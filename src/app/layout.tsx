@@ -1,23 +1,17 @@
 import type { Metadata } from "next";
-import { Manrope, Hanken_Grotesk, Geist } from "next/font/google";
+import { Playfair_Display, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["300", "400", "500", "700"],
+  variable: "--font-playfair-display",
+  weight: ["400", "500", "600", "700"],
 });
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-hanken-grotesk",
-  weight: ["400", "500"],
-});
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
-  weight: ["500"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${manrope.variable} ${hankenGrotesk.variable} ${geist.variable}`}>
+    <html lang="en" className={`dark ${playfairDisplay.variable} ${hankenGrotesk.variable}`}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aethemar AI Labs | Imagine Anything. Create Everything.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary-container": "#e2e2e7",
+                "on-primary": "#2e3034",
+                "tertiary-container": "#e4e2e4",
+                "primary-fixed": "#e2e2e7",
+                "on-tertiary-container": "#646466",
+                "surface-container-highest": "#353534",
+                "on-primary-fixed-variant": "#45474b",
+                "secondary": "#c6c6cb",
+                "on-secondary-fixed": "#1a1b1f",
+                "on-secondary-container": "#b5b4ba",
+                "surface-container-high": "#2a2a2a",
+                "on-primary-fixed": "#1a1c1f",
+                "surface": "#131313",
+                "inverse-surface": "#e5e2e1",
+                "on-secondary": "#2f3034",
+                "outline-variant": "#45474a",
+                "on-tertiary": "#303032",
+                "on-tertiary-fixed": "#1b1b1d",
+                "on-surface": "#e5e2e1",
+                "on-error": "#690005",
+                "on-primary-container": "#636469",
+                "surface-variant": "#353534",
+                "secondary-container": "#46464b",
+                "error": "#ffb4ab",
+                "primary-fixed-dim": "#c6c6cb",
+                "tertiary": "#ffffff",
+                "surface-container": "#201f1f",
+                "surface-container-low": "#1c1b1b",
+                "surface-tint": "#c6c6cb",
+                "background": "#131313",
+                "on-error-container": "#ffdad6",
+                "on-secondary-fixed-variant": "#46464b",
+                "inverse-primary": "#5d5e63",
+                "tertiary-fixed-dim": "#c8c6c8",
+                "on-surface-variant": "#c6c6ca",
+                "primary": "#ffffff",
+                "on-background": "#e5e2e1",
+                "outline": "#909095",
+                "surface-container-lowest": "#0e0e0e",
+                "secondary-fixed": "#e3e2e7",
+                "inverse-on-surface": "#313030",
+                "surface-bright": "#3a3939",
+                "secondary-fixed-dim": "#c6c6cb",
+                "error-container": "#93000a",
+                "tertiary-fixed": "#e4e2e4",
+                "surface-dim": "#131313",
+                "on-tertiary-fixed-variant": "#474648"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "64px",
+                "base": "8px",
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "container-max": "1280px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Playfair Display"
+                ],
+                "label-sm": [
+                        "Hanken Grotesk"
+                ],
+                "headline-lg-mobile": [
+                        "Playfair Display"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ],
+                "headline-md": [
+                        "Playfair Display"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .glass-panel {
+            background: rgba(36, 30, 28, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        .glow-box {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.05) inset, 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .stardust-bg {
+            background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 80%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary/20 selection:text-primary overflow-x-hidden min-h-screen flex flex-col relative">
+<!-- Global Background Texture -->
+<div class="fixed inset-0 z-[-1] pointer-events-none stardust-bg">
+<div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-primary/15 shadow-[0_4px_30px_rgba(255,255,255,0.05)]">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-3">
+<img alt="Aethemar Logo" class="h-10 w-auto mix-blend-screen opacity-90 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoL3zPSb_Hj7xEBSbMzXOFBVni5QNFzF8-LwTfNR8HZzHAWiAAfU0n9b6eAW_NoN7ijazaQD0VGeNzI4qMSBJFmsgykhtvDJJKQQzaWl9Ky_wn6pCLWmhMzYBP5DHR2oupK0kdxe8dzD1CaY8F5J237N7IrGmuYPHT7cGvb-9_m0vwV77m5wNFk7uGkMvDzQ4903qnM4EobyeDfJB2Ma6eD3QAsEaiWi7DE799SaLOTFJ11DXp-itKacNjUWdmu2KpAA0eOIJoE4w"/>
+</div>
+<div class="hidden md:flex gap-8 items-center font-label-sm text-label-sm uppercase tracking-widest">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#philosophy">Philosophy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#ceo">CEO</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<a class="hidden md:inline-flex bg-primary text-on-primary font-label-sm px-6 py-3 rounded-DEFAULT hover:opacity-80 transition-all active:scale-95 duration-200" href="#contact">
+                Consult Now
+            </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden" id="philosophy">
+<div class="absolute inset-0 z-0">
+<img alt="Abstract constellation network in dark space" class="w-full h-full object-cover opacity-30 mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe3FXqISdAopzi3kKDnYtsLWSNltjJapDaQ4k9KbD_odDmK7wlRF1OiuQurArV_06YwCtlkKOCeGkS_5p-XMruput0T0K5D0UfTykDQ1fHTxOWgA5KzMX-Or-33DTdSobDyb7nlx5RUAxxLnp8Z7ckLnhm72hysMVS5GW8ZwYuJdwmAMiqxGcv9IdTZJi_dg9DfbZMN2HTZe1vgxJTBx6QLUkG6UyNLb4lYA_1kY39n60kc426ffPucLqQiixmqfsejQABqVdRXIE"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-12">
+<img alt="Aethemar Logo Glowing" class="w-48 md:w-64 mix-blend-screen opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoL3zPSb_Hj7xEBSbMzXOFBVni5QNFzF8-LwTfNR8HZzHAWiAAfU0n9b6eAW_NoN7ijazaQD0VGeNzI4qMSBJFmsgykhtvDJJKQQzaWl9Ky_wn6pCLWmhMzYBP5DHR2oupK0kdxe8dzD1CaY8F5J237N7IrGmuYPHT7cGvb-9_m0vwV77m5wNFk7uGkMvDzQ4903qnM4EobyeDfJB2Ma6eD3QAsEaiWi7DE799SaLOTFJ11DXp-itKacNjUWdmu2KpAA0eOIJoE4w"/>
+<div class="space-y-6">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary glow-text uppercase tracking-wider">
+                        Imagine Anything.<br/>
+<span class="text-on-background">Create Everything.</span>
+</h1>
+<div class="glass-panel inline-block px-8 py-4 rounded-full glow-box">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+<span class="text-primary font-medium">Aether</span> (The fifth element, boundless space) + <span class="text-primary font-medium">Marketing</span> = <span class="text-on-background font-bold tracking-widest uppercase ml-2">Aethemar</span>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CEO Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative" id="ceo">
+<div class="grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden glass-panel glow-box p-2">
+<div class="w-full h-full rounded-lg bg-surface-container-high relative overflow-hidden group">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;q=80')] bg-cover bg-center opacity-70 group-hover:opacity-90 transition-opacity duration-700 mix-blend-luminosity" data-alt="A professional portrait of an elite female executive in a modern, dark corporate environment. The lighting is cinematic, highlighting her features with a soft, warm glow against a deep obsidian background. She exudes confidence and visionary leadership, dressed in a sharp, tailored dark suit. The atmosphere is sophisticated and high-tech, aligning with a premium AI marketing agency."></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 border border-primary/20 rounded-full border-dashed animate-[spin_20s_linear_infinite]"></div>
+</div>
+<div class="md:col-span-7 space-y-8 md:pl-12">
+<div>
+<div class="font-label-sm text-primary tracking-widest uppercase mb-4 flex items-center gap-2">
+<span class="w-8 h-[1px] bg-primary"></span> Leadership
+                        </div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2">Lee Heekyung</h2>
+<p class="font-body-lg text-primary opacity-80">CEO &amp; CMO, Aethemar AI Labs</p>
+</div>
+<div class="space-y-6 font-body-md text-on-surface-variant text-lg">
+<p>Bridging the analytical rigor of artificial intelligence with the creative intuition of high-end marketing. With a distinguished career as an in-house marketing director for leading hospitals and premier law firms, Lee Heekyung brings unparalleled expertise in navigating complex, trust-based industries.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-white/5">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 0;">domain</span>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Corporate Mastery</h4>
+<p class="text-sm">Strategic growth for medical and legal sectors.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 0;">mic</span>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Media Presence</h4>
+<p class="text-sm">Recognized authority with multiple broadcast appearances.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low/50 border-y border-white/5" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Our Capabilities</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Precision engineering meets limitless creativity. We architect digital dominance.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Service Card 1 -->
+<div class="glass-panel rounded-xl p-8 md:p-12 glow-box group hover:border-primary/40 transition-colors duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary" style="font-variation-settings: 'FILL' 0;">campaign</span>
+</div>
+<div class="relative z-10">
+<div class="w-14 h-14 rounded-full border border-primary/30 flex items-center justify-center mb-8 bg-surface-container shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Marketing Agency</h3>
+<p class="font-body-md text-on-surface-variant mb-8 line-clamp-3">
+                                Data-driven marketing architectures designed for elite conversion. We don't just run campaigns; we build self-sustaining ecosystems of brand authority.
+                            </p>
+<ul class="space-y-3 font-body-md text-sm text-on-surface/80">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(255,255,255,0.8)]"></span> AI-Optimized Strategy</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(255,255,255,0.8)]"></span> High-Ticket Lead Generation</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(255,255,255,0.8)]"></span> Brand Positioning</li>
+</ul>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="glass-panel rounded-xl p-8 md:p-12 glow-box group hover:border-primary/40 transition-colors duration-500 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary" style="font-variation-settings: 'FILL' 0;">terminal</span>
+</div>
+<div class="relative z-10">
+<div class="w-14 h-14 rounded-full border border-primary/30 flex items-center justify-center mb-8 bg-surface-container shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">code_blocks</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">SW Development</h3>
+<p class="font-body-md text-on-surface-variant mb-8 line-clamp-3">
+                                Bespoke application and web development tailored for scale. We engineer digital products that serve as the technological backbone of your enterprise.
+                            </p>
+<ul class="space-y-3 font-body-md text-sm text-on-surface/80">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(255,255,255,0.8)]"></span> Native App Architecture</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(255,255,255,0.8)]"></span> Web Platforms &amp; Portals</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(255,255,255,0.8)]"></span> AI Integration &amp; Automation</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Connect / Social Portfolio Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="portfolio">
+<div class="flex flex-col items-center text-center space-y-12">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">The Aether Network</h2>
+<p class="font-body-lg text-on-surface-variant">Connect with our constellation of insights.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="flex flex-col items-center gap-4 group" href="#">
+<div class="w-20 h-20 rounded-full glass-panel flex items-center justify-center group-hover:border-primary transition-colors duration-300 shadow-[0_0_20px_rgba(255,255,255,0)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+<span class="material-symbols-outlined text-3xl text-on-surface group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">smart_display</span>
+</div>
+<div class="text-center">
+<p class="font-label-sm text-on-surface">YouTube</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">@aethemarailabs</p>
+</div>
+</a>
+<a class="flex flex-col items-center gap-4 group" href="#">
+<div class="w-20 h-20 rounded-full glass-panel flex items-center justify-center group-hover:border-primary transition-colors duration-300 shadow-[0_0_20px_rgba(255,255,255,0)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+<span class="material-symbols-outlined text-3xl text-on-surface group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">photo_camera</span>
+</div>
+<div class="text-center">
+<p class="font-label-sm text-on-surface">Instagram</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">@aethernarailabs</p>
+</div>
+</a>
+<a class="flex flex-col items-center gap-4 group" href="#">
+<div class="w-20 h-20 rounded-full glass-panel flex items-center justify-center group-hover:border-primary transition-colors duration-300 shadow-[0_0_20px_rgba(255,255,255,0)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+<span class="material-symbols-outlined text-3xl text-on-surface group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">forum</span>
+</div>
+<div class="text-center">
+<p class="font-label-sm text-on-surface">Threads</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">@aethernarailabs</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="contact">
+<div class="max-w-4xl mx-auto glass-panel p-8 md:p-16 rounded-2xl glow-box relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFPYm-MekJdOrYPK2HS0ZaiFieLo-2Rnw_pLQMoBMec0ki34mwOp-jzZE9gUMHGh4akfqqt8KtouI_m_A981twRHWgwOAY6TBnZSYpi7JJcCTbiZh-OwYpai7C8C5PVZIwXblUKxGwCJzNplVAeiOQKnXYg629iJi35wglSvpw4MrNAg7Tpezr8iSD_sny_WteYjhRVDSOYsZmQgdKw6n8tZtvhgPo-YhigVHhpxQh4an319gluE1N96lEn1EW8HTMKEWxBOgj6hg')] bg-cover bg-center opacity-5 mix-blend-screen pointer-events-none"></div>
+<div class="relative z-10 grid md:grid-cols-2 gap-16">
+<div class="space-y-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Initiate Contact</h2>
+<p class="font-body-md text-on-surface-variant">Ready to elevate your operational reality? Reach out to our secure channel.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">call</span>
+</div>
+<div>
+<p class="font-label-sm text-on-surface-variant mb-1">Phone</p>
+<p class="font-body-md text-on-surface">82-10-9932-9829</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-on-surface-variant mb-1">Email</p>
+<p class="font-body-md text-on-surface">aethemarcmo@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<form class="space-y-6">
+<div>
+<label class="font-label-sm text-sm text-on-surface-variant mb-2 block">Identity Code (Name)</label>
+<input class="w-full bg-surface/50 border-0 border-b border-white/20 focus:border-primary focus:ring-0 px-0 py-3 text-on-surface font-body-md transition-colors" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-sm text-on-surface-variant mb-2 block">Transmission Vector (Email)</label>
+<input class="w-full bg-surface/50 border-0 border-b border-white/20 focus:border-primary focus:ring-0 px-0 py-3 text-on-surface font-body-md transition-colors" placeholder="Enter your email" type="email"/>
+</div>
+<div>
+<label class="font-label-sm text-sm text-on-surface-variant mb-2 block">Directive (Message)</label>
+<textarea class="w-full bg-surface/50 border-0 border-b border-white/20 focus:border-primary focus:ring-0 px-0 py-3 text-on-surface font-body-md transition-colors resize-none" placeholder="State your objective..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-sm uppercase tracking-widest py-4 rounded-sm hover:bg-primary/90 transition-colors flex items-center justify-center gap-2" type="button">
+                            Transmit <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-headline-lg text-headline-lg text-primary flex items-center gap-3">
+<img alt="Aethemar Logo" class="h-10 w-auto mix-blend-screen opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoL3zPSb_Hj7xEBSbMzXOFBVni5QNFzF8-LwTfNR8HZzHAWiAAfU0n9b6eAW_NoN7ijazaQD0VGeNzI4qMSBJFmsgykhtvDJJKQQzaWl9Ky_wn6pCLWmhMzYBP5DHR2oupK0kdxe8dzD1CaY8F5J237N7IrGmuYPHT7cGvb-9_m0vwV77m5wNFk7uGkMvDzQ4903qnM4EobyeDfJB2Ma6eD3QAsEaiWi7DE799SaLOTFJ11DXp-itKacNjUWdmu2KpAA0eOIJoE4w"/>
+</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Brand Kit</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Career</a>
+</div>
+</div>
+<div class="text-center md:text-left font-body-md text-on-surface-variant text-sm opacity-60">
+                © 2024 AETHEMAR AI LABS. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>
