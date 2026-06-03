@@ -25,7 +25,7 @@ export default function Home() {
                 className="h-8 w-auto object-contain" 
                 unoptimized
               />
-              <span className="uppercase">AETHEMAR</span>
+              <span className="" style={{ opacity: 0 }}>aethemar ai labs</span>
             </div>
           </div>
           <div className="hidden md:flex gap-8 items-center font-label-caps text-label-caps uppercase tracking-widest">
@@ -279,7 +279,7 @@ export default function Home() {
                 className="h-8 w-auto mix-blend-screen opacity-90 object-contain" 
                 unoptimized
               />
-              <span className="uppercase tracking-tighter">AETHEMAR</span>
+              <span className="tracking-tighter" style={{ opacity: 0 }}>aethemar ai labs</span>
             </div>
             <p className="font-body-sm text-body-sm text-on-surface-variant opacity-80 mt-4">
               © 2026 AETHEMAR AI LABS. ALL RIGHTS RESERVED.
