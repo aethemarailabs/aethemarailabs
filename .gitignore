@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore non-web project files
+agents/
+design.html
+design_neutral.html
+luminar_proposal.pdf
+parse_gemini.js
