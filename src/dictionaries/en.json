@@ -15,7 +15,63 @@
     "mastery_title": "Corporate Mastery",
     "mastery_desc": "Strategic growth for medical and legal sectors.",
     "media_title": "Media Presence",
-    "media_desc": "Recognized authority with multiple broadcast appearances."
+    "media_desc": "Recognized authority with multiple broadcast appearances.",
+    "experience_title": "Professional Experience",
+    "experience": [
+      {
+        "period": "2024 - 2025",
+        "role": "Marketing Planning Team Leader",
+        "company": "YoonKang Law Firm",
+        "desc": "Directed omni-channel marketing operations, managed PR strategies, and oversaw external agencies."
+      },
+      {
+        "period": "2024",
+        "role": "Legal Marketing Manager",
+        "company": "JCL Partners Law Office",
+        "desc": "Authored legal manuscripts, managed blog operations, designed websites, and conducted primary client consultations."
+      },
+      {
+        "period": "2023 - 2024",
+        "role": "Marketing Manager",
+        "company": "Yeeun Animal Hospital",
+        "desc": "Spearheaded YouTube channel growth (achieved 20k subscribers in 6 months) and managed comprehensive SNS campaigns."
+      },
+      {
+        "period": "2023",
+        "role": "Marketing Manager",
+        "company": "Roadmap Law Firm",
+        "desc": "Crafted real estate legal marketing contents, newsletters based on success cases, and executed paid advertising."
+      },
+      {
+        "period": "2022 - 2023",
+        "role": "Licensed Real Estate Broker",
+        "company": "Real Estate Agency",
+        "desc": "Produced promotional property videos, conducted client briefings, and managed inbound real estate sales."
+      }
+    ],
+    "activities_title": "Key Activities & Education",
+    "activities": [
+      {
+        "title": "LG Household & Health Care 'Mapsi Maker'",
+        "desc": "Planned global K-Beauty promotional content and executed creative SNS marketing."
+      },
+      {
+        "title": "SBS Stargram Grammar Panel",
+        "desc": "Featured as a Beauty Power Blogger panelist on broadcast television."
+      },
+      {
+        "title": "Lotte Department Store Ambassador",
+        "desc": "Developed marketing ideas and hosted promotional events."
+      },
+      {
+        "title": "Pusan National University Ambassador",
+        "desc": "Represented the university for campus tours, press interviews, and newsletters."
+      },
+      {
+        "title": "Pusan National University",
+        "desc": "B.A. in Japanese Language and Literature (Minor in International Trade)"
+      }
+    ]
   },
   "services": {
     "title": "Our Capabilities",
