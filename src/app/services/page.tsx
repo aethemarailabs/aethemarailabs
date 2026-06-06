@@ -51,6 +51,26 @@ export default function ServicesPage() {
               </ul>
             </div>
           </div>
+          {/* Service Card 3 */}
+          <div className="flex-none w-[85vw] md:w-auto snap-center glass-panel rounded-xl p-8 md:p-12 glow-box group hover:border-primary/40 transition-colors duration-500 relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+              <span className="material-symbols-outlined text-6xl text-primary" style={{ fontVariationSettings: "'FILL' 0" }}>movie</span>
+            </div>
+            <div className="relative z-10">
+              <div className="w-14 h-14 rounded-full border border-primary/30 flex items-center justify-center mb-8 bg-surface-container shadow-[0_0_15px_rgba(212,175,55,0.1)]">
+                <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>video_camera_front</span>
+              </div>
+              <h3 className="font-title-md text-title-md mb-4 text-on-surface">AI Commercials</h3>
+              <p className="font-body-sm text-on-surface-variant mb-8 line-clamp-3">
+                최첨단 생성형 AI 모델을 활용하여 물리적 한계를 초월한 하이엔드 브랜드 커머셜 영상을 제작합니다.
+              </p>
+              <ul className="space-y-3 font-body-sm text-sm text-on-surface/80">
+                <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(212,175,55,0.8)]"></span> AI Video Generation</li>
+                <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(212,175,55,0.8)]"></span> Visual FX &amp; Compositing</li>
+                <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(212,175,55,0.8)]"></span> Cinematic Storytelling</li>
+              </ul>
+            </div>
+          </div>
           
         </div>
       </div>
