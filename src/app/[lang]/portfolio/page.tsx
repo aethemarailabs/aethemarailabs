@@ -1,10 +1,9 @@
 import Link from 'next/link';
-
-import Link from 'next/link';
 import { getDictionary } from '@/dictionaries';
 
-export default async function PortfolioPage({ params }: { params: { lang: 'en' | 'ko' } }) {
-  const dict = await getDictionary(params.lang);
+export default async function PortfolioPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return (
     <section id="portfolio" className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-[70vh] flex items-center justify-center">

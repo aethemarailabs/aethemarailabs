@@ -20,15 +20,17 @@ export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ko' }];
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
+
   return (
-    <html lang={params?.lang ?? 'en'} className={`dark ${outfit.variable}`}>
+    <html lang={lang ?? 'en'} className={`dark ${outfit.variable}`}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>

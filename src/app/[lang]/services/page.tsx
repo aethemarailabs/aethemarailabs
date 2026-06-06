@@ -1,7 +1,8 @@
 import { getDictionary } from '@/dictionaries';
 
-export default async function ServicesPage({ params }: { params: { lang: 'en' | 'ko' } }) {
-  const dict = await getDictionary(params.lang);
+export default async function ServicesPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return (
     <section id="services" className="py-24 px-margin-mobile md:px-margin-desktop min-h-[70vh] flex items-center">

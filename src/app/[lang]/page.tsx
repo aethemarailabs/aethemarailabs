@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { getDictionary } from '@/dictionaries';
 
-export default async function Home({ params }: { params: { lang: 'en' | 'ko' } }) {
-  const dict = await getDictionary(params.lang);
+export default async function Home({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return (
     <section id="philosophy" className="relative min-h-[70vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-8 md:py-12 overflow-hidden">
@@ -25,7 +26,7 @@ export default async function Home({ params }: { params: { lang: 'en' | 'ko' } }
             <div className="relative z-10 border-b border-primary/20 pb-6">
               <h2 className="font-title-md text-xl md:text-2xl text-primary mb-2 tracking-widest uppercase">{dict.philosophy.subtitle}</h2>
               <p className="font-body-lg text-lg text-on-surface-variant leading-relaxed">
-                <span className="text-primary font-medium">Aether</span> {params.lang === 'ko' ? '(빛을 전달하는 매질)' : ''} + <span className="text-primary font-medium">Marketing</span> = <span className="text-on-background font-bold tracking-widest uppercase ml-2">Aethemar</span>
+                <span className="text-primary font-medium">Aether</span> {lang === 'ko' ? '(빛을 전달하는 매질)' : ''} + <span className="text-primary font-medium">Marketing</span> = <span className="text-on-background font-bold tracking-widest uppercase ml-2">Aethemar</span>
               </p>
             </div>
             <div className="relative z-10 space-y-4 font-body-sm text-on-surface/80 text-base leading-relaxed">
