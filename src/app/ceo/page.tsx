@@ -24,20 +24,20 @@ export default function CeoPage() {
             <p className="font-body-lg text-primary opacity-80">CEO &amp; CMO, Aethemar AI Labs</p>
           </div>
           <div className="space-y-6 font-body-sm text-on-surface-variant text-lg">
-            <p>Bridging the analytical rigor of artificial intelligence with the creative intuition of high-end marketing. With a distinguished career as an in-house marketing director for leading hospitals and premier law firms, Lee Heekyung brings unparalleled expertise in navigating complex, trust-based industries.</p>
+            <p>인공지능의 분석적 정교함과 하이엔드 마케팅의 크리에이티브한 직관을 연결합니다. 대형 병원 및 로펌의 인하우스 마케팅 총괄(CMO)로서 쌓아온 독보적인 커리어를 바탕으로, 고도의 신뢰가 요구되는 전문 산업 분야에서 타의 추종을 불허하는 전문성을 제공합니다.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-primary/5">
               <div className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>domain</span>
                 <div>
-                  <h4 className="font-bold text-on-surface mb-1 font-title-md text-title-md">Corporate Mastery</h4>
-                  <p className="text-sm">Strategic growth for medical and legal sectors.</p>
+                  <h4 className="font-bold text-on-surface mb-1 font-title-md text-title-md">전문 산업 특화</h4>
+                  <p className="text-sm">의료 및 법률 등 고관여 산업군의 전략적 성장 리드.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>mic</span>
                 <div>
-                  <h4 className="font-bold text-on-surface mb-1 font-title-md text-title-md">Media Presence</h4>
-                  <p className="text-sm">Recognized authority with multiple broadcast appearances.</p>
+                  <h4 className="font-bold text-on-surface mb-1 font-title-md text-title-md">미디어 권위</h4>
+                  <p className="text-sm">다수의 방송 출연을 통해 입증된 대중적 신뢰와 전문성.</p>
                 </div>
               </div>
             </div>
