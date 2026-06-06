@@ -44,6 +44,73 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
             </div>
           </Link>
         </div>
+
+        {/* Embedded Videos Section */}
+        <div className="w-full mt-16 space-y-16">
+          {/* YouTube Embeds */}
+          <div className="space-y-6">
+            <h3 className="font-title-md text-2xl text-primary">YouTube Showcases</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="aspect-video w-full rounded-xl overflow-hidden glass-panel glow-box">
+                <iframe 
+                  className="w-full h-full border-0"
+                  src="https://www.youtube.com/embed/xnuxzPBhaN0" 
+                  title="YouTube video player 1" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="aspect-video w-full rounded-xl overflow-hidden glass-panel glow-box">
+                <iframe 
+                  className="w-full h-full border-0"
+                  src="https://www.youtube.com/embed/nQIjpvkqSsY" 
+                  title="YouTube video player 2" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="aspect-video w-full rounded-xl overflow-hidden glass-panel glow-box">
+                <iframe 
+                  className="w-full h-full border-0"
+                  src="https://www.youtube.com/embed/4SWPBTTnHD0" 
+                  title="YouTube video player 3" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* Instagram Embeds */}
+          <div className="space-y-6">
+            <h3 className="font-title-md text-2xl text-primary">Instagram Reels</h3>
+            <div className="flex justify-center">
+              <div className="w-full max-w-sm rounded-xl overflow-hidden glass-panel glow-box bg-white">
+                <iframe 
+                  className="w-full h-[600px] border-0"
+                  src="https://www.instagram.com/reel/DX9uaVuJzBe/embed/" 
+                  scrolling="no"
+                  allowtransparency="true"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* Threads Embeds */}
+          <div className="space-y-6 pb-12">
+            <h3 className="font-title-md text-2xl text-primary">Threads Showcases</h3>
+            <div className="flex justify-center">
+              <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
+                <iframe 
+                  className="w-full h-[600px] border-0"
+                  src="https://www.threads.net/@aethemarailabs/post/DX5xWqECmMm/embed" 
+                  scrolling="no"
+                  allowtransparency="true"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
