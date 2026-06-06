@@ -10,7 +10,15 @@
   "ceo": {
     "leadership": "Leadership",
     "name": "Lee Heekyung",
-    "role": "CEO & CMO, Aethemar AI Labs",
+    "role": "CEO & Founder",
+    "short_intro": [
+      "Appeared on multiple SBS broadcasts with the title of Beauty Power Blogger.",
+      "As a YouTube planner, grew a former employer's (medical clinic) channel to 20,000 subscribers in a short period.",
+      "Acted as a promotional ambassador and marketer for various brands as a beauty influencer.",
+      "As a content creator and marketing planning team leader, simultaneously utilized various SNS such as Instagram, YouTube, and Naver Blog for promotion, and closely followed the latest algorithm trends for each channel.",
+      "As a former practicing real estate broker in the Gangnam area, possesses excellent communication skills and sociability."
+    ],
+    "skills": ["Marketing", "PR", "Design", "Sales", "Branding", "Filming", "Strategic Planning", "YouTube", "Blog", "Instagram", "SNS", "Legal Consulting"],
     "desc": "Bridging the analytical rigor of artificial intelligence with the creative intuition of high-end marketing. With a distinguished career as an in-house marketing director for leading hospitals and premier law firms, Lee Heekyung brings unparalleled expertise in navigating complex, trust-based industries.",
     "mastery_title": "Corporate Mastery",
     "mastery_desc": "Strategic growth for medical and legal sectors.",

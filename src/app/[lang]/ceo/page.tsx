@@ -31,7 +31,32 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
             <p className="font-body-lg text-primary opacity-80">{dict.ceo.role}</p>
           </div>
           <div className="space-y-6 font-body-sm text-on-surface-variant text-lg">
-            <p>{dict.ceo.desc}</p>
+            <p className="font-body-lg text-primary/90">{dict.ceo.desc}</p>
+            
+            {dict.ceo.short_intro && (
+              <ul className="space-y-3 font-body-sm text-on-surface-variant text-base mt-4">
+                {dict.ceo.short_intro.map((intro: string, idx: number) => (
+                  <li key={idx} className="flex gap-3">
+                    <span className="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">check</span>
+                    <span className="leading-relaxed">{intro}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {dict.ceo.skills && (
+              <div className="pt-6">
+                <h4 className="font-label-caps text-primary tracking-widest uppercase mb-4 text-sm font-semibold">My Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  {dict.ceo.skills.map((skill: string, idx: number) => (
+                    <span key={idx} className="px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-sm text-on-surface hover:border-primary/50 transition-colors">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-primary/5">
               <div className="flex gap-4 items-start">
                 <span className="material-symbols-outlined text-primary mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>domain</span>
