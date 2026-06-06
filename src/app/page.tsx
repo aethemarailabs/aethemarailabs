@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <section id="philosophy" className="relative min-h-[90vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden">
+    <section id="philosophy" className="relative min-h-[70vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-12">
         <Image 
           src="/logo_outline.png"
