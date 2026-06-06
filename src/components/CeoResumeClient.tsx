@@ -16,10 +16,17 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {dict.intro_stories.map((story: any, idx: number) => (
-              <div key={idx} className="glass-panel glow-box p-6 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300 flex flex-col gap-3">
-                <span className="material-symbols-outlined text-primary text-3xl opacity-50">format_quote</span>
-                <h4 className="font-title-md text-lg text-on-surface">{story.title}</h4>
-                <p className="font-body-sm text-base text-on-surface-variant leading-relaxed">{story.desc}</p>
+              <div 
+                key={idx} 
+                className="glass-panel glow-box p-6 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300 flex flex-col gap-3 group cursor-pointer"
+                onClick={() => setSelectedExperience(story)}
+              >
+                <span className="material-symbols-outlined text-primary text-3xl opacity-50 group-hover:opacity-100 transition-opacity">format_quote</span>
+                <h4 className="font-title-md text-lg text-on-surface group-hover:text-primary transition-colors">{story.title}</h4>
+                <p className="font-body-sm text-base text-on-surface-variant leading-relaxed line-clamp-3">{story.desc}</p>
+                <p className="font-body-sm text-sm text-primary mt-auto pt-2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  View Details <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                </p>
               </div>
             ))}
           </div>
@@ -117,7 +124,9 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
               <span className="material-symbols-outlined text-3xl">close</span>
             </button>
             
-            <p className="font-label-caps text-primary tracking-widest uppercase mb-4">{selectedExperience.period || 'Activity Details'}</p>
+            <p className="font-label-caps text-primary tracking-widest uppercase mb-4">
+              {selectedExperience.period || (selectedExperience.full_desc ? 'Philosophy & Story' : 'Activity Details')}
+            </p>
             <h3 className="font-headline-sm text-2xl sm:text-3xl text-on-surface mb-2">{selectedExperience.company || selectedExperience.title}</h3>
             {selectedExperience.role && (
               <p className="font-title-md text-lg text-primary/80 mb-8 pb-6 border-b border-primary/10">{selectedExperience.role}</p>
@@ -133,8 +142,8 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                 ))}
               </ul>
             ) : (
-              <div className="font-body-lg text-on-surface-variant text-base sm:text-lg leading-relaxed mt-6 pt-6 border-t border-primary/10">
-                {selectedExperience.desc}
+              <div className="font-body-lg text-on-surface-variant text-base sm:text-lg leading-relaxed mt-6 pt-6 border-t border-primary/10 whitespace-pre-wrap">
+                {selectedExperience.full_desc || selectedExperience.desc}
               </div>
             )}
           </div>
