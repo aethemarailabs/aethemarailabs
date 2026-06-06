@@ -74,15 +74,38 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                   {dict.sns_title}
                 </h3>
                 <div className="space-y-6">
-                  {dict.sns_list.map((sns: any, idx: number) => (
-                    <div key={idx} className="glass-panel glow-box p-6 rounded-xl border border-primary/20 bg-primary/5">
-                      <h4 className="font-title-md text-lg text-primary mb-2 flex items-center gap-2">
-                        <span className="material-symbols-outlined text-xl">smart_display</span>
-                        {sns.title}
-                      </h4>
-                      <p className="font-body-sm text-sm text-on-surface-variant">{sns.desc}</p>
-                    </div>
-                  ))}
+                  {dict.sns_list.map((sns: any, idx: number) => {
+                    const content = (
+                      <>
+                        <h4 className="font-title-md text-lg text-primary mb-2 flex items-center gap-2 group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all">
+                          <span className="material-symbols-outlined text-xl">smart_display</span>
+                          {sns.title}
+                        </h4>
+                        <p className="font-body-sm text-sm text-on-surface-variant">{sns.desc}</p>
+                        {sns.url && (
+                          <p className="font-body-sm text-sm text-primary mt-3 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            View Channel <span className="material-symbols-outlined text-sm">open_in_new</span>
+                          </p>
+                        )}
+                      </>
+                    );
+
+                    return sns.url ? (
+                      <a 
+                        key={idx} 
+                        href={sns.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block glass-panel glow-box p-6 rounded-xl border border-primary/20 bg-primary/5 hover:border-primary/40 transition-all duration-300 group cursor-pointer"
+                      >
+                        {content}
+                      </a>
+                    ) : (
+                      <div key={idx} className="glass-panel glow-box p-6 rounded-xl border border-primary/20 bg-primary/5">
+                        {content}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}
