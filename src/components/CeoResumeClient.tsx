@@ -7,7 +7,26 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
 
   return (
     <>
-      <div className="w-full mt-16 md:mt-32">
+      {/* Philosophy & Stories Section */}
+      {dict.intro_stories && (
+        <div className="w-full mt-24">
+          <h3 className="font-title-md text-2xl text-primary mb-10 flex items-center gap-3">
+            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>psychology</span>
+            {dict.intro_stories_title}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {dict.intro_stories.map((story: any, idx: number) => (
+              <div key={idx} className="glass-panel glow-box p-6 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300 flex flex-col gap-3">
+                <span className="material-symbols-outlined text-primary text-3xl opacity-50">format_quote</span>
+                <h4 className="font-title-md text-lg text-on-surface">{story.title}</h4>
+                <p className="font-body-sm text-base text-on-surface-variant leading-relaxed">{story.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="w-full mt-24">
         <div className="grid md:grid-cols-2 gap-16">
           {/* Experience Timeline */}
           <div>
@@ -41,15 +60,35 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
 
           {/* Activities List */}
           <div>
-            <h3 className="font-title-md text-2xl text-primary mb-10 flex items-center gap-3">
+            {dict.sns_list && (
+              <div className="mb-16">
+                <h3 className="font-title-md text-2xl text-primary mb-8 flex items-center gap-3">
+                  <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>share</span>
+                  {dict.sns_title}
+                </h3>
+                <div className="space-y-6">
+                  {dict.sns_list.map((sns: any, idx: number) => (
+                    <div key={idx} className="glass-panel glow-box p-6 rounded-xl border border-primary/20 bg-primary/5">
+                      <h4 className="font-title-md text-lg text-primary mb-2 flex items-center gap-2">
+                        <span className="material-symbols-outlined text-xl">smart_display</span>
+                        {sns.title}
+                      </h4>
+                      <p className="font-body-sm text-sm text-on-surface-variant">{sns.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <h3 className="font-title-md text-2xl text-primary mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>military_tech</span>
               {dict.activities_title}
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-4">
               {dict.activities.map((item: any, idx: number) => (
-                <div key={idx} className="glass-panel glow-box p-6 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300">
-                  <h4 className="font-title-md text-lg text-on-surface mb-2">{item.title}</h4>
-                  <p className="font-body-sm text-sm text-on-surface-variant">{item.desc}</p>
+                <div key={idx} className="glass-panel glow-box p-5 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300">
+                  <h4 className="font-title-md text-base text-on-surface mb-1">{item.title}</h4>
+                  <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>

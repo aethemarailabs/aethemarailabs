@@ -50,6 +50,7 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
             </div>
           </div>
         </div>
+      </div>
       </section>
 
       <section id="resume" className="pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">

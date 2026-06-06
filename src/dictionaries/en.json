@@ -72,7 +72,7 @@
         ]
       },
       {
-        "period": "2022 - 2023",
+        "period": "2022.01 - 2023.05",
         "role": "Licensed Real Estate Broker",
         "company": "Real Estate Agency",
         "desc": "Produced promotional property videos, conducted client briefings, and managed inbound real estate sales.",
@@ -82,29 +82,91 @@
           "Client property briefings and home tours",
           "Site visits, inbound client sales, and phone consultations (Seoul metropolitan area apartments)"
         ]
+      },
+      {
+        "period": "2018.08 - 2021.04",
+        "role": "Administrator",
+        "company": "Association of University Environmental Safety",
+        "desc": "Managed government research projects, website operations, and internal magazine columns.",
+        "details": [
+          "Executed government research projects (business plans, final reports, official documents)",
+          "Website operations and research fund management",
+          "Advertiser and member communication",
+          "Internal magazine column writing and photography"
+        ]
+      }
+    ],
+    "sns_title": "Personal Channels",
+    "sns_list": [
+      {
+        "title": "YouTube (Real Estate & Law): 'Sister Who Buys Apartments'",
+        "desc": "Independently managed video shooting and planning. Created thumbnails and channel art using design tools. Established viewership growth strategies based on the YouTube algorithm."
       }
     ],
     "activities_title": "Key Activities & Education",
     "activities": [
       {
+        "title": "Class101 / PD Joo Eon-gyu Course",
+        "desc": "Completed 'How to Build a High-Earning YouTube Channel Fastest' course (Content planning, algorithm analysis) (2022.10 - 2023.05)"
+      },
+      {
         "title": "LG Household & Health Care 'Mapsi Maker'",
-        "desc": "Planned global K-Beauty promotional content and executed creative SNS marketing."
+        "desc": "Planned global K-Beauty online promotional content and executed SNS marketing ideas. (2015.11 - 2016.03)"
       },
       {
         "title": "SBS Stargram Grammar Panel",
-        "desc": "Featured as a Beauty Power Blogger panelist on broadcast television."
+        "desc": "Beauty power blogger panelist, executed blog and Instagram SNS marketing. (2015.11 - 2016.03)"
+      },
+      {
+        "title": "Bella Citta Social Marketer",
+        "desc": "Planned marketing events for cultural spaces, created multilingual online promotional content. (2012.07 - 2012.08)"
+      },
+      {
+        "title": "Universiade Ambassador",
+        "desc": "Planned marketing ideas, filmed promotional UCCs, and conducted press interviews. (2011.09 - 2012.02)"
       },
       {
         "title": "Lotte Department Store Ambassador",
-        "desc": "Developed marketing ideas and hosted promotional events."
+        "desc": "Developed marketing ideas, hosted promotional events, and modeled for PR media. (2011.07 - 2011.12)"
       },
       {
         "title": "Pusan National University Ambassador",
-        "desc": "Represented the university for campus tours, press interviews, and newsletters."
+        "desc": "Conducted campus tours, protocol execution, press interviews, and university newsletters. (2010.05 - 2012.02)"
+      },
+      {
+        "title": "Cornell University (US Overseas Program)",
+        "desc": "Invited by Cornell University with full funding from Pusan National Univ. for campus tours, research planning, and presentations. (2014.02 - 2014.03)"
+      },
+      {
+        "title": "Sogang University (Exchange)",
+        "desc": "Recognized 4-year degree credits. (2014.03 - 2014.08)"
       },
       {
         "title": "Pusan National University",
-        "desc": "B.A. in Japanese Language and Literature (Minor in International Trade)"
+        "desc": "B.A. in Japanese Language and Literature, Minor in International Trade. (GPA 3.62/4.5)"
+      }
+    ],
+    "intro_stories_title": "Philosophy & Mindset",
+    "intro_stories": [
+      {
+        "title": "Flexible Thinking, Mapsi Maker",
+        "desc": "As a global marketer for LG Household & Health Care, I proposed an innovative 2-in-1 beauty item by mixing eyeshadow with nail polish, earning recognition for limitless creative fusion."
+      },
+      {
+        "title": "Elevating Brand Value",
+        "desc": "During my time at 'Bella Citta', I pioneered house wedding services and drove multilingual SNS marketing that eventually secured a location sponsorship from KBS broadcasting."
+      },
+      {
+        "title": "Cheerful, Bright, and Friendly",
+        "desc": "Through 12 major extracurricular activities, including being a university ambassador and KBS youth panelist, I developed exceptional communication skills and approachability."
+      },
+      {
+        "title": "The Value of Collaborative Challenge",
+        "desc": "Leveraging my English and Japanese skills, I won first prize in an overseas challenge contest, leading to a fully-funded trip to Cornell University, learning to overcome crises with teamwork."
+      },
+      {
+        "title": "Driven by a Challenging Spirit",
+        "desc": "When heavy rain threatened an outdoor busking event at Lotte Department Store, I pushed through by creating waterproof banners and actively promoting the event in the rain, demonstrating unyielding drive."
       }
     ]
   },
