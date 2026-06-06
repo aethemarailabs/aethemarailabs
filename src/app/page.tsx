@@ -2,22 +2,22 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <section id="philosophy" className="relative min-h-[70vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden">
-      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-12">
+    <section id="philosophy" className="relative min-h-[70vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-8 md:py-12 overflow-hidden">
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
         <Image 
           src="/logo_outline.png"
           alt="Aethemar Logo Glowing" 
           width={400} 
           height={130} 
-          className="w-64 md:w-96 mix-blend-screen opacity-90 object-contain"
+          className="h-24 md:h-32 w-auto mix-blend-screen opacity-90 object-contain"
           unoptimized 
         />
-        <div className="space-y-6">
+        <div className="space-y-4">
           <h1 className="font-display-lg text-display-lg text-primary glow-text uppercase tracking-wider">
             Imagine Anything.<br />
             <span className="text-on-background">Create Everything.</span>
           </h1>
-          <div className="glass-panel w-full max-w-3xl text-left px-8 py-10 md:px-12 md:py-12 rounded-2xl glow-box space-y-6 relative overflow-hidden mt-8 transition-transform hover:-translate-y-1 duration-500">
+          <div className="glass-panel w-full max-w-3xl text-left px-8 py-6 md:px-10 md:py-8 rounded-2xl glow-box space-y-4 relative overflow-hidden mt-4 transition-transform hover:-translate-y-1 duration-500">
             <div className="absolute -top-10 -right-10 text-primary/5 text-9xl font-display-lg pointer-events-none" aria-hidden="true">A</div>
             <div className="relative z-10 border-b border-primary/20 pb-6">
               <h2 className="font-title-md text-xl md:text-2xl text-primary mb-2 tracking-widest uppercase">The Fifth Element</h2>
