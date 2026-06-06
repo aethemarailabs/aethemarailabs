@@ -20,7 +20,7 @@ export default function TopNavBar() {
   return (
     <>
       <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-primary/15 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-        <div className="flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto">
+        <div className="flex justify-center md:justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
           <Link href="/" className="flex items-center gap-3 group">
             <div className="font-display-lg text-title-md tracking-tighter text-primary flex items-center gap-2">
               <Image 
@@ -48,6 +48,7 @@ export default function TopNavBar() {
               );
             })}
           </div>
+          {/* Get Started Button */}
           <Link href="/contact" className="hidden md:inline-flex bg-primary text-on-primary font-label-caps px-6 py-3 rounded-DEFAULT hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all active:scale-95 duration-200 uppercase tracking-widest">
             Get Started
           </Link>

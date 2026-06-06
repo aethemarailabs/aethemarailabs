@@ -6,9 +6,12 @@ export default function ServicesPage() {
           <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Our Capabilities</h2>
           <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Precision engineering meets limitless creativity. We architect digital dominance.</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
+        
+        {/* Horizontal scroll wrapper for mobile, Grid for desktop */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pb-8 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0 scrollbar-hide">
+          
           {/* Service Card 1 */}
-          <div className="glass-panel rounded-xl p-8 md:p-12 glow-box group hover:border-primary/40 transition-colors duration-500 relative overflow-hidden">
+          <div className="flex-none w-[85vw] md:w-auto snap-center glass-panel rounded-xl p-8 md:p-12 glow-box group hover:border-primary/40 transition-colors duration-500 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <span className="material-symbols-outlined text-6xl text-primary" style={{ fontVariationSettings: "'FILL' 0" }}>campaign</span>
             </div>
@@ -29,7 +32,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Service Card 2 */}
-          <div className="glass-panel rounded-xl p-8 md:p-12 glow-box group hover:border-primary/40 transition-colors duration-500 relative overflow-hidden">
+          <div className="flex-none w-[85vw] md:w-auto snap-center glass-panel rounded-xl p-8 md:p-12 glow-box group hover:border-primary/40 transition-colors duration-500 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <span className="material-symbols-outlined text-6xl text-primary" style={{ fontVariationSettings: "'FILL' 0" }}>terminal</span>
             </div>
@@ -48,6 +51,7 @@ export default function ServicesPage() {
               </ul>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
