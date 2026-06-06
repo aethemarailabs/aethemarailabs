@@ -14,7 +14,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
         </div>
         
         <div className="flex overflow-x-auto snap-x snap-mandatory md:flex-wrap md:justify-center gap-6 md:gap-12 w-full pb-8 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0 scrollbar-hide">
-          <Link href="#" className="flex-none w-[60vw] md:w-auto snap-center flex flex-col items-center gap-4 group">
+          <Link href="https://www.youtube.com/@AethemarAILabs" target="_blank" rel="noopener noreferrer" className="flex-none w-[60vw] md:w-auto snap-center flex flex-col items-center gap-4 group">
             <div className="w-24 h-24 rounded-full glass-panel flex items-center justify-center group-hover:border-primary transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
               <span className="material-symbols-outlined text-4xl text-on-surface group-hover:text-primary transition-colors" style={{ fontVariationSettings: "'FILL' 0" }}>smart_display</span>
             </div>
@@ -24,7 +24,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
             </div>
           </Link>
           
-          <Link href="#" className="flex-none w-[60vw] md:w-auto snap-center flex flex-col items-center gap-4 group">
+          <Link href="https://www.instagram.com/aethemarailabs" target="_blank" rel="noopener noreferrer" className="flex-none w-[60vw] md:w-auto snap-center flex flex-col items-center gap-4 group">
             <div className="w-24 h-24 rounded-full glass-panel flex items-center justify-center group-hover:border-primary transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
               <span className="material-symbols-outlined text-4xl text-on-surface group-hover:text-primary transition-colors" style={{ fontVariationSettings: "'FILL' 0" }}>photo_camera</span>
             </div>
@@ -34,7 +34,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
             </div>
           </Link>
           
-          <Link href="#" className="flex-none w-[60vw] md:w-auto snap-center flex flex-col items-center gap-4 group">
+          <Link href="https://www.threads.com/@aethemarailabs" target="_blank" rel="noopener noreferrer" className="flex-none w-[60vw] md:w-auto snap-center flex flex-col items-center gap-4 group">
             <div className="w-24 h-24 rounded-full glass-panel flex items-center justify-center group-hover:border-primary transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
               <span className="material-symbols-outlined text-4xl text-on-surface group-hover:text-primary transition-colors" style={{ fontVariationSettings: "'FILL' 0" }}>forum</span>
             </div>

@@ -6,5 +6,5 @@ const dictionaries = {
 };
 
 export const getDictionary = async (locale: 'en' | 'ko') => {
-  return dictionaries[locale]?.() ?? dictionaries.en();
+  return dictionaries[locale]?.() ?? dictionaries.ko();
 };

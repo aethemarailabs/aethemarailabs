@@ -30,7 +30,7 @@ export default async function RootLayout({
   const { lang } = await params;
 
   return (
-    <html lang={lang ?? 'en'} className={`dark ${outfit.variable}`}>
+    <html lang={lang ?? 'ko'} className={`dark ${outfit.variable}`}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>

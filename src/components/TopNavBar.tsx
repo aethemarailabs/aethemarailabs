@@ -11,8 +11,8 @@ export default function TopNavBar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Default to 'en' if the pathname doesn't start with /ko
-  const currentLang = pathname.startsWith('/ko') ? 'ko' : 'en';
+  // Default to 'ko' if the pathname doesn't start with /en
+  const currentLang = pathname.startsWith('/en') ? 'en' : 'ko';
 
   const togglePath = (targetLang: 'en' | 'ko') => {
     if (pathname.startsWith(`/${currentLang}`)) {
