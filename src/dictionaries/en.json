@@ -1,0 +1,37 @@
+{
+  "philosophy": {
+    "title1": "Imagine Anything.",
+    "title2": "Create Everything.",
+    "subtitle": "The Fifth Element",
+    "desc1": "In ancient philosophy, Aether was considered the fifth element—the absolute medium that fills the universe and transmits light. Just as modern science posits invisible energy to explain the order and gravity of the cosmos, Aether is the essential medium that connects all things and transmits energy.",
+    "desc2": "Aethemar originates from this grand concept. We are not just an agency; we aim to be the 'most powerful invisible medium' that helps your brand's unique light and potential reach everywhere. Through AI technology, the modern Aether, we create limitless connections and growth.",
+    "desc3": "A name born by adding the strategic edge of Marketing to the infinite expandability of Aether: Aethemar. Just as light traverses the universe, we design an unparalleled path for your brand to shine brilliantly at the center of the world using the most innovative technologies and sharp insights."
+  },
+  "ceo": {
+    "leadership": "Leadership",
+    "name": "Lee Heekyung",
+    "role": "CEO & CMO, Aethemar AI Labs",
+    "desc": "Bridging the analytical rigor of artificial intelligence with the creative intuition of high-end marketing. With a distinguished career as an in-house marketing director for leading hospitals and premier law firms, Lee Heekyung brings unparalleled expertise in navigating complex, trust-based industries.",
+    "mastery_title": "Corporate Mastery",
+    "mastery_desc": "Strategic growth for medical and legal sectors.",
+    "media_title": "Media Presence",
+    "media_desc": "Recognized authority with multiple broadcast appearances."
+  },
+  "services": {
+    "title": "Our Capabilities",
+    "subtitle": "Precision engineering meets limitless creativity. We architect digital dominance.",
+    "card1_title": "Marketing Agency",
+    "card1_desc": "Data-driven marketing architectures designed for elite conversion. We don't just run campaigns; we build self-sustaining ecosystems of brand authority.",
+    "card1_items": ["AI-Optimized Strategy", "High-Ticket Lead Generation", "Brand Positioning"],
+    "card2_title": "SW Development",
+    "card2_desc": "Bespoke application and web development tailored for scale. We engineer digital products that serve as the technological backbone of your enterprise.",
+    "card2_items": ["Native App Architecture", "Web Platforms & Portals", "AI Integration & Automation"],
+    "card3_title": "AI Commercials",
+    "card3_desc": "We produce high-end brand commercial videos that transcend physical limits using cutting-edge generative AI models.",
+    "card3_items": ["AI Video Generation", "Visual FX & Compositing", "Cinematic Storytelling"]
+  },
+  "portfolio": {
+    "title": "The Aether Network",
+    "subtitle": "Connect with our constellation of insights."
+  }
+}

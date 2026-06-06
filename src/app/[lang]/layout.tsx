@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import TopNavBar from "@/components/TopNavBar";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
@@ -16,13 +16,19 @@ export const metadata: Metadata = {
   description: "Aethemar AI Labs - Marketing agency & SW development",
 };
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'ko' }];
+}
+
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: string };
 }>) {
   return (
-    <html lang="en" className={`dark ${outfit.variable}`}>
+    <html lang={params?.lang ?? 'en'} className={`dark ${outfit.variable}`}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
