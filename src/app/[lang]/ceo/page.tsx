@@ -1,11 +1,13 @@
 import { getDictionary } from '@/dictionaries';
+import CeoResumeClient from '@/components/CeoResumeClient';
 
 export default async function CeoPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return (
-    <section id="ceo" className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative min-h-[70vh] flex items-center">
+    <>
+      <section id="ceo" className="pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative min-h-[70vh] flex items-center">
       <div className="grid md:grid-cols-12 gap-gutter items-center w-full">
         <div className="md:col-span-5 relative">
           <div className="rounded-xl overflow-hidden glass-panel glow-box p-2">
@@ -48,49 +50,11 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Resume Section */}
-      <div className="w-full mt-32">
-        <div className="grid md:grid-cols-2 gap-16">
-          {/* Experience Timeline */}
-          <div>
-            <h3 className="font-title-md text-2xl text-primary mb-10 flex items-center gap-3">
-              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>work</span>
-              {dict.ceo.experience_title}
-            </h3>
-            <div className="border-l border-primary/20 pl-8 space-y-12 ml-2">
-              {dict.ceo.experience.map((item: any, idx: number) => (
-                <div key={idx} className="relative group">
-                  <div className="absolute w-3 h-3 bg-surface border-2 border-primary rounded-full -left-[38px] top-1.5 group-hover:bg-primary transition-colors duration-300 shadow-[0_0_10px_rgba(212,175,55,0)] group-hover:shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
-                  <p className="font-label-caps text-sm text-primary/80 mb-2 tracking-widest uppercase">{item.period}</p>
-                  <h4 className="font-title-md text-xl text-on-surface mb-1 flex flex-wrap items-baseline gap-x-3">
-                    {item.company}
-                    <span className="text-on-surface-variant font-body-sm text-sm whitespace-nowrap">| {item.role}</span>
-                  </h4>
-                  <p className="font-body-sm text-base text-on-surface-variant leading-relaxed mt-2">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Activities List */}
-          <div>
-            <h3 className="font-title-md text-2xl text-primary mb-10 flex items-center gap-3">
-              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>military_tech</span>
-              {dict.ceo.activities_title}
-            </h3>
-            <div className="space-y-6">
-              {dict.ceo.activities.map((item: any, idx: number) => (
-                <div key={idx} className="glass-panel glow-box p-6 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300">
-                  <h4 className="font-title-md text-lg text-on-surface mb-2">{item.title}</h4>
-                  <p className="font-body-sm text-sm text-on-surface-variant">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section id="resume" className="pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+        <CeoResumeClient dict={dict.ceo} />
+      </section>
+    </>
   );
 }

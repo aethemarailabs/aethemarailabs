@@ -22,31 +22,66 @@
         "period": "2024 - 2025",
         "role": "Marketing Planning Team Leader",
         "company": "YoonKang Law Firm",
-        "desc": "Directed omni-channel marketing operations, managed PR strategies, and oversaw external agencies."
+        "desc": "Directed omni-channel marketing operations, managed PR strategies, and oversaw external agencies.",
+        "details": [
+          "General management of online and offline marketing",
+          "Supervised agencies, planned and executed PR strategies",
+          "Analyzed advertising efficiency"
+        ]
       },
       {
         "period": "2024",
         "role": "Legal Marketing Manager",
         "company": "JCL Partners Law Office",
-        "desc": "Authored legal manuscripts, managed blog operations, designed websites, and conducted primary client consultations."
+        "desc": "Authored legal manuscripts, managed blog operations, designed websites, and conducted primary client consultations.",
+        "details": [
+          "Authored legal manuscripts for real estate, civil, criminal, and divorce cases",
+          "Blog posting, quality control, and design work",
+          "Conducted initial legal consultations for clients",
+          "Website creation and marketing strategy planning",
+          "Competitor and market analysis"
+        ]
       },
       {
         "period": "2023 - 2024",
         "role": "Marketing Manager",
         "company": "Yeeun Animal Hospital",
-        "desc": "Spearheaded YouTube channel growth (achieved 20k subscribers in 6 months) and managed comprehensive SNS campaigns."
+        "desc": "Spearheaded YouTube channel growth (achieved 20k subscribers in 6 months) and managed comprehensive SNS campaigns.",
+        "details": [
+          "Managed YouTube channel (filming, shorts editing, algorithm analysis, thumbnail planning, scriptwriting)",
+          "Directed SNS marketing (content planning and production)",
+          "Blog posting (manuscript writing and card news design)",
+          "Instagram posting, paid ads execution, event planning, and follower management",
+          "PR copywriting (professional profiles, brochures)",
+          "Competitor analysis and marketing idea generation"
+        ]
       },
       {
         "period": "2023",
         "role": "Marketing Manager",
         "company": "Roadmap Law Firm",
-        "desc": "Crafted real estate legal marketing contents, newsletters based on success cases, and executed paid advertising."
+        "desc": "Crafted real estate legal marketing contents, newsletters based on success cases, and executed paid advertising.",
+        "details": [
+          "Authored real estate legal manuscripts and blog posts (e.g., lease disputes)",
+          "Created marketing content based on attorneys' success stories",
+          "Produced newsletters introducing success cases and legal updates",
+          "Managed official SNS (Instagram, Facebook, Blog)",
+          "Executed Naver Power Link paid advertisements",
+          "Website management (notices, PR articles, news)",
+          "Competitor analysis and marketing idea generation"
+        ]
       },
       {
         "period": "2022 - 2023",
         "role": "Licensed Real Estate Broker",
         "company": "Real Estate Agency",
-        "desc": "Produced promotional property videos, conducted client briefings, and managed inbound real estate sales."
+        "desc": "Produced promotional property videos, conducted client briefings, and managed inbound real estate sales.",
+        "details": [
+          "Drafted real estate contracts and confirmation documents",
+          "Produced property promotional videos (filming, editing, narration, scripting)",
+          "Client property briefings and home tours",
+          "Site visits, inbound client sales, and phone consultations (Seoul metropolitan area apartments)"
+        ]
       }
     ],
     "activities_title": "Key Activities & Education",
