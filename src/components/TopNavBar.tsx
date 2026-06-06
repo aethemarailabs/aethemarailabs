@@ -24,17 +24,17 @@ export default function TopNavBar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="font-display-lg text-title-md tracking-tighter text-primary flex items-center gap-2">
               <Image 
-                src="/logo/119409.png"
+                src="/logo_outline.png"
                 alt="Aethemar Logo" 
-                width={40} 
-                height={40} 
-                className="h-8 w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
+                width={300} 
+                height={300} 
+                className="h-[56px] w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
                 unoptimized
               />
               <span className="sr-only">aethemar ai labs</span>
             </div>
           </Link>
-          <div className="hidden md:flex gap-8 items-center font-label-caps text-label-caps uppercase tracking-widest">
+          <div className="hidden md:flex gap-8 items-center font-label-caps text-base uppercase tracking-widest">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (

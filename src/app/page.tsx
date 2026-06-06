@@ -3,21 +3,13 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <section id="philosophy" className="relative min-h-[90vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img 
-          alt="Abstract constellation network in dark space" 
-          className="w-full h-full object-cover opacity-30 mix-blend-screen" 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe3FXqISdAopzi3kKDnYtsLWSNltjJapDaQ4k9KbD_odDmK7wlRF1OiuQurArV_06YwCtlkKOCeGkS_5p-XMruput0T0K5D0UfTykDQ1fHTxOWgA5KzMX-Or-33DTdSobDyb7nlx5RUAxxLnp8Z7ckLnhm72hysMVS5GW8ZwYuJdwmAMiqxGcv9IdTZJi_dg9DfbZMN2HTZe1vgxJTBx6QLUkG6UyNLb4lYA_1kY39n60kc426ffPucLqQiixmqfsejQABqVdRXIE"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
-      </div>
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-12">
         <Image 
-          src="/logo/119406.png"
+          src="/logo_outline.png"
           alt="Aethemar Logo Glowing" 
-          width={256} 
-          height={256} 
-          className="w-48 md:w-64 mix-blend-screen opacity-90"
+          width={400} 
+          height={130} 
+          className="w-64 md:w-96 mix-blend-screen opacity-90 object-contain"
           unoptimized 
         />
         <div className="space-y-6">

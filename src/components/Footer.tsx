@@ -8,11 +8,11 @@ export default function Footer() {
         <div className="md:col-span-4 flex flex-col gap-4">
           <div className="font-display-lg text-title-md tracking-tighter text-primary flex items-center gap-2">
             <Image 
-              src="/logo/119409.png"
+              src="/logo_outline.png"
               alt="Aethemar Logo" 
-              width={40} 
-              height={40} 
-              className="h-8 w-auto mix-blend-screen opacity-90 object-contain" 
+              width={300} 
+              height={300} 
+              className="h-[70px] w-auto mix-blend-screen opacity-90 object-contain" 
               unoptimized
             />
             <span className="sr-only">aethemar ai labs</span>

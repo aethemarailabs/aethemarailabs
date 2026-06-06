@@ -3,10 +3,14 @@ export default function CeoPage() {
     <section id="ceo" className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative min-h-[70vh] flex items-center">
       <div className="grid md:grid-cols-12 gap-gutter items-center w-full">
         <div className="md:col-span-5 relative">
-          <div className="aspect-[4/5] rounded-xl overflow-hidden glass-panel glow-box p-2">
-            <div className="w-full h-full rounded-lg bg-surface-container-high relative overflow-hidden group">
-              <div className="absolute inset-0 bg-[url('/ceo_profile.jpg')] bg-cover bg-center opacity-70 group-hover:opacity-90 transition-opacity duration-700 mix-blend-luminosity"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+          <div className="rounded-xl overflow-hidden glass-panel glow-box p-2">
+            <div className="w-full rounded-lg bg-surface-container-high relative overflow-hidden group">
+              <img 
+                src="/ceo_profile.png" 
+                alt="CEO Lee Heekyung" 
+                className="w-full h-auto opacity-80 group-hover:opacity-100 transition-opacity duration-700 mix-blend-luminosity block" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none"></div>
             </div>
           </div>
           <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-primary/20 rounded-full border-dashed animate-[spin_20s_linear_infinite]"></div>
