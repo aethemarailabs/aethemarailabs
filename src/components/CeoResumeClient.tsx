@@ -18,11 +18,10 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
             {dict.intro_stories.map((story: any, idx: number) => (
               <div 
                 key={idx} 
-                className="glass-panel glow-box p-6 rounded-xl border border-primary/5 flex flex-col gap-3 group"
+                className="glass-panel glow-box p-6 rounded-xl border border-primary/5 flex flex-col items-center justify-center text-center gap-3 group min-h-[140px]"
               >
                 <span className="material-symbols-outlined text-primary text-3xl opacity-50 group-hover:opacity-100 transition-opacity">format_quote</span>
-                <h4 className="font-title-md text-lg text-on-surface group-hover:text-primary transition-colors">{story.title}</h4>
-                <p className="font-body-sm text-base text-on-surface-variant leading-relaxed line-clamp-3">{story.desc}</p>
+                <h4 className="font-title-md text-lg sm:text-xl text-on-surface group-hover:text-primary transition-colors">{story.title}</h4>
               </div>
             ))}
           </div>
