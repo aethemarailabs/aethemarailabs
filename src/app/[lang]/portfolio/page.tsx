@@ -132,13 +132,8 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                   scrolling="no"
                 ></iframe>
               </div>
-              <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
-                <iframe
-                  className="w-full h-[600px] border-0"
-                  src="https://www.instagram.com/reel/DX9uaVuJzBe/embed/" 
-                  scrolling="no"
-                ></iframe>
-              </div>
+              {/* Insight Image replacing the 5th Instagram post */}
+              <InsightImageCard imageSrc="/insight2.jpg" altText="Instagram Post Insights Statistics" />
               <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
                 <iframe
                   className="w-full h-[600px] border-0"
