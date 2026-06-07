@@ -127,6 +127,13 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
               <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
                 <iframe
                   className="w-full h-[600px] border-0"
+                  src="https://www.instagram.com/p/DXq-NHVEVxJ/embed/" 
+                  scrolling="no"
+                ></iframe>
+              </div>
+              <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
+                <iframe
+                  className="w-full h-[600px] border-0"
                   src="https://www.instagram.com/reel/DX9uaVuJzBe/embed/" 
                   scrolling="no"
                 ></iframe>
