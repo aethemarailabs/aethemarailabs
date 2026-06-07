@@ -14,7 +14,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>psychology</span>
             {dict.intro_stories_title}
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {dict.intro_stories.map((story: any, idx: number) => (
               <div 
                 key={idx} 
