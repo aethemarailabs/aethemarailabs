@@ -111,7 +111,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                 <div className="aspect-video w-full rounded-xl overflow-hidden glass-panel glow-box">
                   <iframe 
                     className="w-full h-full border-0"
-                    src="https://www.youtube.com/embed/umBeoLNsuAY" 
+                    src="https://www.youtube.com/embed/CR-QJeDDwu0" 
                     title="YouTube video player 5" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen
