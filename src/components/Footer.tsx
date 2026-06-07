@@ -26,12 +26,6 @@ export default function Footer() {
               주식회사 에테마르 | 대표이사 이희경 | 사업자등록번호 376-81-01910
             </p>
           </div>
-        </div>
-        <div className="flex flex-wrap justify-center md:justify-end gap-6 font-body-sm text-xs text-on-surface-variant">
-          <Link href="#" className="hover:text-primary transition-all opacity-80 hover:opacity-100">Privacy Policy</Link>
-          <Link href="#" className="hover:text-primary transition-all opacity-80 hover:opacity-100">Terms of Service</Link>
-          <Link href="#" className="hover:text-primary transition-all opacity-80 hover:opacity-100">LinkedIn</Link>
-        </div>
       </div>
     </footer>
   );
