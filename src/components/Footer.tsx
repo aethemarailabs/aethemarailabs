@@ -26,6 +26,7 @@ export default function Footer() {
               주식회사 에테마르 | 대표이사 이희경 | 사업자등록번호 376-81-01910
             </p>
           </div>
+        </div>
       </div>
     </footer>
   );
