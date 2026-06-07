@@ -101,11 +101,10 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
             <h3 className="font-title-md text-2xl text-primary">Threads Showcases</h3>
             <div className="flex justify-center">
               <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
-                <iframe 
+                <iframe
                   className="w-full h-[600px] border-0"
-                  src="https://www.threads.net/@aethemarailabs/post/DX5xWqECmMm/embed" 
+                  src="https://www.threads.net/@aethemarailabs/post/DX5xWqECmMm/embed"
                   scrolling="no"
-                  allowtransparency="true"
                 ></iframe>
               </div>
             </div>
