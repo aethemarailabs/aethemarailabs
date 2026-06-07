@@ -90,7 +90,6 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                   className="w-full h-[600px] border-0"
                   src="https://www.instagram.com/reel/DX9uaVuJzBe/embed/" 
                   scrolling="no"
-                  allowtransparency="true"
                 ></iframe>
               </div>
             </div>
