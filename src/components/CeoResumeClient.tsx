@@ -21,7 +21,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                 className="glass-panel glow-box p-6 rounded-xl border border-primary/5 flex flex-col items-center justify-center text-center gap-3 group min-h-[140px]"
               >
                 <span className="material-symbols-outlined text-primary text-3xl opacity-50 group-hover:opacity-100 transition-opacity">format_quote</span>
-                <h4 className="font-title-md text-lg sm:text-xl text-on-surface group-hover:text-primary transition-colors">{story.title}</h4>
+                <h4 className="font-title-md text-base xl:text-lg whitespace-nowrap overflow-hidden text-ellipsis text-on-surface group-hover:text-primary transition-colors">{story.title}</h4>
               </div>
             ))}
           </div>
