@@ -10,9 +10,9 @@ export default function Footer() {
             <Image 
               src="/logo_outline.png"
               alt="Aethemar Logo" 
-              width={200} 
-              height={200} 
-              className="h-[32px] w-auto mix-blend-screen opacity-90 object-contain" 
+              width={300} 
+              height={300} 
+              className="h-[36px] md:h-[56px] w-auto mix-blend-screen opacity-90 object-contain" 
               unoptimized
             />
             <span className="sr-only">aethemar ai labs</span>

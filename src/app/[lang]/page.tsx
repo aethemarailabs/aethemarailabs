@@ -13,7 +13,7 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
           alt="Aethemar Logo Glowing" 
           width={400} 
           height={130} 
-          className="h-24 md:h-32 w-auto mix-blend-screen opacity-90 object-contain"
+          className="h-16 sm:h-24 md:h-32 w-auto mix-blend-screen opacity-90 object-contain"
           unoptimized 
         />
         <div className="space-y-4">

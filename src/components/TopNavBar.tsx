@@ -40,7 +40,7 @@ export default function TopNavBar() {
                 alt="Aethemar Logo" 
                 width={300} 
                 height={300} 
-                className="h-[56px] w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
+                className="h-[32px] md:h-[56px] w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
                 unoptimized
               />
               <span className="sr-only">aethemar ai labs</span>

@@ -9,7 +9,7 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
     <>
       <section id="ceo" className="pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative min-h-[70vh] flex items-center">
       <div className="grid md:grid-cols-12 gap-gutter items-center w-full">
-        <div className="md:col-span-5 relative">
+        <div className="md:col-span-5 relative max-w-sm mx-auto md:max-w-none">
           <div className="rounded-xl overflow-hidden glass-panel glow-box p-2">
             <div className="w-full rounded-lg bg-surface-container-high relative overflow-hidden group">
               <img 
