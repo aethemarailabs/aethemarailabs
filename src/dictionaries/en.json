@@ -27,80 +27,38 @@
     "experience_title": "Professional Experience",
     "experience": [
       {
-        "period": "2024 - 2025",
-        "role": "Marketing Planning Team Leader",
-        "company": "YoonKang Law Firm",
-        "desc": "Directed omni-channel marketing operations, managed PR strategies, and oversaw external agencies.",
+        "period": "In-house CMO",
+        "role": "Chief Marketing Officer",
+        "company": "Legal & Medical Sectors",
+        "desc": "Directed omni-channel marketing strategies and managed external agencies for top-tier law firms and hospitals.",
         "details": [
-          "General management of online and offline marketing",
-          "Supervised agencies, planned and executed PR strategies",
-          "Analyzed advertising efficiency"
+          "Overall management of online and offline marketing strategies",
+          "Planned and operated YouTube channels (e.g., reached 20,000 subscribers in a short period)",
+          "Managed official blogs and SNS, executed paid advertising campaigns (SA)",
+          "Competitor analysis and brand identity development",
+          "Conducted primary client consultations and authored professional articles"
         ]
       },
       {
-        "period": "2024",
-        "role": "Legal Marketing Manager",
-        "company": "JCL Partners Law Office",
-        "desc": "Authored legal manuscripts, managed blog operations, designed websites, and conducted primary client consultations.",
-        "details": [
-          "Authored legal manuscripts for real estate, civil, criminal, and divorce cases",
-          "Blog posting, quality control, and design work",
-          "Conducted initial legal consultations for clients",
-          "Website creation and marketing strategy planning",
-          "Competitor and market analysis"
-        ]
-      },
-      {
-        "period": "2023 - 2024",
-        "role": "Marketing Manager",
-        "company": "Yeeun Animal Hospital",
-        "desc": "Spearheaded YouTube channel growth (achieved 20k subscribers in 6 months) and managed comprehensive SNS campaigns.",
-        "details": [
-          "Managed YouTube channel (filming, shorts editing, algorithm analysis, thumbnail planning, scriptwriting)",
-          "Directed SNS marketing (content planning and production)",
-          "Blog posting (manuscript writing and card news design)",
-          "Instagram posting, paid ads execution, event planning, and follower management",
-          "PR copywriting (professional profiles, brochures)",
-          "Competitor analysis and marketing idea generation"
-        ]
-      },
-      {
-        "period": "2023",
-        "role": "Marketing Manager",
-        "company": "Roadmap Law Firm",
-        "desc": "Crafted real estate legal marketing contents, newsletters based on success cases, and executed paid advertising.",
-        "details": [
-          "Authored real estate legal manuscripts and blog posts (e.g., lease disputes)",
-          "Created marketing content based on attorneys' success stories",
-          "Produced newsletters introducing success cases and legal updates",
-          "Managed official SNS (Instagram, Facebook, Blog)",
-          "Executed Naver Power Link paid advertisements",
-          "Website management (notices, PR articles, news)",
-          "Competitor analysis and marketing idea generation"
-        ]
-      },
-      {
-        "period": "2022.01 - 2023.05",
-        "role": "Licensed Real Estate Broker",
+        "period": "Real Estate",
+        "role": "Sales & PR Planning",
         "company": "Real Estate Agency",
-        "desc": "Produced promotional property videos, conducted client briefings, and managed inbound real estate sales.",
+        "desc": "Produced promotional property videos and managed inbound real estate sales and client briefings.",
         "details": [
-          "Drafted real estate contracts and confirmation documents",
-          "Produced property promotional videos (filming, editing, narration, scripting)",
-          "Client property briefings and home tours",
-          "Site visits, inbound client sales, and phone consultations (Seoul metropolitan area apartments)"
+          "Produced property promotional videos (filming, editing, scripting, and narration)",
+          "Conducted client property briefings and comprehensive home tours",
+          "Managed site visits, inbound client sales, and phone consultations"
         ]
       },
       {
-        "period": "2018.08 - 2021.04",
-        "role": "Administrator",
-        "company": "Association of University Environmental Safety",
-        "desc": "Managed government research projects, website operations, and internal magazine columns.",
+        "period": "Public Institute",
+        "role": "Administration",
+        "company": "Academic & Public Associations",
+        "desc": "Managed government research projects and authored internal magazine columns.",
         "details": [
-          "Executed government research projects (business plans, final reports, official documents)",
-          "Website operations and research fund management",
-          "Advertiser and member communication",
-          "Internal magazine column writing and photography"
+          "Executed government research projects (drafting business plans and official documents)",
+          "Website operations and member communications",
+          "Authored columns for the internal magazine"
         ]
       }
     ],
@@ -115,72 +73,39 @@
     "activities_title": "Key Activities & Education",
     "activities": [
       {
-        "title": "Class101 / PD Joo Eon-gyu Course",
-        "desc": "Completed 'How to Build a High-Earning YouTube Channel Fastest' course (Content planning, algorithm analysis) (2022.10 - 2023.05)"
+        "title": "SBS Stargram & Broadcast Appearances",
+        "desc": "Demonstrated public communication skills through multiple appearances as a beauty power blogger panelist and broadcast model."
       },
       {
-        "title": "LG Household & Health Care 'Mapsi Maker'",
-        "desc": "Planned global K-Beauty online promotional content and executed SNS marketing ideas. (2015.11 - 2016.03)"
+        "title": "LG Household & Health Care Global Marketer",
+        "desc": "Planned and produced online promotional content for K-Beauty brands, executing innovative fusion marketing ideas."
       },
       {
-        "title": "SBS Stargram Grammar Panel",
-        "desc": "Beauty power blogger panelist, executed blog and Instagram SNS marketing. (2015.11 - 2016.03)"
+        "title": "Class101 YouTube Channel Planning Course",
+        "desc": "Completed practical YouTube marketing courses covering content planning, algorithm analysis, and scriptwriting."
       },
       {
-        "title": "Bella Citta Social Marketer",
-        "desc": "Planned marketing events for cultural spaces, created multilingual online promotional content. (2012.07 - 2012.08)"
-      },
-      {
-        "title": "Universiade Ambassador",
-        "desc": "Planned marketing ideas, filmed promotional UCCs, and conducted press interviews. (2011.09 - 2012.02)"
-      },
-      {
-        "title": "Lotte Department Store Ambassador",
-        "desc": "Developed marketing ideas, hosted promotional events, and modeled for PR media. (2011.07 - 2011.12)"
-      },
-      {
-        "title": "Pusan National University Ambassador",
-        "desc": "Conducted campus tours, protocol execution, press interviews, and university newsletters. (2010.05 - 2012.02)"
-      },
-      {
-        "title": "Cornell University (US Overseas Program)",
-        "desc": "Invited by Cornell University with full funding from Pusan National Univ. for campus tours, research planning, and presentations. (2014.02 - 2014.03)"
-      },
-      {
-        "title": "Sogang University (Exchange)",
-        "desc": "Recognized 4-year degree credits. (2014.03 - 2014.08)"
-      },
-      {
-        "title": "Pusan National University",
-        "desc": "B.A. in Japanese Language and Literature, Minor in International Trade. (GPA 3.62/4.5)"
+        "title": "Cornell University Overseas Program",
+        "desc": "Invited to Cornell University to plan global research projects and deliver English presentations."
       }
     ],
     "intro_stories_title": "Philosophy & Mindset",
     "intro_stories": [
       {
-        "title": "Flexible Thinking, Mapsi Maker",
-        "desc": "As a global marketer for LG Household & Health Care, I proposed an innovative 2-in-1 beauty item by mixing eyeshadow with nail polish, earning recognition for limitless creative fusion.",
-        "full_desc": "As a global marketer for LG Household & Health Care, I planned and produced online marketing content to promote new products for the cosmetics division. I primarily created content aimed at global consumers, which was translated into Chinese and posted on the official website. However, as time went on, the manager mentioned that the plans from the 'Mapsi Makers' were often similar and overlapping, so I strived to come up with unique ideas. As a result, I submitted a proposal to mix skincare products with nail polish and lip tint, and the manager praised me for my creativity. I also marketed a 2-in-1 item by emphasizing a 1+1 function, such as mixing eyeshadow with nail polish or lipstick. This led to a diverse range of promotional proposals, and the manager was delighted, calling it an innovative approach they hadn't even considered. Given the honor of joining your company, I will faithfully fulfill my duties at every moment through a flexible mindset."
+        "title": "Flexible Creative Approach",
+        "desc": "Proposing innovative, boundary-breaking concepts that demonstrate exceptional creativity. We create limitless results with a flexible mindset that refuses to be boxed in."
       },
       {
-        "title": "Elevating Brand Value",
-        "desc": "During my time at 'Bella Citta', I pioneered house wedding services and drove multilingual SNS marketing that eventually secured a location sponsorship from KBS broadcasting.",
-        "full_desc": "While working as a marketer for Bella Citta, a landmark in Busan, I worked hard to promote the brand by reflecting customer feedback. Bella Citta is a complex cultural space consisting of a restaurant on the 1st floor, a gallery on the 2nd floor, and a banquet hall on the 3rd floor, so I believed it had a wide range of applications. Therefore, I actively sought to raise Bella Citta's profile by planning a house wedding service for customers wanting a special ceremony. I was also happy because the prospective couples felt as blissful as movie protagonists in the romantic space. Furthermore, I planned and produced online marketing content promoting Bella Citta and posted it on my personal SNS in English, Japanese, and Korean. A KBS broadcasting PD saw the post and requested a location sponsorship. As a result, the owner awarded me a certificate and a bonus, saying it greatly helped promote Bella Citta thanks to the exposure in the final episode of the popular drama 'Lovers of Haeundae'. I also felt a sense of accomplishment by having my creative planning skills recognized. Based on my experience as a creator and marketer in various fields, I now want to unleash my capabilities at your company!"
+        "title": "Planning that Amplifies Value",
+        "desc": "Driven by client feedback, we pioneer new services and lead explosive growth through multilingual marketing that even secures major broadcast sponsorships."
       },
       {
-        "title": "Cheerful, Bright, and Friendly",
-        "desc": "Through 12 major extracurricular activities, including being a university ambassador and KBS youth panelist, I developed exceptional communication skills and approachability.",
-        "full_desc": "Wanting to communicate with diverse people, I have proactively expanded my areas of activity. As a result, I developed the sociability to approach anyone first through 12 different extracurricular activities, including working as a corporate marketer in various fields. Additionally, as an ambassador for Pusan National University for two years, I improved my communication skills by planning official events and writing the campus newsletter. Furthermore, by participating in numerous TV recordings, such as being selected as a youth panelist for a KBS talk show and a demonstration model for domestic and international beauty broadcasts, I learned the art of conversation that opens others' ears and the power of listening. Living by my parents' teaching to 'go with all your heart wherever you go,' I always strive to greet everyone with a smile first and create a joyful atmosphere. Based on a bright, polite attitude and a sense of responsibility, I will be a cheerful worker who instills a favorable impression of your company."
+        "title": "Heart-Opening Communication",
+        "desc": "Honed through extensive extracurricular and broadcast panel experiences, we possess the power of articulation and active listening to truly engage others."
       },
       {
-        "title": "The Value of Collaborative Challenge",
-        "desc": "Leveraging my English and Japanese skills, I won first prize in an overseas challenge contest, leading to a fully-funded trip to Cornell University, learning to overcome crises with teamwork.",
-        "full_desc": "To communicate with people around the world in line with the global era, I learned English, Japanese, and other cultures. Through this, I challenged the 'PNU Overseas Challenge and Experience' contest with my colleagues and won the grand prize. At the time, it overlapped with the exam period, so I couldn't sleep properly for two weeks while juggling research and studies, but the thought of taking on a meaningful challenge gave me strength. There were difficult moments when we studied individually during the day and gathered at dawn to divide the workload, but we persevered through teamwork and passion thanks to mutual encouragement and consideration. As a result, we were invited by Cornell University, toured the campus, and experienced another culture firsthand. I was grateful for the hospitality we received from the foreigners who welcomed us, so I will emulate that kindness and extend warm goodwill to everyone I meet in the future. Furthermore, I want to be a diligent talent who overcomes crises with teamwork and passion during the working process."
-      },
-      {
-        "title": "Driven by a Challenging Spirit",
-        "desc": "When heavy rain threatened an outdoor busking event at Lotte Department Store, I pushed through by creating waterproof banners and actively promoting the event in the rain, demonstrating unyielding drive.",
-        "full_desc": "I give my utmost passion with a challenging spirit as my weapon in any unexpected situation. This happened when I planned and hosted a festival called 'Busking Day' as the team leader of the Lotte Department Store PR team. Since it was held outdoors in midsummer, we prepared fans as promotional items to cool off the customers, but it unexpectedly rained on the day of the event. I was flustered, but to make up for it, I created new waterproof banners just hours before the event. Furthermore, I put in manifold effort, such as wearing raincoats and running around in the rain with my colleagues as a team to promote the event. As a result, the outdoor event, which was almost canceled, could be held thanks to the many customers who visited, and I felt rewarded when customers were satisfied with the warm drinks provided instead of fans. Since it was an event held in the rain, there were moments of concern, but I was able to conclude the event successfully by striving to fulfill my responsibilities as a team leader. In addition, I felt grateful to my colleagues who didn't surrender to the environment and ran together until the end. Through this, I learned firsthand that there is nothing in the world that cannot be accomplished with a 'can-do' challenging spirit and the strongest teamwork."
+        "title": "Execution Beyond the Challenge",
+        "desc": "In times of crisis, a challenging spirit and teamwork shine brightest. We never give up, breaking through limitations with a positive mindset to lead projects to success."
       }
     ]
   },

@@ -18,15 +18,11 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
             {dict.intro_stories.map((story: any, idx: number) => (
               <div 
                 key={idx} 
-                className="glass-panel glow-box p-6 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300 flex flex-col gap-3 group cursor-pointer"
-                onClick={() => setSelectedExperience(story)}
+                className="glass-panel glow-box p-6 rounded-xl border border-primary/5 flex flex-col gap-3 group"
               >
                 <span className="material-symbols-outlined text-primary text-3xl opacity-50 group-hover:opacity-100 transition-opacity">format_quote</span>
                 <h4 className="font-title-md text-lg text-on-surface group-hover:text-primary transition-colors">{story.title}</h4>
                 <p className="font-body-sm text-base text-on-surface-variant leading-relaxed line-clamp-3">{story.desc}</p>
-                <p className="font-body-sm text-sm text-primary mt-auto pt-2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View Details <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </p>
               </div>
             ))}
           </div>
@@ -118,14 +114,10 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
               {dict.activities.map((item: any, idx: number) => (
                 <div 
                   key={idx} 
-                  className="glass-panel glow-box p-5 rounded-xl border border-primary/5 hover:border-primary/20 transition-all duration-300 group cursor-pointer"
-                  onClick={() => setSelectedExperience(item)}
+                  className="glass-panel glow-box p-5 rounded-xl border border-primary/5 group"
                 >
-                  <h4 className="font-title-md text-base text-on-surface mb-1 group-hover:text-primary transition-colors">{item.title}</h4>
-                  <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed line-clamp-2">{item.desc}</p>
-                  <p className="font-body-sm text-sm text-primary mt-3 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    View Details <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                  </p>
+                  <h4 className="font-title-md text-base text-on-surface mb-1">{item.title}</h4>
+                  <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
