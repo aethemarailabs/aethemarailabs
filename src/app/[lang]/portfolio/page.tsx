@@ -112,11 +112,25 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
           {/* Threads Embeds */}
           <div className="space-y-6 pb-12">
             <h3 className="font-title-md text-2xl text-primary">Threads Showcases</h3>
-            <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
               <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
                 <iframe
                   className="w-full h-[600px] border-0"
                   src="https://www.threads.net/@aethemarailabs/post/DX5xWqECmMm/embed"
+                  scrolling="no"
+                ></iframe>
+              </div>
+              <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
+                <iframe
+                  className="w-full h-[600px] border-0"
+                  src="https://www.threads.net/@aethemarailabs/post/DYFD5p2E7qN/embed"
+                  scrolling="no"
+                ></iframe>
+              </div>
+              <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
+                <iframe
+                  className="w-full h-[600px] border-0"
+                  src="https://www.threads.net/@aethemarailabs/post/DXt0-CACXbt/embed"
                   scrolling="no"
                 ></iframe>
               </div>
