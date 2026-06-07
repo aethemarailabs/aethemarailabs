@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getDictionary } from '@/dictionaries';
+import InsightImageCard from '@/components/InsightImageCard';
 
 export default async function PortfolioPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
   const { lang } = await params;
@@ -159,13 +160,10 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                   scrolling="no"
                 ></iframe>
               </div>
-              <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
-                <iframe
-                  className="w-full h-[600px] border-0"
-                  src="https://www.threads.net/@aethemarailabs/post/DYFD5p2E7qN/embed"
-                  scrolling="no"
-                ></iframe>
-              </div>
+              
+              {/* Insight Image replacing the 2nd thread */}
+              <InsightImageCard imageSrc="/insight1.jpg" altText="Post Insights Statistics" />
+
               <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
                 <iframe
                   className="w-full h-[600px] border-0"
