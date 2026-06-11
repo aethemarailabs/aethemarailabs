@@ -8,7 +8,7 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
 
   return (
     <>
-      <section id="ceo" className="pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative min-h-[70vh] flex items-center">
+      <section id="ceo" className="pt-24 pb-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
       <div className="grid md:grid-cols-12 gap-gutter items-center w-full">
         <div className="md:col-span-5 relative max-w-sm mx-auto md:max-w-none">
           <FadeIn direction="right" delay={0.1}>

@@ -7,7 +7,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
 
   return (
     <>
-      <div className="w-full mt-24">
+      <div className="w-full mt-8">
         <div className="grid md:grid-cols-2 gap-16">
           {/* Experience Timeline */}
           <div>
@@ -57,9 +57,10 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                         </h4>
                         <p className="font-body-sm text-sm text-on-surface-variant">{sns.desc}</p>
                         {sns.url && (
-                          <p className="font-body-sm text-sm text-primary mt-3 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                            View Channel <span className="material-symbols-outlined text-sm">open_in_new</span>
-                          </p>
+                          <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-bold group-hover:bg-primary group-hover:text-background transition-colors w-fit">
+                            <span className="material-symbols-outlined text-[14px]">ads_click</span>
+                            Click to View
+                          </div>
                         )}
                       </>
                     );
