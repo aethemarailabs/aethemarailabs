@@ -7,27 +7,6 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
 
   return (
     <>
-      {/* Philosophy & Stories Section */}
-      {dict.intro_stories && (
-        <div className="w-full mt-24">
-          <h3 className="font-title-md text-2xl text-primary mb-10 flex items-center gap-3">
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>psychology</span>
-            {dict.intro_stories_title}
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {dict.intro_stories.map((story: any, idx: number) => (
-              <div 
-                key={idx} 
-                className="glass-panel glow-box p-6 rounded-xl border border-primary/5 flex flex-col items-center justify-center text-center gap-3 group min-h-[140px]"
-              >
-                <span className="material-symbols-outlined text-primary text-3xl opacity-50 group-hover:opacity-100 transition-opacity">format_quote</span>
-                <h4 className="font-title-md text-base xl:text-lg whitespace-nowrap overflow-hidden text-ellipsis text-on-surface group-hover:text-primary transition-colors">{story.title}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       <div className="w-full mt-24">
         <div className="grid md:grid-cols-2 gap-16">
           {/* Experience Timeline */}
@@ -110,15 +89,46 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
               {dict.activities_title}
             </h3>
             <div className="space-y-4">
-              {dict.activities.map((item: any, idx: number) => (
-                <div 
-                  key={idx} 
-                  className="glass-panel glow-box p-5 rounded-xl border border-primary/5 group"
-                >
-                  <h4 className="font-title-md text-base text-on-surface mb-1">{item.title}</h4>
-                  <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+              {dict.activities.map((item: any, idx: number) => {
+                const content = (
+                  <>
+                    <h4 className="font-title-md text-base text-on-surface mb-1 group-hover:text-primary transition-colors">{item.title}</h4>
+                    <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed">{item.desc}</p>
+                    {item.url && (
+                      <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-bold group-hover:bg-primary group-hover:text-background transition-colors w-fit">
+                        <span className="material-symbols-outlined text-[14px]">ads_click</span>
+                        Click to View
+                      </div>
+                    )}
+                  </>
+                );
+
+                return item.url ? (
+                  <a 
+                    key={idx} 
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col sm:flex-row items-center sm:items-stretch glass-panel glow-box p-0 rounded-xl border border-primary/5 hover:border-primary/40 transition-all duration-300 group cursor-pointer overflow-hidden"
+                  >
+                    {item.image && (
+                      <div className="w-full sm:w-1/3 min-h-[140px] bg-surface-container relative overflow-hidden flex-shrink-0 border-b sm:border-b-0 sm:border-r border-primary/10">
+                        <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
+                      </div>
+                    )}
+                    <div className="p-5 flex-1 flex flex-col justify-center">
+                      {content}
+                    </div>
+                  </a>
+                ) : (
+                  <div 
+                    key={idx} 
+                    className="glass-panel glow-box p-5 rounded-xl border border-primary/5 group"
+                  >
+                    {content}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

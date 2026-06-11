@@ -12,14 +12,13 @@
     "name": "Lee Heekyung",
     "role": "CEO & Founder",
     "short_intro": [
-      "Appeared on multiple SBS broadcasts with the title of Beauty Power Blogger.",
-      "As a YouTube planner, grew a former employer's (medical clinic) channel to 20,000 subscribers in a short period.",
-      "Acted as a promotional ambassador and marketer for various brands as a beauty influencer.",
-      "As a content creator and marketing planning team leader, simultaneously utilized various SNS such as Instagram, YouTube, and Naver Blog for promotion, and closely followed the latest algorithm trends for each channel.",
-      "As a former practicing real estate broker in the Gangnam area, possesses excellent communication skills and sociability."
+      "Creative intuition forged through direct experience as a commercial model and beauty blogger",
+      "Cold, ROI-driven marketing insight proven as In-house CMO for 13 major law firms and hospitals",
+      "Led rapid growth of a YouTube channel to 20,000 subscribers as a content strategist",
+      "All-rounder expert covering marketing, strategy, branding, and sales communication"
     ],
-    "skills": ["Marketing", "PR", "Design", "Sales", "Branding", "Filming", "Strategic Planning", "YouTube", "Blog", "Instagram", "SNS", "Legal Consulting"],
-    "desc": "Bridging the analytical rigor of artificial intelligence with the creative intuition of high-end marketing. With a distinguished career as an in-house marketing director for leading hospitals and premier law firms, Lee Heekyung brings unparalleled expertise in navigating complex, trust-based industries.",
+    "skills": ["Marketing Director", "Strategic Planning", "Content Directing", "Sales Communication", "Branding", "YouTube/SNS Planning", "Ad Directing"],
+    "desc": "Bridging the analytical precision of artificial intelligence with the creative intuition of high-end marketing. Based on an unrivaled career built as an in-house marketing director (CMO) for 13 major law firms and hospitals, providing unmatched expertise in professional industries demanding high trust.",
     "mastery_title": "Corporate Mastery",
     "mastery_desc": "Strategic growth for medical and legal sectors.",
     "media_title": "Media Presence",
@@ -27,16 +26,16 @@
     "experience_title": "Professional Experience",
     "experience": [
       {
-        "period": "In-house CMO",
-        "role": "Chief Marketing Officer",
-        "company": "Legal & Medical Sectors",
-        "desc": "Directed omni-channel marketing strategies and managed external agencies for top-tier law firms and hospitals.",
+        "period": "13+ Institutions",
+        "role": "Marketing Director (CMO) & Team Leader",
+        "company": "Major Law Firms & Large Hospitals",
+        "desc": "A true 'In-house Expert' who has mastered everything from foundational staff operations to the highest executive responsibilities (CMO) overseeing online/offline marketing.",
         "details": [
-          "Overall management of online and offline marketing strategies",
-          "Planned and operated YouTube channels (e.g., reached 20,000 subscribers in a short period)",
-          "Managed official blogs and SNS, executed paid advertising campaigns (SA)",
-          "Competitor analysis and brand identity development",
-          "Conducted primary client consultations and authored professional articles"
+          "Served as Marketing Team Leader (Director) and core strategist for 9 major law firms in the Gangnam/Seocho districts",
+          "Served as Marketing Team Leader for 4 specialized clinics including Gangnam plastic surgery, large OB/GYN, and Seoul Nat'l Univ animal hospital",
+          "Directed comprehensive on/offline marketing strategies and supervised external agencies",
+          "Planned and operated YouTube channels (achieving 20,000 subscribers rapidly)",
+          "Managed official blogs, SNS, and executed paid search ads (SA)"
         ]
       },
       {
@@ -73,39 +72,32 @@
     "activities_title": "Key Activities & Education",
     "activities": [
       {
-        "title": "SBS Stargram & Broadcast Appearances",
-        "desc": "Demonstrated public communication skills through multiple appearances as a beauty power blogger panelist and broadcast model."
+        "title": "Appeared on SBS <Morning Wide>",
+        "desc": "Featured exclusively as a beauty power blogger/marketer, proving media communication capabilities.",
+        "url": "https://www.instagram.com/p/BIu36OMD_3b/?igsh=MXRqYXVxMjlteHl4Yg==",
+        "image": "/activities/sbs_morning.png"
       },
       {
-        "title": "LG Household & Health Care Global Marketer",
-        "desc": "Planned and produced online promotional content for K-Beauty brands, executing innovative fusion marketing ideas."
+        "title": "SBS PLUS <Stargram> Power Blogger Panel",
+        "desc": "Broadcast appearance as a fashion/beauty power blogger panelist alongside main MCs.",
+        "url": "https://www.instagram.com/p/BLyo5yfg7Yu/?igsh=a2hxbTM3NmE0azU1",
+        "image": "/activities/sbs_stargram.png"
       },
       {
-        "title": "Class101 YouTube Channel Planning Course",
-        "desc": "Completed practical YouTube marketing courses covering content planning, algorithm analysis, and scriptwriting."
+        "title": "Naver TV <Beauty Station The Show> & Commercial Model",
+        "desc": "Commercial marketing insights gained through activities as an advertising model and creator.",
+        "url": "https://www.instagram.com/p/-HOmhxQxuj/?igsh=c3dyc2ZybTNianJl",
+        "image": "/activities/naver_tv.png"
       },
       {
-        "title": "Cornell University Overseas Program",
-        "desc": "Invited to Cornell University to plan global research projects and deliver English presentations."
-      }
-    ],
-    "intro_stories_title": "Philosophy & Mindset",
-    "intro_stories": [
-      {
-        "title": "Flexible Creative Approach",
-        "desc": "Proposing innovative, boundary-breaking concepts that demonstrate exceptional creativity. We create limitless results with a flexible mindset that refuses to be boxed in."
+        "title": "Commercial Advertising Model Experience",
+        "desc": "Mastering the details of directing and production by understanding the dynamics in front of the camera as a model.",
+        "url": "https://www.instagram.com/p/BLy4TWvghY9/?igsh=MWhpYTR1MjF1emV2dA==",
+        "image": "/activities/ad_model.png"
       },
       {
-        "title": "Planning that Amplifies Value",
-        "desc": "Driven by client feedback, we pioneer new services and lead explosive growth through multilingual marketing that even secures major broadcast sponsorships."
-      },
-      {
-        "title": "Heart-Opening Communication",
-        "desc": "Honed through extensive extracurricular and broadcast panel experiences, we possess the power of articulation and active listening to truly engage others."
-      },
-      {
-        "title": "Execution Beyond the Challenge",
-        "desc": "In times of crisis, a challenging spirit and teamwork shine brightest. We never give up, breaking through limitations with a positive mindset to lead projects to success."
+        "title": "KBS <Golden Pond> Youth Panel",
+        "desc": "Demonstrated exceptional logic and eloquence through participation in a national broadcast debate program."
       }
     ]
   },
