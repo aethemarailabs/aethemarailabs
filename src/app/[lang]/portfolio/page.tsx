@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getDictionary } from '@/dictionaries';
-import InsightImageCard from '@/components/InsightImageCard';
 import FadeIn from '@/components/animations/FadeIn';
 
 export default async function PortfolioPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
@@ -154,8 +153,6 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                     scrolling="no"
                   ></iframe>
                 </div>
-                {/* Insight Image replacing the 5th Instagram post */}
-                <InsightImageCard imageSrc="/insight2.jpg" altText="Instagram Post Insights Statistics" />
                 <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
                   <iframe
                     className="w-full h-[600px] border-0"
@@ -180,9 +177,6 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                   ></iframe>
                 </div>
                 
-                {/* Insight Image replacing the 2nd thread */}
-                <InsightImageCard imageSrc="/insight1.jpg" altText="Post Insights Statistics" />
-
                 <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
                   <iframe
                     className="w-full h-[600px] border-0"

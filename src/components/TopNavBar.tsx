@@ -23,16 +23,18 @@ export default function TopNavBar() {
 
   const navLinks = [
     { name: 'Philosophy', href: `/${currentLang}` },
+    { name: 'Why Aethemar?', href: `/${currentLang}/why-aethemar` },
     { name: 'CEO', href: `/${currentLang}/ceo` },
     { name: 'Services', href: `/${currentLang}/services` },
     { name: 'Portfolio', href: `/${currentLang}/portfolio` },
+    { name: 'Achievements', href: `/${currentLang}/achievements` },
     { name: 'Contact', href: `/${currentLang}/contact` },
   ];
 
   return (
     <>
       <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-primary/15 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-        <div className="flex justify-center md:justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+        <div className="flex justify-center md:justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-[1440px] mx-auto">
           <Link href={`/${currentLang}`} className="flex items-center gap-3 group">
             <div className="font-display-lg text-title-md tracking-tighter text-primary flex items-center gap-2">
               <Image 
@@ -60,16 +62,13 @@ export default function TopNavBar() {
               );
             })}
           </div>
-          {/* Actions: Lang Toggle & Get Started */}
+          {/* Actions: Lang Toggle */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-2 font-label-caps text-sm tracking-widest text-on-surface-variant">
               <Link href={togglePath('en')} className={`transition-colors hover:text-primary ${currentLang === 'en' ? 'text-primary drop-shadow-[0_0_5px_rgba(212,175,55,0.5)]' : ''}`}>EN</Link>
               <span>|</span>
               <Link href={togglePath('ko')} className={`transition-colors hover:text-primary ${currentLang === 'ko' ? 'text-primary drop-shadow-[0_0_5px_rgba(212,175,55,0.5)]' : ''}`}>KOR</Link>
             </div>
-            <Link href={`/${currentLang}/contact`} className="bg-primary text-on-primary font-label-caps px-6 py-3 rounded-DEFAULT hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all active:scale-95 duration-200 uppercase tracking-widest">
-              Get Started
-            </Link>
           </div>
           <button 
             className="md:hidden text-primary"
@@ -103,13 +102,6 @@ export default function TopNavBar() {
             <span>|</span>
             <Link href={togglePath('ko')} onClick={() => setIsMobileMenuOpen(false)} className={`transition-colors hover:text-primary ${currentLang === 'ko' ? 'text-primary drop-shadow-[0_0_5px_rgba(212,175,55,0.5)]' : ''}`}>KOR</Link>
           </div>
-          <Link 
-            href={`/${currentLang}/contact`} 
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-4 bg-primary text-on-primary font-label-caps px-10 py-4 rounded-DEFAULT hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all active:scale-95 duration-200 uppercase tracking-widest text-lg"
-          >
-            Get Started
-          </Link>
         </div>
       )}
     </>

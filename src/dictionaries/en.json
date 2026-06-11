@@ -3,9 +3,9 @@
     "title1": "Imagine Anything.",
     "title2": "Create Everything.",
     "subtitle": "The Fifth Element",
-    "desc1": "In ancient philosophy, Aether was considered the fifth element—the absolute medium that fills the universe and transmits light. Just as modern science posits invisible energy to explain the order and gravity of the cosmos, Aether is the essential medium that connects all things and transmits energy.",
-    "desc2": "Aethemar originates from this grand concept. We are not just an agency; we aim to be the 'most powerful invisible medium' that helps your brand's unique light and potential reach everywhere. Through AI technology, the modern Aether, we create limitless connections and growth.",
-    "desc3": "A name born by adding the strategic edge of Marketing to the infinite expandability of Aether: Aethemar. Just as light traverses the universe, we design an unparalleled path for your brand to shine brilliantly at the center of the world using the most innovative technologies and sharp insights."
+    "desc1": "In ancient philosophy, <strong>Aether</strong> was considered the absolute medium and the fifth element that fills the universe and transmits light. Just as modern science posits invisible energy to explain cosmic order, Aether is the essential medium that connects everything.",
+    "desc2": "<strong>Aethemar</strong> was born by combining this vast concept with <strong>cutting-edge AI technology</strong>. We perfectly replace the imperfect, high-cost 'traditional human teams'. By utilizing top-tier AI Agents as our tireless teammates, we become the <strong>'most powerful and intelligent medium'</strong> that helps your brand expand across the world.",
+    "desc3": "<strong>The name Aethemar is born from adding the strategic edge of Marketing to the infinite scalability of Aether.</strong> The fusion of a single brilliant Control Tower (CEO) and an AI organization with overwhelming performance. This is why we can design an exclusive path for your brand to shine brighter and faster than a 10-person in-house team."
   },
   "ceo": {
     "leadership": "Leadership",
@@ -110,20 +110,87 @@
     ]
   },
   "services": {
-    "title": "Our Capabilities",
-    "subtitle": "Precision engineering meets limitless creativity. We architect digital dominance.",
-    "card1_title": "Marketing Agency",
-    "card1_desc": "Data-driven marketing architectures designed for elite conversion. We don't just run campaigns; we build self-sustaining ecosystems of brand authority.",
-    "card1_items": ["AI-Optimized Strategy", "High-Ticket Lead Generation", "Brand Positioning"],
-    "card2_title": "SW Development",
-    "card2_desc": "Bespoke application and web development tailored for scale. We engineer digital products that serve as the technological backbone of your enterprise.",
-    "card2_items": ["Native App Architecture", "Web Platforms & Portals", "AI Integration & Automation"],
-    "card3_title": "AI Commercials",
-    "card3_desc": "We produce high-end brand commercial videos that transcend physical limits using cutting-edge generative AI models.",
-    "card3_items": ["AI Video Generation", "Visual FX & Compositing", "Cinematic Storytelling"]
+    "title": "Aethemar AI Team Line-up",
+    "subtitle": "From marketing to development and ad production. Hire an entire perfect team combining the best AI Agents with a human Control Tower.",
+    "teams": [
+      {
+        "id": "marketing",
+        "title": "AI Marketing Team",
+        "desc": "Data-driven marketing architecture for ultra-high conversions. Building an ecosystem of self-sustaining brand authority.",
+        "director": "Lee Heekyung CEO & CMO",
+        "members": ["Copywriter AI", "Media Buyer AI", "Data Analyst AI"],
+        "items": ["High-Involvement Targeting", "SEO & Performance Ads", "Premium Brand Positioning"],
+        "icon": "campaign"
+      },
+      {
+        "id": "development",
+        "title": "AI SW Development Team",
+        "desc": "Custom web and app development optimized for business expansion. Engineering the perfect digital products for your business.",
+        "director": "CTO (Chief Technology Officer)",
+        "members": ["Frontend Architect AI", "Backend System AI", "QA Tester AI"],
+        "items": ["Native App Architecture", "Enterprise Web Platforms", "AI Chatbot Integration"],
+        "icon": "terminal"
+      },
+      {
+        "id": "production",
+        "title": "AI Ad Production Team",
+        "desc": "Producing high-end brand commercial videos that transcend physical limits using state-of-the-art generative AI models.",
+        "director": "Creative Director",
+        "members": ["Prompt Engineer AI", "Video Generator AI", "Sound Editor AI"],
+        "items": ["Generative AI Commercials", "Cinematic Promo Videos", "Mass Short-form Production"],
+        "icon": "movie"
+      }
+    ]
   },
   "portfolio": {
     "title": "Aethemar's Creations",
     "subtitle": "Connect with our constellation of insights."
+  },
+  "achievements": {
+    "title": "Achievements",
+    "subtitle": "Our undeniable results, proven by numbers."
+  },
+  "why_aethemar": {
+    "badge": "Why Aethemar?",
+    "title1": "Shattering the Illusion of",
+    "title2": "In-house Marketing Teams.",
+    "subtitle": "Half the cost, 10x the performance. Aethemar's AI Agent outsourcing model redefines marketing standards.",
+    "traditional_team": {
+      "title": "Traditional In-house Team",
+      "director": "Hospital / Law Firm Director",
+      "leader": "Marketing Manager",
+      "members": ["Content Marketer", "Visual Designer", "Performance Marketer"],
+      "pain_points": ["High Fixed Labor Costs", "Labor Law Liabilities", "Management Stress", "Turnover Burden"]
+    },
+    "aethemar_team": {
+      "title": "Aethemar AI Agent Team",
+      "director": "Hospital / Law Firm Director",
+      "leader": "Lee Heekyung CEO (Control Tower)",
+      "members": ["Copywriter AI", "Design AI", "Media Buyer AI"],
+      "benefits": ["Unbeatable ROI", "0% HR Risk", "24/7 Data-driven", "Top-tier Strategy"]
+    },
+    "details": [
+      {
+        "title": "1. Shattering the Illusion of In-house Marketing Teams",
+        "label1": "Reality",
+        "desc1": "Many hospital directors and law firm partners dream of a dedicated in-house marketing team.\n\nBut the reality?\nEnormous fixed monthly labor costs, rigid labor laws making it hard to manage underperforming staff, and the agonizing stress of constant management.",
+        "label2": "Solution",
+        "desc2": "Aethemar reduces human-related risks (turnover, slacking, labor laws, emotional drain) to 0%.\n\nOur top-tier AI Agents work tirelessly without complaints, proving their worth purely through data and results to become your perfect in-house team."
+      },
+      {
+        "title": "2. Perfect Control Tower + Specialized AI",
+        "label1": "Ideal Structure",
+        "desc1": "The most perfect and cost-effective structure is:\n[Top Agencies in each field + 1 Competent Team Leader to manage them].",
+        "label2": "Our Proposal",
+        "desc2": "CEO Lee Heekyung becomes your 'Single Perfect Control Tower'.\n\nThe roles of SEO, Ads, and Design agencies are executed by our specialized AI Agents. You only communicate with the CEO and receive the final results without managing multiple staff."
+      },
+      {
+        "title": "3. Half the Cost, 10x the Performance",
+        "label1": "Traditional Cost Structure",
+        "desc1": "Maintaining a standard 5-person in-house team requires enormous fixed monthly expenses and risks.\n\nThis includes salaries, severance pay, insurance, and office space overhead.",
+        "label2": "Aethemar's Hyper-Efficiency",
+        "desc2": "For less than half that budget, hire 24/7 AI Agents and the top-tier strategic mind of our CEO.\n\nOutsourcing your entire marketing to Aethemar is the smartest business decision for your hospital or law firm."
+      }
+    ]
   }
 }

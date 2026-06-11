@@ -6,11 +6,15 @@ import { usePathname } from 'next/navigation';
 export default function MobileBottomNav() {
   const pathname = usePathname();
 
+  const currentLang = pathname.startsWith('/en') ? 'en' : 'ko';
+
   const navItems = [
-    { name: 'Home', href: '/', icon: 'home' },
-    { name: 'CEO', href: '/ceo', icon: 'person' },
-    { name: 'Services', href: '/services', icon: 'widgets' },
-    { name: 'Contact', href: '/contact', icon: 'mail' },
+    { name: 'Philosophy', href: `/${currentLang}`, icon: 'home' },
+    { name: 'Why Aethemar?', href: `/${currentLang}/why-aethemar`, icon: 'question_mark' },
+    { name: 'CEO', href: `/${currentLang}/ceo`, icon: 'person' },
+    { name: 'Services', href: `/${currentLang}/services`, icon: 'widgets' },
+    { name: 'Achievements', href: `/${currentLang}/achievements`, icon: 'insights' },
+    { name: 'Contact', href: `/${currentLang}/contact`, icon: 'mail' },
   ];
 
   return (
