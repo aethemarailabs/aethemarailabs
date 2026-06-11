@@ -183,6 +183,88 @@
         "label2": "Aethemar's Hyper-Efficiency",
         "desc2": "For less than half that budget, hire 24/7 AI Agents and the top-tier strategic mind of our CEO.\n\nOutsourcing your entire marketing to Aethemar is the smartest business decision for your hospital or law firm."
       }
-    ]
+    ],
+    "deep_dive": {
+      "badge": "Deep Dive",
+      "title": "In-house Blueprint & AI Mapping Strategy",
+      "subtitle": "Discover how typical hospital and law firm marketing teams are structured, and how Aethemar innovates this with AI.",
+      "structures": {
+        "hospital": {
+          "title": "Hospital In-house Marketing Team",
+          "desc": "Visual outputs (Before/After) and patient reviews are crucial. Fast, trendy marketing synchronized with clinic events is essential.",
+          "roles": [
+            {
+              "name": "Marketing Director",
+              "tasks": ["Set main procedures and revenue goals with medical staff", "Allocate budget and establish strategies"]
+            },
+            {
+              "name": "Content Marketer",
+              "tasks": ["Blog posting that complies with medical laws", "Instagram planning and medical column writing"]
+            },
+            {
+              "name": "Performance Marketer",
+              "tasks": ["Search ads and place ad bidding management", "SNS sponsored ads setup and ROAS analysis"]
+            },
+            {
+              "name": "Visual Designer",
+              "tasks": ["Design banners, landing pages, and promo materials", "Film and edit YouTube Shorts/Reels"]
+            },
+            {
+              "name": "CRM Marketer",
+              "tasks": ["Plan notification messages", "Plan promotions to induce return visits"]
+            }
+          ]
+        },
+        "lawfirm": {
+          "title": "Law Firm In-house Marketing Team",
+          "desc": "Expertise and trust are paramount. High-efficiency keyword targeting and professional 'winning case' contents are core.",
+          "roles": [
+            {
+              "name": "Marketing Director",
+              "tasks": ["Strategy meetings with partners, setting focus areas", "Manage legal compliance risks and direct campaigns"]
+            },
+            {
+              "name": "SEO Content Marketer",
+              "tasks": ["Blog posts explaining winning cases clearly", "Meticulous SEO optimization for search engines"]
+            },
+            {
+              "name": "DB Marketer",
+              "tasks": ["Manage bids for high-cost keywords by time slot", "Plan landing pages for lead generation A/B testing"]
+            },
+            {
+              "name": "Web Designer",
+              "tasks": ["Create trustworthy and highly readable detail pages", "Retouch lawyer profile photos and design cards"]
+            }
+          ]
+        }
+      },
+      "mapping": {
+        "title": "Aethemar AI Labs Mapping Strategy",
+        "subtitle": "We modularize these specialized human roles into top-tier AI Agents for complete automation.",
+        "agents": [
+          {
+            "name": "Marketing Director",
+            "ai": "Lee Heekyung CEO",
+            "desc": "Directs all AI agents: 'This client is a Gangnam clinic, focusing on lifting. Budget is $10k. Generate content.' Conducts final approval."
+          },
+          {
+            "name": "Content Agent",
+            "ai": "Copywriter AI",
+            "desc": "Configured with specific prompts for law firms and hospitals. Automatically writes SEO-optimized posts daily adhering to guidelines."
+          },
+          {
+            "name": "Performance Agent",
+            "ai": "Media Buyer AI",
+            "desc": "An automated bot that analyzes ad performance data, automatically adjusts bids, and turns off underperforming creatives."
+          },
+          {
+            "name": "Creative Agent",
+            "ai": "Design & Video AI",
+            "desc": "A generative AI that instantly creates ad thumbnails and short-form videos (Shorts/Reels) based on text prompts."
+          }
+        ],
+        "conclusion": "Traditionally, building a team of this caliber costs $15,000 to $30,000 per month. Aethemar AI Labs automates this, offering full-stack in-house marketing at a disruptive cost."
+      }
+    }
   }
 }
