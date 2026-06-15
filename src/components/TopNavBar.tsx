@@ -34,7 +34,7 @@ export default function TopNavBar() {
   return (
     <>
       <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-primary/15 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
-        <div className="flex justify-center md:justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-[1440px] mx-auto">
+        <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 md:py-6 max-w-[1440px] mx-auto">
           <Link href={`/${currentLang}`} className="flex items-center gap-3 group">
             <div className="font-display-lg text-title-md tracking-tighter text-primary flex items-center gap-2">
               <Image 
@@ -42,7 +42,7 @@ export default function TopNavBar() {
                 alt="Aethemar Logo" 
                 width={300} 
                 height={300} 
-                className="h-[32px] md:h-[56px] w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
+                className="h-[40px] md:h-[56px] w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
                 unoptimized
               />
               <span className="sr-only">aethemar ai labs</span>

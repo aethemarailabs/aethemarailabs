@@ -9,13 +9,13 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
   return (
     <>
       <section id="ceo" className="pt-24 pb-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
-      <div className="grid md:grid-cols-12 gap-gutter items-center w-full">
+      <div className="grid md:grid-cols-12 gap-10 md:gap-16 items-center w-full">
         <div className="md:col-span-5 relative max-w-sm mx-auto md:max-w-none">
           <FadeIn direction="right" delay={0.1}>
             <div className="rounded-xl overflow-hidden glass-panel glow-box p-2">
               <div className="w-full rounded-lg bg-surface-container-high relative overflow-hidden group">
                 <img 
-                  src="/ceo_profile.png" 
+                  src="/ceo_profile_silhouette.png" 
                   alt="CEO Lee Heekyung" 
                   className="w-full h-auto opacity-80 group-hover:opacity-100 transition-opacity duration-700 mix-blend-luminosity block" 
                 />
@@ -31,17 +31,17 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
               <div className="font-label-caps text-primary tracking-widest uppercase mb-4 flex items-center gap-2">
                 <span className="w-8 h-[1px] bg-primary"></span> {dict.ceo.leadership}
               </div>
-              <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-2">{dict.ceo.name}</h2>
+              <h2 className="font-headline-lg text-4xl md:text-5xl lg:text-6xl mb-2 leading-tight tracking-tight">{dict.ceo.name}</h2>
               <p className="font-body-lg text-primary opacity-80">{dict.ceo.role}</p>
             </div>
           </FadeIn>
           
           <FadeIn direction="left" delay={0.3}>
-            <div className="space-y-6 font-body-sm text-on-surface-variant text-lg">
+            <div className="space-y-6 font-body-sm text-on-surface-variant text-base md:text-lg">
               <p className="font-body-lg text-primary/90">{dict.ceo.desc}</p>
               
               {dict.ceo.short_intro && (
-                <ul className="space-y-3 font-body-sm text-on-surface-variant text-base mt-4">
+                <ul className="space-y-3 font-body-sm text-on-surface-variant text-sm md:text-base mt-4">
                   {dict.ceo.short_intro.map((intro: string, idx: number) => (
                     <li key={idx} className="flex gap-3">
                       <span className="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">check</span>

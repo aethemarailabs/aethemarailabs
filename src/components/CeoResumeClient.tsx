@@ -8,14 +8,14 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
   return (
     <>
       <div className="w-full mt-8">
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           {/* Experience Timeline */}
           <div>
             <h3 className="font-title-md text-2xl text-primary mb-10 flex items-center gap-3">
               <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>work</span>
               {dict.experience_title}
             </h3>
-            <div className="border-l border-primary/20 pl-8 space-y-12 ml-2">
+            <div className="border-l border-primary/20 pl-6 md:pl-8 space-y-8 md:space-y-12 ml-2">
               {dict.experience.map((item: any, idx: number) => (
                 <div 
                   key={idx} 
@@ -113,7 +113,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                     className="flex flex-col sm:flex-row items-center sm:items-stretch glass-panel glow-box p-0 rounded-xl border border-primary/5 hover:border-primary/40 transition-all duration-300 group cursor-pointer overflow-hidden"
                   >
                     {item.image && (
-                      <div className="w-full sm:w-1/3 min-h-[140px] bg-surface-container relative overflow-hidden flex-shrink-0 border-b sm:border-b-0 sm:border-r border-primary/10">
+                      <div className="w-full sm:w-1/3 aspect-video sm:aspect-auto sm:min-h-[140px] bg-surface-container relative overflow-hidden flex-shrink-0 border-b sm:border-b-0 sm:border-r border-primary/10">
                         <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
                       </div>
                     )}
@@ -139,7 +139,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
       {selectedExperience && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-background/80 backdrop-blur-sm" onClick={() => setSelectedExperience(null)}>
           <div 
-            className="w-full max-w-2xl bg-surface-container border border-primary/20 rounded-2xl p-6 sm:p-10 shadow-[0_0_40px_rgba(212,175,55,0.15)] relative overflow-y-auto max-h-[90vh]"
+            className="w-full max-w-2xl bg-surface-container border border-primary/20 rounded-2xl p-5 sm:p-10 shadow-[0_0_40px_rgba(212,175,55,0.15)] relative overflow-y-auto max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
