@@ -17,7 +17,8 @@ export default function MobileBottomNav() {
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-t border-primary/15 pb-safe pt-2 px-3 flex justify-between items-center shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
+    <div className="md:hidden fixed inset-x-0 bottom-0 z-[9999] w-full transform-none">
+      <nav className="bg-surface/90 backdrop-blur-xl border-t border-primary/15 pb-safe pt-2 px-3 flex justify-between items-center shadow-[0_-5px_15px_rgba(0,0,0,0.5)] w-full">
       {navItems.map((item) => {
         const isActive = pathname === item.href || pathname === item.href + '/';
         return (
@@ -36,6 +37,7 @@ export default function MobileBottomNav() {
           </Link>
         );
       })}
-    </nav>
+      </nav>
+    </div>
   );
 }
