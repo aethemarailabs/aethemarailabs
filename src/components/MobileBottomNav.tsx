@@ -14,7 +14,6 @@ export default function MobileBottomNav() {
     { name: 'Services', href: `/${currentLang}/services`, icon: 'widgets' },
     { name: 'Portfolio', href: `/${currentLang}/portfolio`, icon: 'view_carousel' },
     { name: 'Achievements', href: `/${currentLang}/achievements`, icon: 'insights' },
-    { name: 'Contact', href: `/${currentLang}/contact`, icon: 'mail' },
   ];
 
   return (
