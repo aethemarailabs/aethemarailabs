@@ -17,8 +17,8 @@ export default function MobileBottomNav() {
   ];
 
   return (
-    <div className="md:hidden fixed inset-x-0 bottom-0 z-[9999] w-full transform-none">
-      <nav className="bg-surface/90 backdrop-blur-xl border-t border-primary/15 pb-safe pt-2 px-3 flex justify-between items-center shadow-[0_-5px_15px_rgba(0,0,0,0.5)] w-full">
+    <div className="md:hidden fixed inset-x-0 bottom-0 z-[9999] w-full" style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}>
+      <nav className="bg-surface border-t border-primary/15 pb-safe pt-2 px-3 flex justify-between items-center shadow-[0_-5px_15px_rgba(0,0,0,0.8)] w-full will-change-transform">
       {navItems.map((item) => {
         const isActive = pathname === item.href || pathname === item.href + '/';
         return (
