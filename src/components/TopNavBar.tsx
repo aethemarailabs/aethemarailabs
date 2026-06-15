@@ -62,22 +62,23 @@ export default function TopNavBar() {
               );
             })}
           </div>
-          {/* Actions: Lang Toggle */}
-          <div className="hidden md:flex items-center gap-6">
-            <div className="flex items-center gap-2 font-label-caps text-sm tracking-widest text-on-surface-variant">
+          {/* Actions: Lang Toggle and Menu */}
+          <div className="flex items-center gap-4 md:gap-6">
+            <div className="flex items-center gap-2 font-label-caps text-xs md:text-sm tracking-widest text-on-surface-variant">
               <Link href={togglePath('en')} className={`transition-colors hover:text-primary ${currentLang === 'en' ? 'text-primary drop-shadow-[0_0_5px_rgba(212,175,55,0.5)]' : ''}`}>EN</Link>
               <span>|</span>
               <Link href={togglePath('ko')} className={`transition-colors hover:text-primary ${currentLang === 'ko' ? 'text-primary drop-shadow-[0_0_5px_rgba(212,175,55,0.5)]' : ''}`}>KOR</Link>
             </div>
+            
+            <button 
+              className="md:hidden text-primary flex items-center"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                {isMobileMenuOpen ? 'close' : 'menu'}
+              </span>
+            </button>
           </div>
-          <button 
-            className="md:hidden text-primary"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-              {isMobileMenuOpen ? 'close' : 'menu'}
-            </span>
-          </button>
         </div>
       </nav>
 
