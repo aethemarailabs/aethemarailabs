@@ -9,15 +9,15 @@ export default function MobileBottomNav() {
   const currentLang = pathname.startsWith('/en') ? 'en' : 'ko';
 
   const navItems = [
-    { name: 'Why Aethemar?', href: `/${currentLang}/why-aethemar`, icon: 'question_mark' },
+    { name: 'WHY US', href: `/${currentLang}/why-aethemar`, icon: 'question_mark' },
     { name: 'CEO', href: `/${currentLang}/ceo`, icon: 'person' },
-    { name: 'Services', href: `/${currentLang}/services`, icon: 'widgets' },
-    { name: 'Portfolio', href: `/${currentLang}/portfolio`, icon: 'view_carousel' },
-    { name: 'Achievements', href: `/${currentLang}/achievements`, icon: 'insights' },
+    { name: 'SERVICE', href: `/${currentLang}/services`, icon: 'widgets' },
+    { name: 'WORKS', href: `/${currentLang}/portfolio`, icon: 'view_carousel' },
+    { name: 'AWARDS', href: `/${currentLang}/achievements`, icon: 'insights' },
   ];
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-t border-primary/15 pb-safe pt-2 px-6 flex justify-between items-center shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
+    <nav className="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-t border-primary/15 pb-safe pt-2 px-3 flex justify-between items-center shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
       {navItems.map((item) => {
         const isActive = pathname === item.href;
         return (
