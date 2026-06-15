@@ -9,10 +9,10 @@ export default function MobileBottomNav() {
   const currentLang = pathname.startsWith('/en') ? 'en' : 'ko';
 
   const navItems = [
-    { name: 'Philosophy', href: `/${currentLang}`, icon: 'home' },
     { name: 'Why Aethemar?', href: `/${currentLang}/why-aethemar`, icon: 'question_mark' },
     { name: 'CEO', href: `/${currentLang}/ceo`, icon: 'person' },
     { name: 'Services', href: `/${currentLang}/services`, icon: 'widgets' },
+    { name: 'Portfolio', href: `/${currentLang}/portfolio`, icon: 'view_carousel' },
     { name: 'Achievements', href: `/${currentLang}/achievements`, icon: 'insights' },
     { name: 'Contact', href: `/${currentLang}/contact`, icon: 'mail' },
   ];
