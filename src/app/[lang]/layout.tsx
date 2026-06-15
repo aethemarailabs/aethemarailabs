@@ -43,7 +43,7 @@ export default async function RootLayout({
           />
         </div>
         <TopNavBar />
-        <main className="flex-grow pt-24">
+        <main className="flex-grow pt-24 w-full overflow-x-hidden">
           {children}
         </main>
         <MobileBottomNav />
