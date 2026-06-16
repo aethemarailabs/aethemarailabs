@@ -24,7 +24,7 @@ export default function TopNavBar() {
   const navLinks = [
     { name: 'Philosophy', href: `/${currentLang}` },
     { name: 'Why Aethemar?', href: `/${currentLang}/why-aethemar` },
-    { name: 'CEO', href: `/${currentLang}/ceo` },
+    // { name: 'CEO', href: `/${currentLang}/ceo` },
     { name: 'Services', href: `/${currentLang}/services` },
     { name: 'Portfolio', href: `/${currentLang}/portfolio` },
     { name: 'Achievements', href: `/${currentLang}/achievements` },
