@@ -11,7 +11,7 @@ export default async function AchievementsPage({ params }: { params: Promise<{ l
       <div className="flex flex-col items-center text-center space-y-12 w-full mb-16">
         <FadeIn direction="up" delay={0.1}>
           <div className="space-y-4">
-            <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">{dict.achievements.title}</h2>
+            <h2 className="font-headline-lg text-4xl md:text-5xl text-primary glow-text uppercase tracking-wider">{dict.achievements.title}</h2>
             <p className="font-body-lg text-on-surface-variant max-w-3xl mx-auto">{dict.achievements.subtitle}</p>
           </div>
         </FadeIn>

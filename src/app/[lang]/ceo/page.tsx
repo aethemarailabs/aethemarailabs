@@ -31,7 +31,7 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
               <div className="font-label-caps text-primary tracking-widest uppercase mb-4 flex items-center gap-2">
                 <span className="w-8 h-[1px] bg-primary"></span> {dict.ceo.leadership}
               </div>
-              <h2 className="font-headline-lg text-4xl md:text-5xl lg:text-6xl mb-2 leading-tight tracking-tight">{dict.ceo.name}</h2>
+              <h2 className="font-headline-lg text-3xl md:text-4xl lg:text-5xl mb-2 leading-tight tracking-tight">{dict.ceo.name}</h2>
               <p className="font-body-lg text-primary opacity-80">{dict.ceo.role}</p>
             </div>
           </FadeIn>
