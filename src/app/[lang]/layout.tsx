@@ -14,6 +14,28 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Aethemar AI Labs | Imagine Anything. Create Everything.",
   description: "Aethemar AI Labs - Marketing agency & SW development",
+  openGraph: {
+    title: "Aethemar AI Labs",
+    description: "Imagine Anything. Create Everything.",
+    url: "https://aethemar.com", // Replace with actual domain later if needed
+    siteName: "Aethemar AI Labs",
+    images: [
+      {
+        url: "/og_image.png", // The newly attached image
+        width: 1000,
+        height: 1000,
+        alt: "Aethemar AI Labs Logo",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aethemar AI Labs",
+    description: "Imagine Anything. Create Everything.",
+    images: ["/og_image.png"],
+  },
 };
 
 export async function generateStaticParams() {
