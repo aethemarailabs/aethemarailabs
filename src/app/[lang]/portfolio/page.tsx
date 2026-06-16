@@ -128,6 +128,20 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                 <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
                   <iframe
                     className="w-full h-[600px] border-0"
+                    src="https://www.instagram.com/p/DZplSkypVpP/embed/" 
+                    scrolling="no"
+                  ></iframe>
+                </div>
+                <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
+                  <iframe
+                    className="w-full h-[600px] border-0"
+                    src="https://www.instagram.com/p/DZplNp7pOlM/embed/" 
+                    scrolling="no"
+                  ></iframe>
+                </div>
+                <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
+                  <iframe
+                    className="w-full h-[600px] border-0"
                     src="https://www.instagram.com/p/DZMoKBARQZ5/embed/" 
                     scrolling="no"
                   ></iframe>
@@ -150,13 +164,6 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                   <iframe
                     className="w-full h-[600px] border-0"
                     src="https://www.instagram.com/p/DXq-NHVEVxJ/embed/" 
-                    scrolling="no"
-                  ></iframe>
-                </div>
-                <div className="w-full max-w-md rounded-xl overflow-hidden glass-panel glow-box bg-white">
-                  <iframe
-                    className="w-full h-[600px] border-0"
-                    src="https://www.instagram.com/p/DX5T0G1kiM8/embed/" 
                     scrolling="no"
                   ></iframe>
                 </div>
