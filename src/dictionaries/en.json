@@ -158,9 +158,9 @@
     "aethemar_team": {
       "title": "Aethemar AI Agent Team",
       "director": "Hospital / Law Firm Director",
-      "leader": "Lee Heekyung CEO (Control Tower)",
+      "leader": "CEO & CMO (Control Tower)",
       "members": ["Copywriter AI", "Design AI", "Media Buyer AI"],
-      "benefits": ["Unbeatable ROI", "0% HR Risk", "24/7 Data-driven", "Top-tier Strategy"]
+      "benefits": ["Overwhelming Cost-Efficiency", "0% HR Risk", "24/7 Data-Driven Operations", "Top-Tier Strategic Integration"]
     },
     "details": [
       {
@@ -175,7 +175,7 @@
         "label1": "Ideal Structure",
         "desc1": "The most perfect and cost-effective structure is:\n[Top Agencies in each field + 1 Competent Team Leader to manage them].",
         "label2": "Our Proposal",
-        "desc2": "CEO Lee Heekyung becomes your 'Single Perfect Control Tower'.\n\nThe roles of SEO, Ads, and Design agencies are executed by our specialized AI Agents. You only communicate with the CEO and receive the final results without managing multiple staff."
+        "desc2": "The CEO & CMO becomes your 'Single Perfect Control Tower'.\n\nThe roles of SEO, Ads, and Design agencies are executed by our specialized AI Agents. You only communicate with the CEO & CMO and receive the final results without managing multiple staff."
       },
       {
         "title": "3. Half the Cost, 10x the Performance",
@@ -245,7 +245,7 @@
         "agents": [
           {
             "name": "Marketing Director",
-            "ai": "Lee Heekyung CEO",
+            "ai": "CEO & CMO",
             "desc": "Directs all AI agents: 'This client is a Gangnam clinic, focusing on lifting. Budget is $10k. Generate content.' Conducts final approval."
           },
           {
