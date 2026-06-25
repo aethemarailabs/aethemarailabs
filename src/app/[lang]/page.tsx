@@ -18,6 +18,7 @@ export default async function Home({ params }: { params: Promise<{ lang: 'en' | 
             height={130} 
             className="h-16 sm:h-24 md:h-32 w-auto mix-blend-screen opacity-90 object-contain"
             unoptimized 
+            priority
           />
         </FloatAnimation>
         

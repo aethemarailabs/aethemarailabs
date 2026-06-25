@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -22,8 +20,8 @@ export default function TopNavBar() {
   };
 
   const navLinks = [
-    { name: 'Philosophy', href: `/${currentLang}` },
     { name: 'Why Aethemar?', href: `/${currentLang}/why-aethemar` },
+    { name: 'Philosophy', href: `/${currentLang}` },
     // { name: 'CEO', href: `/${currentLang}/ceo` },
     { name: 'Services', href: `/${currentLang}/services` },
     { name: 'Portfolio', href: `/${currentLang}/portfolio` },
@@ -44,6 +42,7 @@ export default function TopNavBar() {
                 height={300} 
                 className="h-[40px] md:h-[56px] w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
                 unoptimized
+                priority
               />
               <span className="sr-only">aethemar ai labs</span>
             </div>
