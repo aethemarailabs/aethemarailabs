@@ -151,22 +151,22 @@
     "traditional_team": {
       "title": "Traditional In-house Team",
       "director": "Hospital / Law Firm Director",
-      "leader": "Marketing Manager",
-      "members": ["Content Marketer", "Visual Designer", "Performance Marketer"],
-      "pain_points": ["High Fixed Labor Costs", "Labor Law Liabilities", "Management Stress", "Turnover Burden"]
+      "leader": "Marketing Director",
+      "members": ["Content Marketer", "Visual Designer", "Video Editor", "Performance Marketer"],
+      "pain_points": ["$15,000+ Monthly Cost", "Labor Law Risks", "Constant Management Stress", "High Turnover & Handovers"]
     },
     "aethemar_team": {
       "title": "Aethemar AI Agent Team",
       "director": "Hospital / Law Firm Director",
       "leader": "CEO & CMO (Control Tower)",
-      "members": ["Copywriter AI", "Design AI", "Media Buyer AI"],
+      "members": ["Copywriter AI", "Design AI", "Video AI", "Media Buyer AI"],
       "benefits": ["Overwhelming Cost-Efficiency", "0% HR Risk", "24/7 Data-Driven Operations", "Top-Tier Strategic Integration"]
     },
     "details": [
       {
         "title": "1. Shattering the Illusion of In-house Marketing Teams",
         "label1": "Reality",
-        "desc1": "Many hospital directors and law firm partners dream of a dedicated in-house marketing team.\n\nBut the reality?\nEnormous fixed monthly labor costs, rigid labor laws making it hard to manage underperforming staff, and the agonizing stress of constant management.",
+        "desc1": "Marketing has become so specialized that even small clinics and law firms hire dedicated designers and video editors separately. Many directors and partners build in-house teams dreaming of 'a dedicated team just for our firm'.\n\nBut the reality?\nEnormous fixed monthly labor costs, rigid labor laws making it hard to manage underperforming staff, and the agonizing stress of constant management.",
         "label2": "Solution",
         "desc2": "Aethemar reduces human-related risks (turnover, slacking, labor laws, emotional drain) to 0%.\n\nOur top-tier AI Agents work tirelessly without complaints, proving their worth purely through data and results to become your perfect in-house team."
       },
