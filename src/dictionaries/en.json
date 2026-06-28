@@ -113,7 +113,18 @@
         "director": "CEO & CMO",
         "members": ["Copywriter AI", "Media Buyer AI", "Data Analyst AI"],
         "items": ["High-Involvement Targeting", "SEO & Performance Ads", "Premium Brand Positioning"],
-        "icon": "campaign"
+        "icon": "campaign",
+        "platforms": [
+          { "id": "reels", "name": "Reels" },
+          { "id": "instagram", "name": "Brand Instagram" },
+          { "id": "youtube", "name": "YouTube" },
+          { "id": "naver-place", "name": "Naver Place" },
+          { "id": "daangn", "name": "Karrot Market" },
+          { "id": "naver-blog", "name": "Naver Blog" },
+          { "id": "ai", "name": "AI" },
+          { "id": "threads", "name": "Threads" },
+          { "id": "naver-ads", "name": "Naver Ads" }
+        ]
       },
       {
         "id": "development",

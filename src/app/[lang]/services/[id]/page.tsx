@@ -2,6 +2,7 @@ import { getDictionary } from '@/dictionaries';
 import FadeIn from '@/components/animations/FadeIn';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import PlatformBadge from '@/components/PlatformBadge';
 
 export async function generateStaticParams() {
   const ids = ['marketing', 'development', 'production'];
@@ -104,6 +105,20 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
           </FadeIn>
         </div>
+
+        {/* Platforms (Conditional) */}
+        {team.platforms && (
+          <FadeIn direction="up" delay={0.45}>
+            <div className="mb-16">
+              <h2 className="font-title-lg text-2xl text-on-surface mb-8 text-center">Target Platforms</h2>
+              <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4 md:gap-6 justify-center max-w-4xl mx-auto">
+                {team.platforms.map((platform: any, idx: number) => (
+                  <PlatformBadge key={idx} id={platform.id} name={platform.name} />
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        )}
         
         {/* Contact CTA */}
         <FadeIn direction="up" delay={0.5}>
@@ -118,7 +133,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 이 강력한 AI 팀을 프로젝트에 투입할 준비가 되셨나요?<br className="hidden md:block"/>지금 바로 연락 주시면 비즈니스 성장을 위한 구체적인 전략을 제안해 드립니다.
               </p>
               <div className="pt-4">
-                <Link href={`/${lang}/#contact`} className="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-sm font-label-caps tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+                <Link href={`/${lang}/contact`} className="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-sm font-label-caps tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                   Initiate Contact <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
                 </Link>
               </div>

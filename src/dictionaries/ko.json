@@ -113,7 +113,18 @@
         "director": "CEO & CMO",
         "members": ["Copywriter AI", "Media Buyer AI", "Data Analyst AI"],
         "items": ["고관여 타겟 마케팅", "SEO 및 퍼포먼스 광고", "프리미엄 브랜드 포지셔닝"],
-        "icon": "campaign"
+        "icon": "campaign",
+        "platforms": [
+          { "id": "reels", "name": "릴스" },
+          { "id": "instagram", "name": "브랜드 인스타그램" },
+          { "id": "youtube", "name": "유튜브" },
+          { "id": "naver-place", "name": "네이버 플레이스" },
+          { "id": "daangn", "name": "당근마켓" },
+          { "id": "naver-blog", "name": "네이버 블로그" },
+          { "id": "ai", "name": "AI" },
+          { "id": "threads", "name": "쓰레드" },
+          { "id": "naver-ads", "name": "파워링크/컨텐츠" }
+        ]
       },
       {
         "id": "development",
