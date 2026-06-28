@@ -54,7 +54,7 @@ export default async function RootLayout({
   return (
     <html lang={lang ?? 'ko'} className={`dark ${outfit.variable}`}>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
       </head>
       <body className={`bg-background text-on-background font-body-md antialiased selection:bg-primary/20 selection:text-primary overflow-x-hidden overflow-y-scroll min-h-screen flex flex-col relative pb-20 md:pb-0`}>
         {/* Global Background Texture */}
