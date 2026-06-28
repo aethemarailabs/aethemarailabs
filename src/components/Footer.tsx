@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
             <span className="hidden md:block w-px h-8 bg-on-surface-variant/50 self-center"></span>
             <p className="text-wrap break-keep">
-              주식회사 에테마르 | 대표이사 이희경<br />
+              주식회사 에테마르 | 대표이사 이희경 | 주소 경기도 안양시 동안구 시민대로 181<br />
               사업자등록번호 376-81-01910
             </p>
           </div>
