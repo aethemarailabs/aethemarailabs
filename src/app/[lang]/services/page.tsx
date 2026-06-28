@@ -16,7 +16,41 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
           </div>
         </FadeIn>
         
-        <div className="flex flex-col gap-12 w-full">
+        {/* Philosophy Banner */}
+        <FadeIn direction="up" delay={0.15} className="w-full">
+          <div className="w-full bg-gradient-to-r from-primary/20 via-surface-container to-primary/20 border border-primary/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 glow-box shadow-[0_0_20px_rgba(212,175,55,0.15)] overflow-hidden relative">
+            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+              <span className="material-symbols-outlined text-[120px] text-primary" style={{ fontVariationSettings: "'FILL' 0" }}>psychology</span>
+            </div>
+            
+            <div className="text-center md:text-left relative z-10 flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 text-primary text-xs font-label-caps tracking-widest bg-primary/10 mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                AETHEMAR'S PHILOSOPHY
+              </div>
+              <h3 className="font-title-lg text-xl md:text-2xl text-on-surface mb-2">
+                비용은 절반으로, <span className="text-primary glow-text">퍼포먼스는 10배로.</span>
+              </h3>
+              <p className="font-body-sm md:font-body-md text-on-surface-variant max-w-3xl">
+                기존 인하우스 팀의 막대한 고정비와 관리 리스크를 완벽하게 해결합니다.<br className="hidden md:block"/>단 1명의 완벽한 컨트롤 타워와 각 분야 최고 수준의 AI 에이전트들이 귀하의 비즈니스를 전담합니다.
+              </p>
+            </div>
+            
+            <div className="hidden lg:flex items-center gap-4 relative z-10 opacity-80 border-l border-primary/20 pl-8">
+              <div className="flex flex-col items-center text-center">
+                <span className="material-symbols-outlined text-primary text-3xl mb-1">group_off</span>
+                <span className="text-[10px] font-label-caps tracking-widest">NO HR RISK</span>
+              </div>
+              <div className="w-px h-10 bg-primary/20 mx-2"></div>
+              <div className="flex flex-col items-center text-center">
+                <span className="material-symbols-outlined text-primary text-3xl mb-1">trending_up</span>
+                <span className="text-[10px] font-label-caps tracking-widest">10X ROI</span>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+        
+        <div className="flex flex-col gap-12 w-full mt-4">
           {/* Main Featured Service (Marketing) */}
           {dict.services.teams.slice(0, 1).map((team: any, idx: number) => (
             <FadeIn key={`main-${idx}`} direction="up" delay={0.2} className="w-full">

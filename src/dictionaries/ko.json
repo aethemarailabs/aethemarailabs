@@ -111,7 +111,7 @@
         "title": "AI Marketing Team",
         "desc": "초고도화된 전환을 위한 데이터 기반 마케팅 아키텍처. 병원과 로펌에 자생력 있는 브랜드 권위의 생태계를 구축합니다.",
         "director": "CEO & CMO",
-        "members": ["Copywriter AI", "Media Buyer AI", "Data Analyst AI"],
+        "members": ["Copywriter AI", "Design AI", "Video AI", "Media Buyer AI"],
         "items": ["고관여 타겟 마케팅", "SEO 및 퍼포먼스 광고", "프리미엄 브랜드 포지셔닝"],
         "icon": "campaign",
         "platforms": [

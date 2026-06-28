@@ -56,7 +56,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           {/* Team Structure */}
           <FadeIn direction="right" delay={0.3}>
-            <h2 className="font-title-lg text-2xl text-on-surface mb-6 border-b border-primary/20 pb-4">Team Architecture</h2>
+            <div className="mb-6 border-b border-primary/20 pb-4">
+              <h2 className="font-title-lg text-2xl text-on-surface mb-2">Team Architecture</h2>
+              <p className="font-body-sm text-on-surface-variant/80 text-sm">단 1명의 완벽한 컨트롤 타워와 각 분야 최고 수준의 AI 에이전트 결합</p>
+            </div>
             <div className="glass-panel p-6 md:p-8 rounded-2xl glow-box flex flex-col gap-6">
               <div className="bg-primary/10 border border-primary/30 rounded-xl p-6 text-center shadow-[0_0_20px_rgba(212,175,55,0.1)]">
                 <div className="text-[10px] font-label-caps text-primary/80 mb-2 tracking-widest">CONTROL TOWER</div>
@@ -156,12 +159,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="glass-panel rounded-2xl p-8 md:p-16 text-center glow-box relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-30"></div>
             <div className="relative z-10 space-y-6">
-              <h2 className="font-headline-lg text-2xl md:text-3xl lg:text-4xl text-on-surface leading-snug">
-                Ready to collaborate with <br className="md:hidden" />
-                <span className="text-primary glow-text">{team.title}</span>?
-              </h2>
-              <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto text-sm md:text-base">
-                이 강력한 AI 팀을 프로젝트에 투입할 준비가 되셨나요?<br className="hidden md:block"/>지금 바로 연락 주시면 비즈니스 성장을 위한 구체적인 전략을 제안해 드립니다.
+              <div className="inline-flex items-center justify-center p-4 rounded-full bg-surface-container border border-primary/20 mb-2">
+                <span className="material-symbols-outlined text-primary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>rocket_launch</span>
+              </div>
+              <h2 className="font-headline-md text-3xl md:text-4xl text-on-surface">Ready to Transform Your Business?</h2>
+              <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto text-lg">
+                이 강력한 AI 팀을 도입하여 <span className="text-primary glow-text">월 2,000만 원 이상의 고정 인건비 리스크</span>를 없애고,<br className="hidden md:block"/>오직 퍼포먼스에만 집중하는 완벽한 아웃소싱을 경험해 보세요.
               </p>
               <div className="pt-4">
                 <Link href={`/${lang}/contact`} className="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-sm font-label-caps tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
