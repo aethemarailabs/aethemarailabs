@@ -17,13 +17,15 @@ export default function Footer() {
             />
             <span className="sr-only">aethemar ai labs</span>
           </Link>
-          <div className="flex flex-col md:flex-row items-center gap-1.5 md:gap-4 font-body-sm text-xs text-on-surface-variant opacity-80 text-center md:text-left px-4 md:px-0">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 font-body-sm text-xs text-on-surface-variant opacity-80 text-center md:text-left px-4 md:px-0 leading-relaxed md:items-start pt-2">
             <p className="text-wrap break-keep">
-              © 2026 AETHEMAR AI LABS. ALL RIGHTS RESERVED. 저작자와의 협의 및 동의가 없는 영상 혹은 이미지의 무단 사용을 금합니다.
+              © 2026 AETHEMAR AI LABS. ALL RIGHTS RESERVED.<br />
+              저작자와의 협의 및 동의가 없는 영상 혹은 이미지의 무단 사용을 금합니다.
             </p>
-            <span className="hidden md:block w-px h-3 bg-on-surface-variant/50"></span>
+            <span className="hidden md:block w-px h-8 bg-on-surface-variant/50 self-center"></span>
             <p className="text-wrap break-keep">
-              주식회사 에테마르 | 대표이사 이희경 | 사업자등록번호 376-81-01910
+              주식회사 에테마르 | 대표이사 이희경<br />
+              사업자등록번호 376-81-01910
             </p>
           </div>
         </div>
