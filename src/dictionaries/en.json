@@ -124,6 +124,15 @@
           { "id": "ai", "name": "AI" },
           { "id": "threads", "name": "Threads" },
           { "id": "naver-ads", "name": "Naver Ads" }
+        ],
+        "trends": [
+          { "title": "Instagram Reels", "desc": "Maximize target customer conversion with short-form videos and in-depth card news offering immediate value.", "icon": "smart_display" },
+          { "title": "YouTube Shorts", "desc": "Proactively build optimized short-form SEO to generate overwhelming organic search traffic.", "icon": "play_circle" },
+          { "title": "Threads", "desc": "Leverage active sharing and reposts to lead initial virality with data-driven, highly spreadable content.", "icon": "forum" },
+          { "title": "Naver Map / Place", "desc": "Benchmark top-ranking algorithms and integrate Naver's ecosystem features to dominate local search.", "icon": "pin_drop" },
+          { "title": "Naver Blog", "desc": "Strategically target Home Feed algorithms and metrics to rapidly build brand awareness and trust.", "icon": "article" },
+          { "title": "GEO (Gen-AI Search Engines)", "desc": "Preemptively expand brand mentions on external media to prepare for the upcoming AI search era like ChatGPT.", "icon": "psychology" },
+          { "title": "Multi Short-form Channels", "desc": "Repurpose and distribute high-quality short-form assets to solidify long-term keyword share.", "icon": "devices" }
         ]
       },
       {

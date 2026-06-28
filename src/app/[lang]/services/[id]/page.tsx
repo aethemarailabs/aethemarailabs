@@ -119,9 +119,40 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </div>
           </FadeIn>
         )}
+
+        {/* 2026 Trends (Conditional) */}
+        {team.trends && (
+          <FadeIn direction="up" delay={0.5}>
+            <div className="mb-24">
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 text-primary text-sm font-label-caps tracking-widest bg-primary/5 mb-4">
+                  2026 INSIGHTS
+                </span>
+                <h2 className="font-headline-lg text-3xl md:text-4xl text-on-surface mb-4">2026 Marketing Trends & Strategies</h2>
+                <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">다가올 마케팅 생태계의 패러다임 변화를 주도할 핵심 트렌드 라인업입니다.</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {team.trends.map((trend: any, idx: number) => (
+                  <div key={idx} className="glass-panel p-6 rounded-2xl border-t border-t-primary/30 glow-box group hover:-translate-y-2 transition-all duration-300">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-surface-container border border-primary/20 flex items-center justify-center shadow-[0_0_10px_rgba(212,175,55,0.1)] group-hover:bg-primary/5 transition-colors">
+                        <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>{trend.icon}</span>
+                      </div>
+                      <h3 className="font-title-md text-lg text-on-surface flex-1">{trend.title}</h3>
+                    </div>
+                    <p className="font-body-sm text-on-surface-variant text-sm leading-relaxed">
+                      {trend.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        )}
         
         {/* Contact CTA */}
-        <FadeIn direction="up" delay={0.5}>
+        <FadeIn direction="up" delay={0.6}>
           <div className="glass-panel rounded-2xl p-8 md:p-16 text-center glow-box relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-30"></div>
             <div className="relative z-10 space-y-6">

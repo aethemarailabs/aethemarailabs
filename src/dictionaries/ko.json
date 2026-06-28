@@ -124,6 +124,15 @@
           { "id": "ai", "name": "AI" },
           { "id": "threads", "name": "쓰레드" },
           { "id": "naver-ads", "name": "파워링크/컨텐츠" }
+        ],
+        "trends": [
+          { "title": "인스타그램 릴스 (Instagram Reels)", "desc": "즉각적인 가치와 솔루션을 제공하는 숏폼 영상과 심도 있는 카드뉴스로 타겟 고객의 전환율을 극대화합니다.", "icon": "smart_display" },
+          { "title": "유튜브 쇼츠 (YouTube Shorts)", "desc": "최적화된 숏폼 SEO를 선제적으로 구축하여 압도적인 오가닉 검색 유입을 창출합니다.", "icon": "play_circle" },
+          { "title": "쓰레드 (Threads)", "desc": "공유와 리포스트가 활발한 플랫폼 특성을 활용해, 데이터 기반의 확산성 높은 콘텐츠로 초기 바이럴을 선도합니다.", "icon": "forum" },
+          { "title": "네이버 지도/플레이스 (Naver Place)", "desc": "상위 노출 업체의 알고리즘을 벤치마킹하고 네이버 생태계의 모든 기능을 연동하여 로컬 검색 시장을 장악합니다.", "icon": "pin_drop" },
+          { "title": "네이버 블로그 (Naver Blog)", "desc": "홈피드 노출 알고리즘과 지수 변화를 전략적으로 공략하여, 신규 브랜드의 빠른 인지도 확산과 신뢰를 구축합니다.", "icon": "article" },
+          { "title": "GEO (생성형 AI 검색 엔진)", "desc": "ChatGPT 등 다가올 AI 검색 시대를 선점하기 위해, 외부 매체에 브랜드 멘션을 선제적으로 확장합니다.", "icon": "psychology" },
+          { "title": "멀티 숏폼 채널 (카카오 숏폼 & 네이버 클립)", "desc": "제작된 하이퀄리티 숏폼 에셋을 다각도로 재가공 및 배포하여 장기적인 키워드 점유율을 견고하게 다집니다.", "icon": "devices" }
         ]
       },
       {
