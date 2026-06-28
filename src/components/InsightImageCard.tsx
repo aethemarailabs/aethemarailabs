@@ -6,9 +6,10 @@ import Image from 'next/image';
 interface InsightImageCardProps {
   imageSrc: string;
   altText?: string;
+  caption?: string;
 }
 
-export default function InsightImageCard({ imageSrc, altText = "Insight statistics" }: InsightImageCardProps) {
+export default function InsightImageCard({ imageSrc, altText = "Insight statistics", caption }: InsightImageCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,11 +29,14 @@ export default function InsightImageCard({ imageSrc, altText = "Insight statisti
             <span className="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-md">zoom_in</span>
           </div>
         </div>
-        <div className="p-4 border-t border-gray-100 bg-white text-center">
+        <div className="p-4 border-t border-gray-100 bg-white text-center flex flex-col items-center">
           <p className="font-title-md text-primary flex items-center justify-center gap-2">
             <span className="material-symbols-outlined text-sm">bar_chart</span>
             View Insights
           </p>
+          {caption && (
+            <p className="text-gray-700 font-medium text-sm mt-2">{caption}</p>
+          )}
         </div>
       </div>
 
