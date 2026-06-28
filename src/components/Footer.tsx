@@ -19,7 +19,7 @@ export default function Footer() {
           </Link>
           <div className="flex flex-col md:flex-row items-center gap-1.5 md:gap-4 font-body-sm text-xs text-on-surface-variant opacity-80 text-center md:text-left px-4 md:px-0">
             <p className="text-wrap break-keep">
-              © 2026 AETHEMAR AI LABS. ALL RIGHTS RESERVED.
+              © 2026 AETHEMAR AI LABS. ALL RIGHTS RESERVED. 저작자와의 협의 및 동의가 없는 영상 혹은 이미지의 무단 사용을 금합니다.
             </p>
             <span className="hidden md:block w-px h-3 bg-on-surface-variant/50"></span>
             <p className="text-wrap break-keep">
