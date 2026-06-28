@@ -1,5 +1,6 @@
 import { getDictionary } from '@/dictionaries';
 import FadeIn from '@/components/animations/FadeIn';
+import Link from 'next/link';
 
 export default async function ServicesPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
   const { lang } = await params;
@@ -18,7 +19,8 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
           {dict.services.teams.map((team: any, idx: number) => (
             <FadeIn key={idx} direction="up" delay={0.2 + idx * 0.1} className="h-full">
-              <div className="glass-panel rounded-3xl p-8 flex flex-col items-center relative overflow-hidden border-t border-t-primary/50 glow-box group h-full hover:-translate-y-2 transition-transform duration-500">
+              <Link href={`/${lang}/services/${team.id}`} className="block h-full outline-none">
+                <div className="glass-panel rounded-3xl p-8 flex flex-col items-center relative overflow-hidden border-t border-t-primary/50 glow-box group h-full hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all duration-500 cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Background Icon */}
@@ -78,7 +80,8 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                   </div>
                 </div>
 
-              </div>
+                </div>
+              </Link>
             </FadeIn>
           ))}
         </div>
