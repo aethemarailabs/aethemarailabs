@@ -10,27 +10,36 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
     <div className="bg-white min-h-screen text-black font-sans print:bg-white print:m-0 print:p-0">
       <style dangerouslySetInnerHTML={{__html: `
         nav, header, footer, #mobile-bottom-nav, #top-nav-bar { display: none !important; }
-        body { background: white !important; color: black !important; margin: 0; padding: 0; }
+        body, html, main { 
+          background: white !important; 
+          color: black !important; 
+          margin: 0 !important; 
+          padding: 0 !important; 
+        }
+        main { padding-top: 0 !important; } /* Override layout.tsx pt-24 */
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         @page { size: A4 portrait; margin: 0; }
         .a4-page {
           width: 210mm;
-          min-height: 297mm;
-          padding: 20mm;
+          height: 297mm; /* strictly fixed height for A4 */
+          padding: 15mm 20mm;
           margin: 0 auto;
           background: white;
           box-shadow: 0 0 10px rgba(0,0,0,0.1);
           box-sizing: border-box;
           margin-bottom: 20px;
+          overflow: hidden; /* Prevent spillover */
+          page-break-after: always;
         }
         @media print {
-          .a4-page { margin: 0; box-shadow: none; width: 100%; height: 100%; padding: 15mm; page-break-after: always; }
-          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          .a4-page { margin: 0; box-shadow: none; }
+          body, html { width: 210mm; height: 297mm; }
         }
       `}} />
 
       <div className="a4-page flex flex-col justify-between">
         {/* Header */}
-        <div className="border-b-4 border-black pb-6 mb-8 flex justify-between items-end">
+        <div className="border-b-4 border-black pb-4 mb-6 flex justify-between items-end">
           <div>
             <h1 className="text-4xl font-extrabold tracking-tight mb-2">AETHEMAR AI LABS</h1>
             <h2 className="text-xl text-gray-600 font-medium">Business Proposal & Core Philosophy</h2>
@@ -41,13 +50,13 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
         </div>
 
         {/* Hero Concept */}
-        <div className="mb-12 text-center bg-gray-50 py-10 rounded-xl border border-gray-200">
-          <h2 className="text-3xl font-bold mb-4">{data.title1} <span className="text-blue-600">{data.title2}</span></h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed whitespace-pre-wrap">{data.subtitle}</p>
+        <div className="mb-8 text-center bg-gray-50 py-8 rounded-xl border border-gray-200">
+          <h2 className="text-2xl font-bold mb-3">{data.title1} <span className="text-blue-600">{data.title2}</span></h2>
+          <p className="text-base text-gray-700 max-w-2xl mx-auto leading-relaxed whitespace-pre-wrap">{data.subtitle}</p>
         </div>
 
         {/* Comparison Table */}
-        <div className="grid grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-2 gap-6 mb-6 flex-1">
           {/* Traditional */}
           <div className="border-2 border-red-100 bg-red-50/30 rounded-xl p-6">
             <h3 className="text-xl font-bold text-red-600 mb-4 border-b border-red-200 pb-2">{data.traditional_team.title}</h3>
@@ -104,29 +113,29 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
       
       {/* Page 2: Details */}
       <div className="a4-page flex flex-col">
-        <div className="border-b-4 border-black pb-6 mb-8 flex justify-between items-end mt-4">
-          <h2 className="text-2xl font-bold text-black">Aethemar Strategies & Core Values</h2>
+        <div className="border-b-4 border-black pb-4 mb-6 flex justify-between items-end mt-2">
+          <h2 className="text-xl font-bold text-black">Aethemar Strategies & Core Values</h2>
         </div>
         
-        <div className="space-y-8 flex-1">
+        <div className="space-y-6 flex-1">
           {data.details.map((detail: any, idx: number) => (
-            <div key={idx} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-bold mb-4 text-blue-800">{detail.title}</h3>
-              <div className="grid grid-cols-2 gap-6">
+            <div key={idx} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
+              <h3 className="text-base font-bold mb-3 text-blue-800">{detail.title}</h3>
+              <div className="grid grid-cols-2 gap-5">
                 <div>
-                  <h4 className="text-[10px] font-bold text-red-500 mb-2 px-2 py-1 bg-red-100 inline-block rounded">{detail.label1}</h4>
-                  <p className="text-sm text-gray-700 whitespace-pre-wrap leading-relaxed">{detail.desc1}</p>
+                  <h4 className="text-[10px] font-bold text-red-500 mb-1.5 px-2 py-0.5 bg-red-100 inline-block rounded">{detail.label1}</h4>
+                  <p className="text-xs text-gray-700 whitespace-pre-wrap leading-relaxed">{detail.desc1}</p>
                 </div>
                 <div>
-                  <h4 className="text-[10px] font-bold text-blue-600 mb-2 px-2 py-1 bg-blue-100 inline-block rounded">{detail.label2}</h4>
-                  <p className="text-sm text-black font-medium whitespace-pre-wrap leading-relaxed">{detail.desc2}</p>
+                  <h4 className="text-[10px] font-bold text-blue-600 mb-1.5 px-2 py-0.5 bg-blue-100 inline-block rounded">{detail.label2}</h4>
+                  <p className="text-xs text-black font-medium whitespace-pre-wrap leading-relaxed">{detail.desc2}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-8 text-center bg-blue-600 text-white p-6 rounded-xl print:bg-blue-600">
+        <div className="mt-6 text-center bg-blue-600 text-white p-6 rounded-xl print:bg-blue-600">
           <h3 className="text-xl font-bold mb-2">Ready to Transform Your Business?</h3>
           <p className="text-sm opacity-90">지금 바로 연락 주시면 비즈니스 성장을 위한 구체적인 AI 도입 전략을 제안해 드립니다.</p>
         </div>
