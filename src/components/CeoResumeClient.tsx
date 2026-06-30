@@ -141,7 +141,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                   >
                     {item.image && (
                       <div className="w-full sm:w-1/3 aspect-video sm:aspect-auto sm:min-h-[140px] bg-surface-container relative overflow-hidden flex-shrink-0 border-b sm:border-b-0 sm:border-r border-primary/10">
-                        <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity" />
+                        <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" />
                       </div>
                     )}
                     <div className="p-5 flex-1 flex flex-col justify-center">
