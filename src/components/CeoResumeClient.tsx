@@ -137,7 +137,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                 ) : (
                   <div 
                     key={idx} 
-                    className="flex flex-col sm:flex-row items-center sm:items-stretch glass-panel glow-box p-0 rounded-xl border border-primary/5 group overflow-hidden"
+                    className="flex flex-col sm:flex-row items-center sm:items-stretch glass-panel glow-box p-0 rounded-xl border border-primary/5 hover:border-primary/40 transition-all duration-300 group overflow-hidden"
                   >
                     {item.image && (
                       <div className="w-full sm:w-1/3 aspect-video sm:aspect-auto sm:min-h-[140px] bg-surface-container relative overflow-hidden flex-shrink-0 border-b sm:border-b-0 sm:border-r border-primary/10">
