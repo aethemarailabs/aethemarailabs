@@ -51,10 +51,15 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         </FadeIn>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full mt-4">
-          {dict.services.teams.map((team: any, idx: number) => (
+          {[...dict.services.teams].sort((a: any, b: any) => {
+            const order = ['development', 'marketing', 'production'];
+            return order.indexOf(a.id) - order.indexOf(b.id);
+          }).map((team: any, idx: number) => {
+            const isMain = team.id === 'marketing';
+            return (
             <FadeIn key={idx} direction="up" delay={0.2 + idx * 0.1} className="h-full">
               <Link href={`/${lang}/services/${team.id}`} className="block h-full outline-none">
-                <div className="glass-panel rounded-3xl p-8 flex flex-col items-center relative overflow-hidden border-t border-t-primary/50 glow-box group h-full hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-all duration-500 cursor-pointer">
+                <div className={`glass-panel rounded-3xl p-8 flex flex-col items-center relative overflow-hidden glow-box group h-full hover:-translate-y-2 transition-all duration-500 cursor-pointer ${isMain ? 'bg-gradient-to-b from-primary/20 to-surface-container/50 border border-primary/50 shadow-[0_0_25px_rgba(212,175,55,0.15)] hover:shadow-[0_0_40px_rgba(212,175,55,0.3)]' : 'border-t border-t-primary/50 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]'}`}>
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Background Icon */}
@@ -65,12 +70,12 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                 <div className="relative z-10 w-full flex flex-col h-full">
                   {/* Header */}
                   <div className="text-center mb-8">
-                    <div className="w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center mx-auto mb-6 bg-surface-container shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_25px_rgba(212,175,55,0.3)] transition-shadow">
+                    <div className={`w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center mx-auto mb-6 bg-surface-container transition-shadow ${isMain ? 'shadow-[0_0_25px_rgba(212,175,55,0.3)] group-hover:shadow-[0_0_35px_rgba(212,175,55,0.5)]' : 'shadow-[0_0_15px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_25px_rgba(212,175,55,0.3)]'}`}>
                       <span className="material-symbols-outlined text-primary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>{team.icon}</span>
                     </div>
-                    {idx === 0 && (
-                      <div className="mb-2">
-                        <span className="inline-block px-3 py-1 rounded-full border border-primary/30 text-primary text-[10px] font-label-caps tracking-widest bg-primary/5">MAIN SERVICE</span>
+                    {isMain && (
+                      <div className="mb-2 flex justify-center">
+                        <span className="inline-block px-3 py-1 rounded-full border border-primary/50 text-primary text-[10px] font-label-caps tracking-widest bg-primary/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]">MAIN SERVICE</span>
                       </div>
                     )}
                     <h3 className="font-title-lg text-2xl text-on-surface mb-3">{team.title}</h3>
@@ -106,9 +111,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                   </div>
 
                   {/* Capabilities */}
-                  <div className="mt-auto border-t border-on-surface/10 pt-6">
+                  <div className="mt-auto border-t border-on-surface/10 pt-6 w-full flex flex-col flex-1">
                     <div className="text-[10px] font-label-caps text-on-surface-variant mb-4 tracking-widest">CORE CAPABILITIES</div>
-                    <ul className="space-y-3 font-body-sm text-sm text-on-surface/80">
+                    <ul className="space-y-3 font-body-sm text-sm text-on-surface/80 flex-1">
                       {team.items.map((item: string, i: number) => (
                         <li key={i} className="flex items-center gap-3">
                           <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(212,175,55,0.8)] flex-shrink-0"></span> 
@@ -116,13 +121,19 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                         </li>
                       ))}
                     </ul>
+                    
+                    {/* View Details Button */}
+                    <div className={`mt-8 flex items-center justify-center gap-2 font-bold text-sm py-3 px-6 rounded-full transition-all duration-300 w-full ${isMain ? 'bg-primary text-background group-hover:bg-primary-hover shadow-[0_0_15px_rgba(212,175,55,0.4)]' : 'text-primary bg-primary/10 group-hover:bg-primary group-hover:text-background'}`}>
+                      <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>touch_app</span>
+                      <span>Click Here</span>
+                    </div>
                   </div>
                 </div>
 
                 </div>
               </Link>
             </FadeIn>
-          ))}
+          )})}
         </div>
       </div>
     </section>
