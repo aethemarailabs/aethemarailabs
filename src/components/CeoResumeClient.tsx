@@ -53,7 +53,7 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                           <span className="material-symbols-outlined text-xl">smart_display</span>
                           {sns.title}
                         </h4>
-                        <p className="font-body-sm text-sm text-on-surface-variant">{sns.desc}</p>
+                        <p className="font-body-sm text-sm text-on-surface-variant whitespace-pre-wrap leading-relaxed">{sns.desc}</p>
                         {sns.url && (
                           <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-xs font-bold group-hover:bg-primary group-hover:text-background transition-colors w-fit">
                             <span className="material-symbols-outlined text-[14px]">ads_click</span>
@@ -104,6 +104,16 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                         Click to View
                       </div>
                     )}
+                    {item.urls && (
+                      <div className="mt-4 flex flex-col gap-2 w-full z-10 relative">
+                        {item.urls.map((u: any, i: number) => (
+                          <a key={i} href={u.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-primary/20 bg-primary/5 text-primary text-xs hover:bg-primary hover:text-background transition-colors w-fit">
+                            <span className="material-symbols-outlined text-[14px]">ads_click</span>
+                            {u.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </>
                 );
 
@@ -127,9 +137,16 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                 ) : (
                   <div 
                     key={idx} 
-                    className="glass-panel glow-box p-5 rounded-xl border border-primary/5 group"
+                    className="flex flex-col sm:flex-row items-center sm:items-stretch glass-panel glow-box p-0 rounded-xl border border-primary/5 group overflow-hidden"
                   >
-                    {content}
+                    {item.image && (
+                      <div className="w-full sm:w-1/3 aspect-video sm:aspect-auto sm:min-h-[140px] bg-surface-container relative overflow-hidden flex-shrink-0 border-b sm:border-b-0 sm:border-r border-primary/10">
+                        <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity" />
+                      </div>
+                    )}
+                    <div className="p-5 flex-1 flex flex-col justify-center">
+                      {content}
+                    </div>
                   </div>
                 );
               })}

@@ -68,39 +68,39 @@
     "sns_list": [
       {
         "title": "유튜브 (부동산 법률) : 아파트 사주는 누나",
-        "desc": "영상 촬영, 기획 등 전 과정 단독수행. 썸네일, 배너, 채널아트 등 디자인 툴 활용 제작. 유튜브 알고리즘에 기반한 조회수 상향 전략 수립.",
+        "desc": "- 유튜브 알고리즘에 기반한 조회수 상향 전략 수립\n- 영상 기획 및 촬영, 편집, 썸네일 디자인 등 전 과정 단독 수행",
         "url": "https://youtube.com/@hkee26?si=SpdqK8nyLDFFZQuJ"
       }
     ],
     "activities_title": "Key Activities",
     "activities": [
       {
-        "title": "SBS <모닝와이드> 출연",
-        "desc": "뷰티 파워블로거/마케터 단독 출연을 통한 미디어 커뮤니케이션 역량 입증",
+        "title": "SBS <모닝와이드> 마케터 출연",
+        "desc": "뷰티 파워블로거 단독 출연을 통한 미디어 커뮤니케이션 역량 입증",
         "url": "https://www.instagram.com/p/BIu36OMD_3b/?igsh=MXRqYXVxMjlteHl4Yg==",
         "image": "/activities/sbs_morning.png"
       },
       {
         "title": "SBS PLUS <스타그램> 파워블로거 패널",
         "desc": "패션/뷰티 파워블로거 패널 자격으로 메인 MC들과 함께 방송 활약",
-        "url": "https://www.instagram.com/p/BLyo5yfg7Yu/?igsh=a2hxbTM3NmE0azU1",
+        "urls": [
+          { "label": "메인엠씨 장도연과 셀카", "link": "https://www.instagram.com/p/BBbZKalwxh1/?igsh=a3l1eDM2ZWQ2ejAw" },
+          { "label": "메인엠씨 주우재 와 셀카", "link": "https://www.instagram.com/p/BAWWGARwxvK/?igsh=MW11NzFpcTFzbGd0Zw==" },
+          { "label": "방송화면 캡쳐", "link": "https://www.instagram.com/p/_y1RUDQxpk/?igsh=MzduaHo3dm9qdmdz" }
+        ],
         "image": "/activities/sbs_stargram.png"
       },
       {
-        "title": "네이버TV <뷰티스테이션 더쇼> 인터뷰 및 상업 광고 모델",
-        "desc": "광고 모델 및 크리에이터 활동을 통해 체득한 뷰티/패션 커머셜 마케팅 인사이트",
+        "title": "네이버TV <뷰티스테이션 더쇼> 인터뷰 및 뷰티 모델",
+        "desc": "메이크업 시연모델 및 뷰티 마케터 활동을 통해 체득한 뷰티 커머셜 마케팅 인사이트",
         "url": "https://www.instagram.com/p/-HOmhxQxuj/?igsh=c3dyc2ZybTNianJl",
         "image": "/activities/naver_tv.png"
       },
       {
-        "title": "상업 광고 모델 경력",
-        "desc": "광고 모델로서 카메라 앞의 생리를 이해하며, 기획과 연출의 디테일 완성",
+        "title": "다수의 메이져 광고모델 경력",
+        "desc": "피사체와 기획자의 시선을 모두 갖춘 디렉터로서 디테일이 생명인 전문직 브랜딩의 완성도를 극대화",
         "url": "https://www.instagram.com/p/BLy4TWvghY9/?igsh=MWhpYTR1MjF1emV2dA==",
         "image": "/activities/ad_model.png"
-      },
-      {
-        "title": "KBS <황금연못> 청년 패널",
-        "desc": "공중파 토론 프로그램 패널 활동을 통한 탁월한 논리력과 화술 입증"
       }
     ]
   },
