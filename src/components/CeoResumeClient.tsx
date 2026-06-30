@@ -37,7 +37,6 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                 </div>
               ))}
             </div>
-            </div>
             
             {/* Personal Channels moved here */}
             {dict.sns_list && (
