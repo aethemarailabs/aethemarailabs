@@ -37,12 +37,11 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Activities List */}
-          <div>
+            </div>
+            
+            {/* Personal Channels moved here */}
             {dict.sns_list && (
-              <div className="mb-16">
+              <div className="mt-16 mb-8 md:mb-0">
                 <h3 className="font-title-md text-2xl text-primary mb-8 flex items-center gap-3">
                   <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>share</span>
                   {dict.sns_title}
@@ -84,6 +83,11 @@ export default function CeoResumeClient({ dict }: { dict: any }) {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* Activities List */}
+          <div>
+
 
             <h3 className="font-title-md text-2xl text-primary mb-8 flex items-center gap-3">
               <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>military_tech</span>
