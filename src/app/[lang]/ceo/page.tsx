@@ -38,7 +38,7 @@ export default async function CeoPage({ params }: { params: Promise<{ lang: 'en'
           
           <FadeIn direction="left" delay={0.3}>
             <div className="space-y-6 font-body-sm text-on-surface-variant text-base md:text-lg">
-              <p className="font-body-lg text-primary/90">{dict.ceo.desc}</p>
+              <p className="font-body-lg text-primary/90 whitespace-pre-wrap">{dict.ceo.desc}</p>
               
               {dict.ceo.short_intro && (
                 <ul className="space-y-3 font-body-sm text-on-surface-variant text-sm md:text-base mt-4">
