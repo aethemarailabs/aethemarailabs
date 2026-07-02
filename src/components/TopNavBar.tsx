@@ -35,14 +35,10 @@ export default function TopNavBar() {
         <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 md:py-6 max-w-[1440px] mx-auto">
           <Link href={`/${currentLang}`} className="flex items-center gap-3 group">
             <div className="font-display-lg text-title-md tracking-tighter text-primary flex items-center gap-2">
-              <Image 
+              <img 
                 src="/logo_outline.png"
                 alt="Aethemar Logo" 
-                width={300} 
-                height={300} 
                 className="h-[40px] md:h-[56px] w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] transition-all" 
-                unoptimized
-                priority
               />
               <span className="sr-only">aethemar ai labs</span>
             </div>
@@ -70,12 +66,22 @@ export default function TopNavBar() {
             </div>
             
             <button 
-              className="md:hidden text-primary flex items-center"
+              className="md:hidden text-primary flex items-center justify-center w-8 h-8"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
             >
-              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-                {isMobileMenuOpen ? 'close' : 'menu'}
-              </span>
+              {isMobileMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+              )}
             </button>
           </div>
         </div>
