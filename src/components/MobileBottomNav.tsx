@@ -10,7 +10,7 @@ export default function MobileBottomNav() {
 
   const navItems = [
     { name: 'WHY US', href: `/${currentLang}`, icon: 'question_mark' },
-    // { name: 'CEO', href: `/${currentLang}/ceo`, icon: 'person' },
+    { name: 'CEO', href: `/${currentLang}/ceo`, icon: 'person' },
     { name: 'SERVICE', href: `/${currentLang}/services`, icon: 'widgets' },
     { name: 'WORKS', href: `/${currentLang}/portfolio`, icon: 'view_carousel' },
     { name: 'RESULT', href: `/${currentLang}/achievements`, icon: 'insights' },
