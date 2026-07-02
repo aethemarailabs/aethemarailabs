@@ -56,8 +56,12 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
             return order.indexOf(a.id) - order.indexOf(b.id);
           }).map((team: any, idx: number) => {
             const isMain = team.id === 'marketing';
+            
+            let orderClass = '';
+            if (team.id === 'marketing') orderClass = 'order-first lg:order-none';
+            
             return (
-            <FadeIn key={idx} direction="up" delay={0.2 + idx * 0.1} className="h-full">
+            <FadeIn key={idx} direction="up" delay={0.2 + idx * 0.1} className={`h-full ${orderClass}`}>
               <Link href={`/${lang}/services/${team.id}`} className="block h-full outline-none">
                 <div className={`glass-panel rounded-3xl p-8 flex flex-col items-center relative overflow-hidden glow-box group h-full hover:-translate-y-2 transition-all duration-500 cursor-pointer ${isMain ? 'bg-gradient-to-b from-primary/20 to-surface-container/50 border border-primary/50 shadow-[0_0_25px_rgba(212,175,55,0.15)] hover:shadow-[0_0_40px_rgba(212,175,55,0.3)]' : 'border-t border-t-primary/50 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]'}`}>
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
