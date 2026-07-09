@@ -1,144 +1,296 @@
 import { getDictionary } from '@/dictionaries';
 import Image from 'next/image';
 
+type WhyDetail = {
+  title: string;
+  label1: string;
+  desc1: string;
+  label2: string;
+  desc2: string;
+};
+
+type TeamBlock = {
+  title: string;
+  director: string;
+  leader: string;
+  members: string[];
+  pain_points?: string[];
+  benefits?: string[];
+};
+
+type WhyAethemar = {
+  badge: string;
+  title1: string;
+  title2: string;
+  subtitle: string;
+  details: WhyDetail[];
+  traditional_team: TeamBlock;
+  aethemar_team: TeamBlock;
+};
+
+const stripLeadingNumber = (value: string) => value.replace(/^\d+\.\s*/, '');
+const firstParagraph = (value: string) => value.split('\n\n')[0];
+const lastParagraph = (value: string) => value.split('\n\n').at(-1) ?? value;
+
 export default async function BrochurePage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const data = dict.why_aethemar;
+  const data = dict.why_aethemar as WhyAethemar;
+  const contactUrl = lang === 'en' ? 'aethemar.com/en' : 'aethemar.com/ko';
 
   return (
-    <div className="bg-white min-h-screen text-black font-sans print:bg-white print:m-0 print:p-0">
-      <style dangerouslySetInnerHTML={{__html: `
-        nav, header, footer, #mobile-bottom-nav, #top-nav-bar { display: none !important; }
-        body, html, main { 
-          background: white !important; 
-          color: black !important; 
-          margin: 0 !important; 
-          padding: 0 !important; 
+    <div className="min-h-screen bg-background text-on-background print:bg-background">
+      <style dangerouslySetInnerHTML={{ __html: `
+        body > nav,
+        body > footer,
+        body > div[style*="translateZ"],
+        #mobile-bottom-nav,
+        #top-nav-bar {
+          display: none !important;
         }
-        main { padding-top: 0 !important; } /* Override layout.tsx pt-24 */
-        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        html, body, main {
+          margin: 0 !important;
+          padding: 0 !important;
+          background: #161311 !important;
+        }
+        main { padding-top: 0 !important; }
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
         @page { size: A4 portrait; margin: 0; }
-        .a4-page {
+        .leaflet-shell {
+          min-height: 100vh;
+          padding: 28px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        .a4-leaflet {
           width: 210mm;
-          height: 297mm; /* strictly fixed height for A4 */
-          padding: 15mm 20mm;
-          margin: 0 auto;
-          background: white;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          height: 297mm;
           box-sizing: border-box;
-          margin-bottom: 20px;
-          overflow: hidden; /* Prevent spillover */
-          page-break-after: always;
+          overflow: hidden;
+          position: relative;
+          background:
+            radial-gradient(circle at 18% 8%, rgba(242, 202, 80, 0.20), transparent 24%),
+            radial-gradient(circle at 92% 38%, rgba(242, 202, 80, 0.12), transparent 26%),
+            linear-gradient(145deg, #110d0c 0%, #161311 42%, #231f1d 100%);
+          box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+        }
+        .a4-leaflet::before {
+          content: "";
+          position: absolute;
+          inset: 8mm;
+          border: 1px solid rgba(242, 202, 80, 0.22);
+          pointer-events: none;
+          z-index: 2;
+        }
+        .a4-leaflet::after {
+          content: "A";
+          position: absolute;
+          right: -9mm;
+          bottom: -32mm;
+          font-size: 118mm;
+          line-height: 1;
+          font-weight: 700;
+          color: rgba(242, 202, 80, 0.035);
+          letter-spacing: 0;
+          z-index: 0;
+        }
+        .print-panel {
+          background: rgba(36, 30, 28, 0.58);
+          border-top: 1px solid rgba(255, 255, 255, 0.16);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.045), 0 8px 32px rgba(0, 0, 0, 0.26);
+        }
+        .gold-text {
+          color: #f2ca50;
+          text-shadow: 0 0 20px rgba(212, 175, 55, 0.30);
+        }
+        .hairline {
+          background: linear-gradient(90deg, transparent, rgba(242, 202, 80, 0.72), transparent);
         }
         @media print {
-          .a4-page { margin: 0; box-shadow: none; }
-          body, html { width: 210mm; height: 297mm; }
+          .leaflet-shell {
+            min-height: 0;
+            padding: 0;
+            display: block;
+          }
+          .a4-leaflet {
+            width: 210mm;
+            height: 297mm;
+            box-shadow: none;
+          }
         }
-      `}} />
+      ` }} />
 
-      <div className="a4-page flex flex-col justify-between">
-        {/* Header */}
-        <div className="border-b-4 border-black pb-4 mb-6 flex justify-between items-end">
-          <div>
-            <h1 className="text-4xl font-extrabold tracking-tight mb-2">AETHEMAR AI LABS</h1>
-            <h2 className="text-xl text-gray-600 font-medium">Business Proposal & Core Philosophy</h2>
-          </div>
-          <div className="text-right text-sm text-gray-500 font-bold tracking-widest">
-            {data.badge}
-          </div>
-        </div>
-
-        {/* Hero Concept */}
-        <div className="mb-8 text-center bg-gray-50 py-8 rounded-xl border border-gray-200">
-          <h2 className="text-2xl font-bold mb-3">{data.title1} <span className="text-blue-600">{data.title2}</span></h2>
-          <p className="text-base text-gray-700 max-w-2xl mx-auto leading-relaxed whitespace-pre-wrap">{data.subtitle}</p>
-        </div>
-
-        {/* Comparison Table */}
-        <div className="grid grid-cols-2 gap-6 mb-6 flex-1">
-          {/* Traditional */}
-          <div className="border-2 border-red-100 bg-red-50/30 rounded-xl p-6">
-            <h3 className="text-xl font-bold text-red-600 mb-4 border-b border-red-200 pb-2">{data.traditional_team.title}</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="text-xs font-bold text-gray-500 mb-1">CONTROL TOWER</p>
-                <p className="font-semibold text-sm">{data.traditional_team.director} &rarr; {data.traditional_team.leader}</p>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-gray-500 mb-1">MEMBERS</p>
-                <ul className="list-disc pl-4 text-sm space-y-1">
-                  {data.traditional_team.members.map((m: string, i: number) => <li key={i}>{m}</li>)}
-                </ul>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-red-500 mb-1">PAIN POINTS</p>
-                <ul className="list-disc pl-4 text-sm text-red-700 space-y-1">
-                  {data.traditional_team.pain_points.map((m: string, i: number) => <li key={i}>{m}</li>)}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Aethemar */}
-          <div className="border-2 border-blue-600 bg-blue-50/20 rounded-xl p-6 shadow-md relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">SOLUTION</div>
-            <h3 className="text-xl font-bold text-blue-700 mb-4 border-b border-blue-200 pb-2">{data.aethemar_team.title}</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="text-xs font-bold text-blue-400 mb-1">CONTROL TOWER</p>
-                <p className="font-bold text-blue-900 text-sm">{data.aethemar_team.director} &rarr; {data.aethemar_team.leader}</p>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-blue-400 mb-1">AI AGENTS</p>
-                <ul className="list-disc pl-4 text-sm space-y-1 font-semibold text-gray-800">
-                  {data.aethemar_team.members.map((m: string, i: number) => <li key={i}>{m}</li>)}
-                </ul>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-blue-600 mb-1">BENEFITS</p>
-                <ul className="list-disc pl-4 text-sm text-blue-800 font-bold space-y-1">
-                  {data.aethemar_team.benefits.map((m: string, i: number) => <li key={i}>{m}</li>)}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-auto border-t border-gray-200 pt-6 text-center text-sm text-gray-500">
-          <p className="font-bold text-black mb-1">aethemar.com</p>
-          <p>주식회사 에테마르 | 대표이사 이희경 | 경기도 안양시 동안구 시민대로 181</p>
-        </div>
-      </div>
-      
-      {/* Page 2: Details */}
-      <div className="a4-page flex flex-col">
-        <div className="border-b-4 border-black pb-4 mb-6 flex justify-between items-end mt-2">
-          <h2 className="text-xl font-bold text-black">Aethemar Strategies & Core Values</h2>
-        </div>
-        
-        <div className="space-y-6 flex-1">
-          {data.details.map((detail: any, idx: number) => (
-            <div key={idx} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-              <h3 className="text-base font-bold mb-3 text-blue-800">{detail.title}</h3>
-              <div className="grid grid-cols-2 gap-5">
+      <div className="leaflet-shell">
+        <article className="a4-leaflet px-[12mm] py-[11mm] font-body-sm">
+          <div className="relative z-10 flex h-full flex-col">
+            <header className="flex items-start justify-between gap-8">
+              <div className="flex items-center gap-4">
+                <Image
+                  src="/logo_outline.png"
+                  alt="Aethemar AI Labs"
+                  width={400}
+                  height={130}
+                  unoptimized
+                  priority
+                  className="h-[18mm] w-auto object-contain mix-blend-screen drop-shadow-[0_0_12px_rgba(242,202,80,0.35)]"
+                />
+                <div className="h-[15mm] w-px bg-primary/35" />
                 <div>
-                  <h4 className="text-[10px] font-bold text-red-500 mb-1.5 px-2 py-0.5 bg-red-100 inline-block rounded">{detail.label1}</h4>
-                  <p className="text-xs text-gray-700 whitespace-pre-wrap leading-relaxed">{detail.desc1}</p>
-                </div>
-                <div>
-                  <h4 className="text-[10px] font-bold text-blue-600 mb-1.5 px-2 py-0.5 bg-blue-100 inline-block rounded">{detail.label2}</h4>
-                  <p className="text-xs text-black font-medium whitespace-pre-wrap leading-relaxed">{detail.desc2}</p>
+                  <p className="font-label-caps text-[8px] uppercase tracking-[0.32em] text-primary/80">Aethemar AI Labs</p>
+                  <p className="mt-1 text-[10px] leading-tight text-on-surface-variant">AI Agent Marketing Outsourcing</p>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-6 text-center bg-blue-600 text-white p-6 rounded-xl print:bg-blue-600">
-          <h3 className="text-xl font-bold mb-2">Ready to Transform Your Business?</h3>
-          <p className="text-sm opacity-90">지금 바로 연락 주시면 비즈니스 성장을 위한 구체적인 AI 도입 전략을 제안해 드립니다.</p>
-        </div>
+              <div className="rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-primary">
+                {data.badge}
+              </div>
+            </header>
+
+            <section className="mt-[6mm] grid grid-cols-[1.1fr_0.9fr] gap-[8mm]">
+              <div>
+                <p className="font-label-caps text-[9px] uppercase tracking-[0.32em] text-primary/80">
+                  Premium AI Marketing Control Tower
+                </p>
+                <h1 className="mt-4 text-[30px] font-light leading-[1.12] tracking-normal text-on-surface">
+                  {data.title1}
+                  <br />
+                  <span className="gold-text whitespace-nowrap font-medium">{data.title2}</span>
+                </h1>
+                <p className="mt-5 max-w-[118mm] text-[12px] leading-[1.7] text-on-surface-variant">
+                  {data.subtitle}
+                </p>
+              </div>
+
+              <div className="print-panel rounded-2xl border border-primary/20 p-[6mm]">
+                <p className="font-label-caps text-[8px] uppercase tracking-[0.28em] text-primary/75">The Core Promise</p>
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <div className="rounded-xl border border-primary/20 bg-primary/10 p-4">
+                    <p className="gold-text text-[24px] font-semibold leading-none">1/2</p>
+                    <p className="mt-2 text-[9px] leading-snug text-on-surface-variant">마케팅 고정비 부담</p>
+                  </div>
+                  <div className="rounded-xl border border-primary/20 bg-primary/10 p-4">
+                    <p className="gold-text text-[24px] font-semibold leading-none">10x</p>
+                    <p className="mt-2 text-[9px] leading-snug text-on-surface-variant">AI 기반 실행 속도</p>
+                  </div>
+                </div>
+                <p className="mt-4 text-[10px] leading-[1.6] text-on-surface/86">
+                  CEO & CMO가 단 하나의 컨트롤 타워가 되고, 분야별 AI 에이전트가 콘텐츠, 디자인, 영상, 퍼포먼스를 동시에 실행합니다.
+                </p>
+              </div>
+            </section>
+
+            <div className="hairline mt-[4mm] h-px w-full" />
+
+            <section className="mt-[6mm] grid grid-cols-3 gap-[4mm]">
+              {data.details.map((detail, idx) => (
+                <div key={detail.title} className="print-panel rounded-2xl border border-primary/15 p-[5mm]">
+                  <div className="mb-4 flex items-start gap-3">
+                    <span className="gold-text text-[18px] font-semibold leading-none">{`0${idx + 1}`}</span>
+                    <h2 className="text-[12px] font-semibold leading-snug text-on-surface">
+                      {stripLeadingNumber(detail.title)}
+                    </h2>
+                  </div>
+                  <div className="rounded-xl border border-on-surface/10 bg-background/35 p-3">
+                    <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-red-200/80">{detail.label1}</p>
+                    <p className="mt-2 whitespace-pre-line text-[9px] leading-[1.45] text-on-surface-variant">
+                      {firstParagraph(detail.desc1)}
+                    </p>
+                  </div>
+                  <div className="mt-3 rounded-xl border border-primary/25 bg-primary/10 p-3">
+                    <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-primary">{detail.label2}</p>
+                    <p className="mt-2 whitespace-pre-line text-[9px] font-medium leading-[1.45] text-on-surface">
+                      {lastParagraph(detail.desc2)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </section>
+
+            <section className="mt-[5mm] grid grid-cols-[1fr_10mm_1fr] items-stretch gap-[3mm]">
+              <div className="print-panel rounded-2xl border border-red-300/15 p-[4mm]">
+                <p className="text-[8px] font-bold uppercase tracking-[0.24em] text-red-200/80">Traditional In-house</p>
+                <h3 className="mt-1.5 text-[13px] font-semibold text-on-surface/90">{data.traditional_team.title}</h3>
+                <div className="mt-3 space-y-1.5">
+                  <div className="rounded-lg border border-on-surface/10 bg-surface/50 px-3 py-1.5 text-center text-[9px] text-on-surface-variant">
+                    {data.traditional_team.director}
+                  </div>
+                  <div className="mx-auto h-2.5 w-px bg-red-200/30" />
+                  <div className="rounded-lg border border-red-300/20 bg-red-500/10 px-3 py-1.5 text-center text-[9px] font-semibold text-red-100">
+                    {data.traditional_team.leader}
+                  </div>
+                  <div className="grid grid-cols-2 gap-1.5 pt-0.5">
+                    {data.traditional_team.members.map((member) => (
+                      <div key={member} className="rounded-md border border-on-surface/10 bg-background/35 px-2 py-1.5 text-center text-[8px] text-on-surface-variant">
+                        {member}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-2.5 flex flex-wrap gap-1.5">
+                  {data.traditional_team.pain_points?.map((point) => (
+                    <span key={point} className="rounded-full border border-red-300/20 bg-red-500/10 px-2 py-0.5 text-[7px] text-red-100/90">
+                      {point}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <div className="flex h-[10mm] w-[10mm] items-center justify-center rounded-full border border-primary/30 bg-surface text-[8px] font-bold text-primary shadow-[0_0_18px_rgba(242,202,80,0.16)]">
+                  VS
+                </div>
+              </div>
+
+              <div className="print-panel rounded-2xl border border-primary/40 bg-primary/5 p-[4mm] shadow-[0_0_34px_rgba(242,202,80,0.10)]">
+                <p className="font-label-caps text-[8px] uppercase tracking-[0.24em] text-primary">Aethemar Solution</p>
+                <h3 className="gold-text mt-1.5 text-[13px] font-semibold">{data.aethemar_team.title}</h3>
+                <div className="mt-3 space-y-1.5">
+                  <div className="rounded-lg border border-on-surface/10 bg-surface/50 px-3 py-1.5 text-center text-[9px] text-on-surface-variant">
+                    {data.aethemar_team.director}
+                  </div>
+                  <div className="mx-auto h-2.5 w-px bg-primary/50" />
+                  <div className="rounded-lg border border-primary/35 bg-primary/15 px-3 py-1.5 text-center text-[9px] font-bold text-primary">
+                    {data.aethemar_team.leader}
+                  </div>
+                  <div className="grid grid-cols-2 gap-1.5 pt-0.5">
+                    {data.aethemar_team.members.map((member) => (
+                      <div key={member} className="rounded-md border border-primary/20 bg-primary/10 px-2 py-1.5 text-center text-[8px] font-semibold text-primary/95">
+                        {member}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-2.5 flex flex-wrap gap-1.5">
+                  {data.aethemar_team.benefits?.map((benefit) => (
+                    <span key={benefit} className="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[7px] font-medium text-primary">
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <footer className="mt-auto grid grid-cols-[1fr_62mm] items-center gap-4 pt-[3mm]">
+              <div>
+                <p className="gold-text text-[11px] font-semibold">
+                  대표님은 여러 대행사를 만날 필요도, 직원을 관리할 필요도 없습니다.
+                </p>
+                <p className="mt-1 text-[8.5px] leading-[1.45] text-on-surface-variant">
+                  결과만 보고받는 완벽한 AI 마케팅 아웃소싱. 병원과 로펌 경영을 위한 가장 선명한 선택입니다.
+                </p>
+              </div>
+              <div className="rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-right">
+                <p className="font-label-caps text-[7px] uppercase tracking-[0.26em] text-primary/75">Contact</p>
+                <p className="mt-1 text-[11px] font-bold text-on-surface">aethemarcmo@gmail.com</p>
+                <p className="text-[8.5px] text-primary">{contactUrl}</p>
+              </div>
+            </footer>
+          </div>
+        </article>
       </div>
     </div>
   );
