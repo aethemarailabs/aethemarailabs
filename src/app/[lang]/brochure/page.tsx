@@ -36,6 +36,9 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
   const { lang } = await params;
   const dict = await getDictionary(lang);
   const data = dict.why_aethemar as WhyAethemar;
+  const services = dict.services;
+  const ceo = dict.ceo as any;
+  const marketingTeam = (services as any).teams.find((t: any) => t.id === 'marketing');
   const contactUrl = lang === 'en' ? 'aethemar.com/en' : 'aethemar.com/ko';
 
   return (
@@ -63,8 +66,9 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
           min-height: 100vh;
           padding: 28px;
           display: flex;
-          justify-content: center;
-          align-items: flex-start;
+          flex-direction: column;
+          align-items: center;
+          gap: 28px;
         }
         .a4-leaflet {
           width: 210mm;
@@ -116,11 +120,18 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
             min-height: 0;
             padding: 0;
             display: block;
+            gap: 0;
           }
           .a4-leaflet {
             width: 210mm;
             height: 297mm;
             box-shadow: none;
+            margin-bottom: 0;
+            page-break-after: always;
+            page-break-inside: avoid;
+          }
+          .a4-leaflet:last-child {
+            page-break-after: auto;
           }
         }
       ` }} />
@@ -289,6 +300,81 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
                 <p className="text-[8.5px] text-primary">{contactUrl}</p>
               </div>
             </footer>
+          </div>
+        </article>
+
+        {/* --- BACK PAGE --- */}
+        <article className="a4-leaflet px-[12mm] py-[11mm] font-body-sm flex flex-col justify-between">
+          <div className="relative z-10 flex h-full flex-col">
+            <header className="flex items-start justify-between gap-8">
+              <div className="flex items-center gap-4">
+                <Image
+                  src="/logo_outline.png"
+                  alt="Aethemar AI Labs"
+                  width={400}
+                  height={130}
+                  unoptimized
+                  className="h-[18mm] w-auto object-contain mix-blend-screen drop-shadow-[0_0_12px_rgba(242,202,80,0.35)]"
+                />
+                <div className="h-[15mm] w-px bg-primary/35" />
+                <div>
+                  <p className="font-label-caps text-[8px] uppercase tracking-[0.32em] text-primary/80">Services</p>
+                  <p className="mt-1 text-[10px] leading-tight text-on-surface-variant">AI-Driven Marketing Architecture</p>
+                </div>
+              </div>
+              <div className="rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-primary">
+                {marketingTeam.title}
+              </div>
+            </header>
+
+            <section className="mt-[8mm]">
+              <h2 className="text-[26px] font-light leading-[1.3] text-on-surface">
+                초고도화된 전환을 위한<br />
+                <span className="gold-text font-medium">데이터 기반 마케팅 아키텍처</span>
+              </h2>
+              <p className="mt-4 text-[12px] leading-[1.7] text-on-surface-variant max-w-[150mm]">
+                {marketingTeam.desc}
+              </p>
+            </section>
+
+            <div className="hairline mt-[6mm] mb-[6mm] h-px w-full" />
+
+            <section className="grid grid-cols-2 gap-[5mm] flex-grow content-start">
+              {marketingTeam.trends?.slice(0, 6).map((trend: any, idx: number) => (
+                <div key={idx} className="print-panel rounded-2xl border border-primary/15 p-[5mm] flex items-start gap-4">
+                  <div className="flex h-[11mm] w-[11mm] shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary shadow-[0_0_12px_rgba(242,202,80,0.12)]">
+                    <span className="material-symbols-outlined text-[24px]">{trend.icon}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-[12px] font-semibold text-on-surface/95">{trend.title}</h3>
+                    <p className="mt-2 text-[10px] leading-[1.55] text-on-surface-variant">{trend.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </section>
+
+            <div className="mt-[6mm]">
+              <div className="hairline mb-[5mm] h-px w-full" />
+              <section className="print-panel rounded-2xl border border-primary/20 p-[7mm] relative overflow-hidden flex flex-col justify-between" style={{ minHeight: '40mm' }}>
+                <div className="absolute -right-[4mm] -top-[4mm] opacity-5 pointer-events-none text-[150px] leading-none font-serif text-primary mix-blend-screen">
+                  &quot;
+                </div>
+                <div className="flex justify-between items-end relative z-10 w-full">
+                  <div className="max-w-[145mm]">
+                    <p className="gold-text text-[15px] font-medium leading-[1.6]">
+                      &quot;{ceo.desc.split('\n\n')[0]}&quot;
+                    </p>
+                    <p className="mt-3 text-[10.5px] leading-[1.65] text-on-surface/85 whitespace-pre-line">
+                      {ceo.desc.split('\n\n')[1]}
+                    </p>
+                  </div>
+                  <div className="text-right shrink-0 ml-[4mm]">
+                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary/75">{ceo.role}</p>
+                    <p className="mt-1 text-[17px] font-medium text-on-surface">{ceo.name.split(' (')[0]}</p>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </article>
       </div>
