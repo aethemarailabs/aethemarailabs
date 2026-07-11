@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
     await new Promise(r => setTimeout(r, 5000));
     
     await page.pdf({ 
-      path: 'public/Aethemar_Sales_Brochure_v4.pdf', 
+      path: 'public/Aethemar_Sales_Brochure_v5.pdf', 
       format: 'A4', 
       printBackground: true,
       margin: { top: 0, right: 0, bottom: 0, left: 0 }

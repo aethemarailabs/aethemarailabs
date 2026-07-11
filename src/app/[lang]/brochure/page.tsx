@@ -1,4 +1,4 @@
-import { getDictionary } from '@/dictionaries';
+﻿  import { getDictionary } from '@/dictionaries';
 import Image from 'next/image';
 
 type WhyDetail = {
@@ -61,14 +61,18 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
           -webkit-print-color-adjust: exact !important;
           print-color-adjust: exact !important;
         }
-        @page { size: A4 portrait; margin: 0; }
+        @page { 
+          size: A4 portrait; 
+          margin: 0; 
+        }
         .leaflet-shell {
           min-height: 100vh;
-          padding: 28px;
+          padding: 40px 0;
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 28px;
+          gap: 40px;
+          background: #0f0d0c;
         }
         .a4-leaflet {
           width: 210mm;
@@ -77,43 +81,46 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
           overflow: hidden;
           position: relative;
           background:
-            radial-gradient(circle at 18% 8%, rgba(242, 202, 80, 0.20), transparent 24%),
-            radial-gradient(circle at 92% 38%, rgba(242, 202, 80, 0.12), transparent 26%),
+            radial-gradient(circle at 18% 8%, rgba(242, 202, 80, 0.18), transparent 28%),
+            radial-gradient(circle at 92% 38%, rgba(242, 202, 80, 0.10), transparent 30%),
             linear-gradient(145deg, #110d0c 0%, #161311 42%, #231f1d 100%);
-          box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+          box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
         }
+        /* Refined Inner Frame */
         .a4-leaflet::before {
           content: "";
           position: absolute;
-          inset: 8mm;
-          border: 1px solid rgba(242, 202, 80, 0.22);
+          inset: 12mm;
+          border: 1px solid rgba(242, 202, 80, 0.15);
           pointer-events: none;
           z-index: 2;
         }
+        /* Background Letter Decal */
         .a4-leaflet::after {
           content: "A";
           position: absolute;
-          right: -9mm;
-          bottom: -32mm;
-          font-size: 118mm;
+          right: -12mm;
+          bottom: -35mm;
+          font-size: 130mm;
           line-height: 1;
           font-weight: 700;
-          color: rgba(242, 202, 80, 0.035);
+          color: rgba(242, 202, 80, 0.025);
           letter-spacing: 0;
           z-index: 0;
         }
         .print-panel {
-          background: rgba(36, 30, 28, 0.58);
-          border-top: 1px solid rgba(255, 255, 255, 0.16);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.045), 0 8px 32px rgba(0, 0, 0, 0.26);
+          background: rgba(36, 30, 28, 0.45);
+          border-top: 1px solid rgba(255, 255, 255, 0.12);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+          box-shadow: inset 0 0 40px rgba(212, 175, 55, 0.03), 0 12px 40px rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(4px);
         }
         .gold-text {
           color: #f2ca50;
-          text-shadow: 0 0 20px rgba(212, 175, 55, 0.30);
+          text-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
         }
         .hairline {
-          background: linear-gradient(90deg, transparent, rgba(242, 202, 80, 0.72), transparent);
+          background: linear-gradient(90deg, transparent, rgba(242, 202, 80, 0.5), transparent);
         }
         @media print {
           .leaflet-shell {
@@ -126,7 +133,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
             width: 210mm;
             height: 297mm;
             box-shadow: none;
-            margin-bottom: 0;
+            margin: 0;
             page-break-after: always;
             page-break-inside: avoid;
           }
@@ -137,10 +144,13 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
       ` }} />
 
       <div className="leaflet-shell">
-        <article className="a4-leaflet px-[12mm] py-[11mm] font-body-sm">
+        {/* --- FRONT PAGE --- */}
+        <article className="a4-leaflet px-[18mm] py-[16mm] font-body-sm flex flex-col">
           <div className="relative z-10 flex h-full flex-col justify-between">
-            <header className="flex items-start justify-between gap-8">
-              <div className="flex items-center gap-4">
+            
+            {/* Header Section */}
+            <header className="flex items-start justify-between gap-10">
+              <div className="flex items-center gap-5">
                 <Image
                   src="/logo_outline.png"
                   alt="Aethemar AI Labs"
@@ -148,141 +158,150 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
                   height={130}
                   unoptimized
                   priority
-                  className="h-[18mm] w-auto object-contain mix-blend-screen drop-shadow-[0_0_12px_rgba(242,202,80,0.35)]"
+                  className="h-[20mm] w-auto object-contain mix-blend-screen drop-shadow-[0_0_15px_rgba(242,202,80,0.3)]"
                 />
-                <div className="h-[15mm] w-px bg-primary/35" />
+                <div className="h-[14mm] w-px bg-primary/30" />
                 <div>
-                  <p className="font-label-caps text-[8px] uppercase tracking-[0.32em] text-primary/80">Aethemar AI Labs</p>
-                  <p className="mt-1 text-[10px] leading-tight text-on-surface-variant">AI Agent Marketing Outsourcing</p>
+                  <p className="font-label-caps text-[8.5px] uppercase tracking-[0.35em] text-primary/80">Aethemar AI Labs</p>
+                  <p className="mt-1.5 text-[10.5px] leading-tight text-on-surface-variant font-medium">AI Agent Marketing Outsourcing</p>
                 </div>
               </div>
-              <div className="rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-primary">
+              <div className="mt-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5 text-[9.5px] font-bold uppercase tracking-[0.28em] text-primary">
                 {data.badge}
               </div>
             </header>
 
-            <section className="mt-[6mm] grid grid-cols-[1.1fr_0.9fr] gap-[8mm]">
+            {/* Hero Section */}
+            <section className="mt-[10mm] grid grid-cols-[1.15fr_0.85fr] gap-[10mm] items-center">
               <div>
-                <p className="font-label-caps text-[9px] uppercase tracking-[0.32em] text-primary/80">
+                <p className="font-label-caps text-[9.5px] uppercase tracking-[0.35em] text-primary/75">
                   Premium AI Marketing Control Tower
                 </p>
-                <h1 className="mt-4 text-[30px] font-light leading-[1.12] tracking-normal text-on-surface">
+                <h1 className="mt-5 text-[32px] font-light leading-[1.1] tracking-tight text-on-surface">
                   {data.title1}
                   <br />
                   <span className="gold-text whitespace-nowrap font-medium">{data.title2}</span>
                 </h1>
-                <div className="mt-6 max-w-[130mm] rounded-xl border border-primary/25 bg-primary/10 p-[4mm] shadow-[0_0_24px_rgba(242,202,80,0.08)]">
-                  <p className="gold-text text-[13px] font-semibold leading-snug">
+                <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-[5mm] shadow-[0_0_30px_rgba(242,202,80,0.06)]">
+                  <p className="gold-text text-[14px] font-semibold leading-relaxed">
                     대표님은 여러 대행사를 만날 필요도, 직원을 관리할 필요도 없습니다.
                   </p>
-                  <p className="mt-2 text-[10px] leading-[1.6] text-on-surface-variant">
+                  <p className="mt-3 text-[10.5px] leading-[1.7] text-on-surface-variant">
                     결과만 보고받는 완벽한 AI 마케팅 아웃소싱. 병원과 로펌 경영을 위한 가장 선명한 선택입니다.
                   </p>
                 </div>
               </div>
 
-              <div className="print-panel rounded-2xl border border-primary/20 p-[6mm]">
-                <p className="font-label-caps text-[8px] uppercase tracking-[0.28em] text-primary/75">The Core Promise</p>
-                <div className="mt-4 grid grid-cols-2 gap-3">
-                  <div className="rounded-xl border border-primary/20 bg-primary/10 p-4">
-                    <p className="gold-text text-[24px] font-semibold leading-none">1/2</p>
-                    <p className="mt-2 text-[9px] leading-snug text-on-surface-variant">마케팅 고정비 부담</p>
+              <div className="print-panel rounded-[24px] border border-primary/15 p-[7mm] flex flex-col justify-center min-h-[55mm]">
+                <p className="font-label-caps text-[8.5px] uppercase tracking-[0.3em] text-primary/70 text-center">The Core Promise</p>
+                <div className="mt-6 grid grid-cols-1 gap-4">
+                  <div className="flex items-center gap-5 rounded-2xl border border-primary/15 bg-primary/5 p-4">
+                    <p className="gold-text text-[26px] font-bold leading-none w-[60px]">1/2</p>
+                    <p className="text-[10px] leading-snug text-on-surface-variant font-medium">마케팅 고정비 부담 <br/><span className="text-[9px] opacity-60">혁신적 비용 절감</span></p>
                   </div>
-                  <div className="rounded-xl border border-primary/20 bg-primary/10 p-4">
-                    <p className="gold-text text-[24px] font-semibold leading-none">10x</p>
-                    <p className="mt-2 text-[9px] leading-snug text-on-surface-variant">AI 기반 실행 속도</p>
+                  <div className="flex items-center gap-5 rounded-2xl border border-primary/15 bg-primary/5 p-4">
+                    <p className="gold-text text-[26px] font-bold leading-none w-[60px]">10x</p>
+                    <p className="text-[10px] leading-snug text-on-surface-variant font-medium">AI 기반 실행 속도 <br/><span className="text-[9px] opacity-60">압도적 시장 선점</span></p>
                   </div>
                 </div>
-                <p className="mt-4 text-[10px] leading-[1.6] text-on-surface/86">
-                  CEO & CMO가 단 하나의 컨트롤 타워가 되고, 분야별 AI 에이전트가 콘텐츠, 디자인, 영상, 퍼포먼스를 동시에 실행합니다.
-                </p>
               </div>
             </section>
 
-            <div className="hairline mt-[4mm] h-px w-full" />
+            <div className="hairline mt-[8mm] h-px w-full opacity-60" />
 
-            <section className="mt-[6mm] grid grid-cols-3 gap-[4mm]">
+            {/* Core Values / Details */}
+            <section className="mt-[10mm] grid grid-cols-3 gap-[6mm]">
               {data.details.map((detail, idx) => (
-                <div key={detail.title} className="print-panel rounded-2xl border border-primary/15 p-[5mm]">
-                  <div className="mb-4 flex items-start gap-3">
-                    <span className="gold-text text-[18px] font-semibold leading-none">{`0${idx + 1}`}</span>
-                    <h2 className="text-[12px] font-semibold leading-snug text-on-surface">
+                <div key={detail.title} className="print-panel rounded-[24px] border border-primary/10 p-[6mm] flex flex-col">
+                  <div className="mb-5 flex items-center gap-3.5">
+                    <span className="gold-text text-[20px] font-bold leading-none italic">{`0${idx + 1}`}</span>
+                    <div className="h-4 w-px bg-primary/20" />
+                    <h2 className="text-[12.5px] font-bold leading-tight text-on-surface tracking-tight">
                       {stripLeadingNumber(detail.title)}
                     </h2>
                   </div>
-                  <div className="rounded-xl border border-on-surface/10 bg-background/35 p-3">
-                    <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-red-200/80">{detail.label1}</p>
-                    <p className="mt-2 whitespace-pre-line text-[9px] leading-[1.45] text-on-surface-variant">
-                      {firstParagraph(detail.desc1)}
-                    </p>
-                  </div>
-                  <div className="mt-3 rounded-xl border border-primary/25 bg-primary/10 p-3">
-                    <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-primary">{detail.label2}</p>
-                    <p className="mt-2 whitespace-pre-line text-[9px] font-medium leading-[1.45] text-on-surface">
-                      {lastParagraph(detail.desc2)}
-                    </p>
+                  <div className="space-y-4 flex-grow">
+                    <div className="rounded-xl border border-white/5 bg-background/40 p-3.5">
+                      <p className="text-[8.5px] font-black uppercase tracking-[0.25em] text-red-200/70">{detail.label1}</p>
+                      <p className="mt-2.5 whitespace-pre-line text-[9.5px] leading-[1.6] text-on-surface-variant">
+                        {firstParagraph(detail.desc1)}
+                      </p>
+                    </div>
+                    <div className="rounded-xl border border-primary/20 bg-primary/5 p-3.5 shadow-inner">
+                      <p className="text-[8.5px] font-black uppercase tracking-[0.25em] text-primary">{detail.label2}</p>
+                      <p className="mt-2.5 whitespace-pre-line text-[9.5px] font-semibold leading-[1.6] text-on-surface">
+                        {lastParagraph(detail.desc2)}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
             </section>
 
-            <section className="mt-[5mm] grid grid-cols-[1fr_10mm_1fr] items-stretch gap-[3mm]">
-              <div className="print-panel rounded-2xl border border-red-300/15 p-[4mm]">
-                <p className="text-[8px] font-bold uppercase tracking-[0.24em] text-red-200/80">Traditional In-house</p>
-                <h3 className="mt-1.5 text-[13px] font-semibold text-on-surface/90">{data.traditional_team.title}</h3>
-                <div className="mt-3 space-y-1.5">
-                  <div className="rounded-lg border border-on-surface/10 bg-surface/50 px-3 py-1.5 text-center text-[9px] text-on-surface-variant">
+            {/* Comparison Section */}
+            <section className="mt-[10mm] grid grid-cols-[1fr_14mm_1fr] items-center gap-[4mm] mb-[2mm]">
+              <div className="print-panel rounded-[24px] border border-red-400/10 p-[5mm]">
+                <div className="flex justify-between items-center mb-4">
+                  <p className="text-[8.5px] font-black uppercase tracking-[0.28em] text-red-200/60">Traditional Team</p>
+                  <div className="h-px flex-grow mx-3 bg-red-400/10" />
+                </div>
+                <h3 className="text-[14px] font-bold text-on-surface/90 text-center mb-4">{data.traditional_team.title}</h3>
+                <div className="space-y-2">
+                  <div className="rounded-xl border border-white/5 bg-surface/40 px-4 py-2 text-center text-[10px] text-on-surface-variant font-medium">
                     {data.traditional_team.director}
                   </div>
-                  <div className="mx-auto h-2.5 w-px bg-red-200/30" />
-                  <div className="rounded-lg border border-red-300/20 bg-red-500/10 px-3 py-1.5 text-center text-[9px] font-semibold text-red-100">
+                  <div className="mx-auto h-3 w-px bg-red-400/20" />
+                  <div className="rounded-xl border border-red-400/15 bg-red-500/5 px-4 py-2 text-center text-[10px] font-bold text-red-100/90">
                     {data.traditional_team.leader}
                   </div>
-                  <div className="grid grid-cols-2 gap-1.5 pt-0.5">
+                  <div className="grid grid-cols-2 gap-2 pt-1">
                     {data.traditional_team.members.map((member) => (
-                      <div key={member} className="rounded-md border border-on-surface/10 bg-background/35 px-2 py-1.5 text-center text-[8px] text-on-surface-variant">
+                      <div key={member} className="rounded-lg border border-white/5 bg-background/30 px-2 py-2 text-center text-[8.5px] text-on-surface-variant">
                         {member}
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="mt-2.5 flex flex-wrap gap-1.5">
+                <div className="mt-4 flex flex-wrap justify-center gap-1.5">
                   {data.traditional_team.pain_points?.map((point) => (
-                    <span key={point} className="rounded-full border border-red-300/20 bg-red-500/10 px-2 py-0.5 text-[7px] text-red-100/90">
+                    <span key={point} className="rounded-full border border-red-400/10 bg-red-500/10 px-2.5 py-1 text-[7.5px] text-red-100/70 font-medium">
                       {point}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="flex items-center justify-center">
-                <div className="flex h-[10mm] w-[10mm] items-center justify-center rounded-full border border-primary/30 bg-surface text-[8px] font-bold text-primary shadow-[0_0_18px_rgba(242,202,80,0.16)]">
+              <div className="flex flex-col items-center gap-2">
+                <div className="flex h-[12mm] w-[12mm] items-center justify-center rounded-full border border-primary/25 bg-surface/80 text-[10px] font-black text-primary shadow-[0_0_25px_rgba(242,202,80,0.2)]">
                   VS
                 </div>
               </div>
 
-              <div className="print-panel rounded-2xl border border-primary/40 bg-primary/5 p-[4mm] shadow-[0_0_34px_rgba(242,202,80,0.10)]">
-                <p className="font-label-caps text-[8px] uppercase tracking-[0.24em] text-primary">Aethemar Solution</p>
-                <h3 className="gold-text mt-1.5 text-[13px] font-semibold">{data.aethemar_team.title}</h3>
-                <div className="mt-3 space-y-1.5">
-                  <div className="rounded-lg border border-on-surface/10 bg-surface/50 px-3 py-1.5 text-center text-[9px] text-on-surface-variant">
+              <div className="print-panel rounded-[24px] border border-primary/30 bg-primary/5 p-[5mm] shadow-[0_0_40px_rgba(242,202,80,0.12)]">
+                <div className="flex justify-between items-center mb-4">
+                  <p className="text-[8.5px] font-black uppercase tracking-[0.28em] text-primary/80">Aethemar AI Solution</p>
+                  <div className="h-px flex-grow mx-3 bg-primary/20" />
+                </div>
+                <h3 className="gold-text text-[14px] font-bold text-center mb-4">{data.aethemar_team.title}</h3>
+                <div className="space-y-2">
+                  <div className="rounded-xl border border-primary/10 bg-surface/50 px-4 py-2 text-center text-[10px] text-on-surface-variant font-medium">
                     {data.aethemar_team.director}
                   </div>
-                  <div className="mx-auto h-2.5 w-px bg-primary/50" />
-                  <div className="rounded-lg border border-primary/35 bg-primary/15 px-3 py-1.5 text-center text-[9px] font-bold text-primary">
+                  <div className="mx-auto h-3 w-px bg-primary/40" />
+                  <div className="rounded-xl border border-primary/30 bg-primary/15 px-4 py-2 text-center text-[10px] font-bold text-primary">
                     {data.aethemar_team.leader}
                   </div>
-                  <div className="grid grid-cols-2 gap-1.5 pt-0.5">
+                  <div className="grid grid-cols-2 gap-2 pt-1">
                     {data.aethemar_team.members.map((member) => (
-                      <div key={member} className="rounded-md border border-primary/20 bg-primary/10 px-2 py-1.5 text-center text-[8px] font-semibold text-primary/95">
+                      <div key={member} className="rounded-lg border border-primary/20 bg-primary/10 px-2 py-2 text-center text-[8.5px] font-bold text-primary/90">
                         {member}
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="mt-2.5 flex flex-wrap gap-1.5">
+                <div className="mt-4 flex flex-wrap justify-center gap-1.5">
                   {data.aethemar_team.benefits?.map((benefit) => (
-                    <span key={benefit} className="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[7px] font-medium text-primary">
+                    <span key={benefit} className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-[7.5px] font-bold text-primary">
                       {benefit}
                     </span>
                   ))}
@@ -294,76 +313,89 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
         </article>
 
         {/* --- BACK PAGE --- */}
-        <article className="a4-leaflet px-[12mm] py-[11mm] font-body-sm flex flex-col justify-between">
-          <div className="relative z-10 flex h-full flex-col">
-            <header className="flex items-start justify-between gap-8">
-              <div className="flex items-center gap-4">
+        <article className="a4-leaflet px-[18mm] py-[16mm] font-body-sm flex flex-col">
+          <div className="relative z-10 flex h-full flex-col justify-between">
+            
+            {/* Header */}
+            <header className="flex items-start justify-between gap-10">
+              <div className="flex items-center gap-5">
                 <Image
                   src="/logo_outline.png"
                   alt="Aethemar AI Labs"
                   width={400}
                   height={130}
                   unoptimized
-                  className="h-[18mm] w-auto object-contain mix-blend-screen drop-shadow-[0_0_12px_rgba(242,202,80,0.35)]"
+                  className="h-[20mm] w-auto object-contain mix-blend-screen drop-shadow-[0_0_15px_rgba(242,202,80,0.3)]"
                 />
-                <div className="h-[15mm] w-px bg-primary/35" />
+                <div className="h-[14mm] w-px bg-primary/30" />
                 <div>
-                  <p className="font-label-caps text-[8px] uppercase tracking-[0.32em] text-primary/80">Services</p>
-                  <p className="mt-1 text-[10px] leading-tight text-on-surface-variant">AI-Driven Marketing Architecture</p>
+                  <p className="font-label-caps text-[8.5px] uppercase tracking-[0.35em] text-primary/80">Services</p>
+                  <p className="mt-1.5 text-[10.5px] leading-tight text-on-surface-variant font-medium">AI-Driven Marketing Architecture</p>
                 </div>
               </div>
-              <div className="rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-primary">
+              <div className="mt-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5 text-[9.5px] font-bold uppercase tracking-[0.28em] text-primary">
                 {marketingTeam.title}
               </div>
             </header>
 
-            <section className="mt-[6mm]">
-              <div className="flex gap-[5mm] items-start">
-                <div className="mt-1.5 w-[2mm] h-[12mm] bg-primary/70 rounded-full shrink-0 shadow-[0_0_10px_rgba(242,202,80,0.4)]" />
-                <div>
-                  <p className="text-[14px] font-semibold text-on-surface leading-[1.5]">
+            {/* CEO Quote Section */}
+            <section className="mt-[12mm]">
+              <div className="flex gap-[6mm] items-start">
+                <div className="mt-2 w-[2.5mm] h-[16mm] bg-primary/60 rounded-full shrink-0 shadow-[0_0_12px_rgba(242,202,80,0.4)]" />
+                <div className="max-w-[150mm]">
+                  <p className="text-[16px] font-medium text-on-surface leading-[1.6] italic tracking-tight">
                     &quot;{ceo.desc.split('\n\n')[0]}&quot;
                   </p>
-                  <p className="mt-2 text-[10px] leading-[1.6] text-on-surface-variant max-w-[170mm]">
+                  <p className="mt-4 text-[11px] leading-[1.7] text-on-surface-variant font-medium opacity-90">
                     {ceo.desc.split('\n\n')[1]}
                   </p>
                 </div>
               </div>
             </section>
 
-            <div className="hairline mt-[6mm] mb-[6mm] h-px w-full" />
+            <div className="hairline mt-[8mm] mb-[10mm] h-px w-full opacity-60" />
 
-            <section>
-              <h2 className="text-[22px] font-light leading-[1.3] text-on-surface">
-                초고도화된 전환을 위한 <span className="gold-text font-medium">데이터 기반 마케팅 아키텍처</span>
+            {/* Services Heading */}
+            <section className="mb-[8mm]">
+              <h2 className="text-[26px] font-light leading-[1.3] text-on-surface tracking-tight">
+                초고도화된 전환을 위한 <br/>
+                <span className="gold-text font-semibold">데이터 기반 마케팅 아키텍처</span>
               </h2>
             </section>
 
-            <section className="grid grid-cols-2 gap-[5mm] flex-grow content-start">
+            {/* Grid Services Section */}
+            <section className="grid grid-cols-2 gap-x-[8mm] gap-y-[6mm] flex-grow content-start">
               {marketingTeam.trends?.slice(0, 6).map((trend: any, idx: number) => (
-                <div key={idx} className="print-panel rounded-2xl border border-primary/15 p-[5mm] flex items-start gap-4">
-                  <div className="flex h-[11mm] w-[11mm] shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary shadow-[0_0_12px_rgba(242,202,80,0.12)]">
-                    <span className="material-symbols-outlined text-[24px]">{trend.icon}</span>
+                <div key={idx} className="print-panel rounded-[24px] border border-primary/10 p-[6mm] flex items-start gap-5">
+                  <div className="flex h-[13mm] w-[13mm] shrink-0 items-center justify-center rounded-2xl bg-primary/10 border border-primary/20 text-primary shadow-[0_0_15px_rgba(242,202,80,0.15)]">
+                    <span className="material-symbols-outlined text-[28px]">{trend.icon}</span>
                   </div>
-                  <div>
-                    <h3 className="text-[12px] font-semibold text-on-surface/95">{trend.title}</h3>
-                    <p className="mt-2 text-[10px] leading-[1.55] text-on-surface-variant">{trend.desc}</p>
+                  <div className="pt-1">
+                    <h3 className="text-[13.5px] font-bold text-on-surface tracking-tight">{trend.title}</h3>
+                    <p className="mt-3 text-[10.5px] leading-[1.65] text-on-surface-variant font-medium">{trend.desc}</p>
                   </div>
                 </div>
               ))}
             </section>
 
-            <div className="mt-auto pt-[4mm]">
-              <div className="hairline mb-[4mm] h-px w-full" />
-              <section className="grid grid-cols-2 gap-[6mm]">
-                <div className="relative aspect-[1.4/1] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+            {/* Footer Visual Section */}
+            <div className="mt-auto pt-[8mm] pb-[4mm]">
+              <div className="hairline mb-[10mm] h-px w-full opacity-50" />
+              <section className="grid grid-cols-2 gap-[10mm] px-[10mm]">
+                <div className="relative aspect-[1.58/1] w-full overflow-hidden rounded-[24px] border border-primary/25 shadow-[0_25px_60px_rgba(0,0,0,0.5)] transform -rotate-1">
                   <Image src="/card_front.png" alt="Aethemar Business Card Front" fill className="object-cover" unoptimized priority />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent pointer-events-none" />
                 </div>
-                <div className="relative aspect-[1.4/1] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+                <div className="relative aspect-[1.58/1] w-full overflow-hidden rounded-[24px] border border-primary/25 shadow-[0_25px_60px_rgba(0,0,0,0.5)] transform rotate-1">
                   <Image src="/card_back.png" alt="Aethemar Business Card Back" fill className="object-cover" unoptimized priority />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent pointer-events-none" />
                 </div>
               </section>
+              <div className="mt-8 text-center">
+                <p className="font-label-caps text-[9px] uppercase tracking-[0.4em] text-primary/50">www.{contactUrl}</p>
+              </div>
             </div>
+
           </div>
         </article>
       </div>
