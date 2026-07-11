@@ -171,9 +171,14 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
                   <br />
                   <span className="gold-text whitespace-nowrap font-medium">{data.title2}</span>
                 </h1>
-                <p className="mt-5 max-w-[118mm] text-[12px] leading-[1.7] text-on-surface-variant">
-                  {data.subtitle}
-                </p>
+                <div className="mt-6 max-w-[130mm] rounded-xl border border-primary/25 bg-primary/10 p-[4mm] shadow-[0_0_24px_rgba(242,202,80,0.08)]">
+                  <p className="gold-text text-[13px] font-semibold leading-snug">
+                    대표님은 여러 대행사를 만날 필요도, 직원을 관리할 필요도 없습니다.
+                  </p>
+                  <p className="mt-2 text-[10px] leading-[1.6] text-on-surface-variant">
+                    결과만 보고받는 완벽한 AI 마케팅 아웃소싱. 병원과 로펌 경영을 위한 가장 선명한 선택입니다.
+                  </p>
+                </div>
               </div>
 
               <div className="print-panel rounded-2xl border border-primary/20 p-[6mm]">
@@ -285,21 +290,6 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               </div>
             </section>
 
-            <footer className="mt-auto grid grid-cols-[1fr_62mm] items-center gap-4 pt-[3mm]">
-              <div>
-                <p className="gold-text text-[11px] font-semibold">
-                  대표님은 여러 대행사를 만날 필요도, 직원을 관리할 필요도 없습니다.
-                </p>
-                <p className="mt-1 text-[8.5px] leading-[1.45] text-on-surface-variant">
-                  결과만 보고받는 완벽한 AI 마케팅 아웃소싱. 병원과 로펌 경영을 위한 가장 선명한 선택입니다.
-                </p>
-              </div>
-              <div className="rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-right">
-                <p className="font-label-caps text-[7px] uppercase tracking-[0.26em] text-primary/75">Contact</p>
-                <p className="mt-1 text-[11px] font-bold text-on-surface">aethemarcmo@gmail.com</p>
-                <p className="text-[8.5px] text-primary">{contactUrl}</p>
-              </div>
-            </footer>
           </div>
         </article>
 
@@ -327,17 +317,27 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               </div>
             </header>
 
-            <section className="mt-[8mm]">
-              <h2 className="text-[26px] font-light leading-[1.3] text-on-surface">
-                초고도화된 전환을 위한<br />
-                <span className="gold-text font-medium">데이터 기반 마케팅 아키텍처</span>
-              </h2>
-              <p className="mt-4 text-[12px] leading-[1.7] text-on-surface-variant max-w-[150mm]">
-                {marketingTeam.desc}
-              </p>
+            <section className="mt-[6mm]">
+              <div className="flex gap-[5mm] items-start">
+                <div className="mt-1.5 w-[2mm] h-[12mm] bg-primary/70 rounded-full shrink-0 shadow-[0_0_10px_rgba(242,202,80,0.4)]" />
+                <div>
+                  <p className="text-[14px] font-semibold text-on-surface leading-[1.5]">
+                    &quot;{ceo.desc.split('\n\n')[0]}&quot;
+                  </p>
+                  <p className="mt-2 text-[10px] leading-[1.6] text-on-surface-variant max-w-[170mm]">
+                    {ceo.desc.split('\n\n')[1]}
+                  </p>
+                </div>
+              </div>
             </section>
 
             <div className="hairline mt-[6mm] mb-[6mm] h-px w-full" />
+
+            <section>
+              <h2 className="text-[22px] font-light leading-[1.3] text-on-surface">
+                초고도화된 전환을 위한 <span className="gold-text font-medium">데이터 기반 마케팅 아키텍처</span>
+              </h2>
+            </section>
 
             <section className="grid grid-cols-2 gap-[5mm] flex-grow content-start">
               {marketingTeam.trends?.slice(0, 6).map((trend: any, idx: number) => (
@@ -353,25 +353,14 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               ))}
             </section>
 
-            <div className="mt-[6mm]">
-              <div className="hairline mb-[5mm] h-px w-full" />
-              <section className="print-panel rounded-2xl border border-primary/20 p-[7mm] relative overflow-hidden flex flex-col justify-between" style={{ minHeight: '40mm' }}>
-                <div className="absolute -right-[4mm] -top-[4mm] opacity-5 pointer-events-none text-[150px] leading-none font-serif text-primary mix-blend-screen">
-                  &quot;
+            <div className="mt-auto pt-[4mm]">
+              <div className="hairline mb-[4mm] h-px w-full" />
+              <section className="grid grid-cols-2 gap-[6mm]">
+                <div className="relative aspect-[1.4/1] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+                  <Image src="/card_front.png" alt="Aethemar Business Card Front" fill className="object-cover" unoptimized />
                 </div>
-                <div className="flex justify-between items-end relative z-10 w-full">
-                  <div className="max-w-[145mm]">
-                    <p className="gold-text text-[15px] font-medium leading-[1.6]">
-                      &quot;{ceo.desc.split('\n\n')[0]}&quot;
-                    </p>
-                    <p className="mt-3 text-[10.5px] leading-[1.65] text-on-surface/85 whitespace-pre-line">
-                      {ceo.desc.split('\n\n')[1]}
-                    </p>
-                  </div>
-                  <div className="text-right shrink-0 ml-[4mm]">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary/75">{ceo.role}</p>
-                    <p className="mt-1 text-[17px] font-medium text-on-surface">{ceo.name.split(' (')[0]}</p>
-                  </div>
+                <div className="relative aspect-[1.4/1] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+                  <Image src="/card_back.png" alt="Aethemar Business Card Back" fill className="object-cover" unoptimized />
                 </div>
               </section>
             </div>
