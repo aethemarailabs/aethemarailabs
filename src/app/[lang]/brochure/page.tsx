@@ -138,7 +138,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
 
       <div className="leaflet-shell">
         <article className="a4-leaflet px-[12mm] py-[11mm] font-body-sm">
-          <div className="relative z-10 flex h-full flex-col">
+          <div className="relative z-10 flex h-full flex-col justify-between">
             <header className="flex items-start justify-between gap-8">
               <div className="flex items-center gap-4">
                 <Image
@@ -357,10 +357,10 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               <div className="hairline mb-[4mm] h-px w-full" />
               <section className="grid grid-cols-2 gap-[6mm]">
                 <div className="relative aspect-[1.4/1] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
-                  <Image src="/card_front.png" alt="Aethemar Business Card Front" fill className="object-cover" unoptimized />
+                  <Image src="/card_front.png" alt="Aethemar Business Card Front" fill className="object-cover" unoptimized priority />
                 </div>
                 <div className="relative aspect-[1.4/1] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
-                  <Image src="/card_back.png" alt="Aethemar Business Card Back" fill className="object-cover" unoptimized />
+                  <Image src="/card_back.png" alt="Aethemar Business Card Back" fill className="object-cover" unoptimized priority />
                 </div>
               </section>
             </div>
