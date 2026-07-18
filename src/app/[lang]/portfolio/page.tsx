@@ -49,7 +49,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
               </div>
             </Link>
             
-            <Link href="https://www.youtube.com/@AethemarAILabs" target="_blank" rel="noopener noreferrer" className="flex-1 max-w-[100px] md:max-w-none flex flex-col items-center gap-3 group">
+            {/* <Link href="https://www.youtube.com/@AethemarAILabs" target="_blank" rel="noopener noreferrer" className="flex-1 max-w-[100px] md:max-w-none flex flex-col items-center gap-3 group">
               <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full glass-panel flex items-center justify-center group-hover:border-primary transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10">
                   <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
@@ -60,14 +60,14 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                 <p className="font-label-caps text-on-surface text-xs sm:text-sm md:text-lg">YouTube</p>
                 <p className="font-body-sm text-[10px] sm:text-[11px] md:text-sm text-on-surface-variant mt-1 md:truncate">@aethemarailabs</p>
               </div>
-            </Link>
+            </Link> */}
           </div>
         </FadeIn>
 
         {/* Embedded Videos Section */}
         <div className="w-full mt-16 space-y-16">
           {/* YouTube Embeds */}
-          <FadeIn direction="up" delay={0.2}>
+          {/* <FadeIn direction="up" delay={0.2}>
             <div className="space-y-6">
               <h3 className="font-title-md text-2xl text-primary">YouTube Showcases</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -127,7 +127,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ lang
                 </div>
               </div>
             </div>
-          </FadeIn>
+          </FadeIn> */}
 
           {/* Instagram Embeds */}
           <FadeIn direction="up" delay={0.2}>
