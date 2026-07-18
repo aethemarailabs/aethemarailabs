@@ -24,8 +24,8 @@ export default function TopNavBar() {
     { name: 'Philosophy', href: `/${currentLang}/philosophy` },
     { name: 'CEO', href: `/${currentLang}/ceo` },
     { name: 'Services', href: `/${currentLang}/services` },
+    { name: 'SNS Channels', href: `/${currentLang}/achievements` },
     { name: 'Portfolio', href: `/${currentLang}/portfolio` },
-    { name: 'Achievements', href: `/${currentLang}/achievements` },
     { name: 'Contact', href: `/${currentLang}/contact` },
   ];
 
