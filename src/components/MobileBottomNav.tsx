@@ -12,7 +12,7 @@ export default function MobileBottomNav() {
     { name: 'WHY US', href: `/${currentLang}`, icon: 'question_mark' },
     { name: 'CEO', href: `/${currentLang}/ceo`, icon: 'person' },
     { name: 'SERVICE', href: `/${currentLang}/services`, icon: 'widgets' },
-    { name: 'SNS', href: `/${currentLang}/portfolio`, icon: 'tag' },
+    { name: 'PRODUCT', href: `/${currentLang}/portfolio`, icon: 'tag' },
     { name: 'WORKS', href: `/${currentLang}/achievements`, icon: 'view_carousel' },
   ];
 
