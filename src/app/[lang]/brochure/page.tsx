@@ -355,8 +355,9 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
 
             <div className="mt-auto pt-[4mm]">
               <div className="hairline mb-[4mm] h-px w-full" />
-              <div className="mb-[4mm] text-center">
-                <p className="font-label-caps text-[10px] uppercase tracking-[0.4em] text-primary/80">aethemar.com</p>
+              <div className="mb-[6mm] flex flex-col items-center justify-center gap-2 text-center">
+                <p className="gold-text text-[36px] font-bold tracking-widest">010-9932-9829</p>
+                <p className="font-label-caps text-[12px] uppercase tracking-[0.4em] text-primary/80">aethemar.com</p>
               </div>
               <section className="grid grid-cols-2 gap-[6mm]">
                 <div className="relative aspect-[1.4/1] w-full overflow-hidden rounded-2xl border border-primary/20 shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
