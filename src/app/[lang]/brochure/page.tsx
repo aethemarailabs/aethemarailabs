@@ -317,7 +317,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               </div>
             </header>
 
-            <section className="mt-[6mm]">
+            <section className="mt-[4mm]">
               <div className="flex gap-[5mm] items-start">
                 <div className="mt-1.5 w-[2mm] h-[12mm] bg-primary/70 rounded-full shrink-0 shadow-[0_0_10px_rgba(242,202,80,0.4)]" />
                 <div>
@@ -331,17 +331,17 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               </div>
             </section>
 
-            <div className="hairline mt-[6mm] mb-[6mm] h-px w-full" />
+            <div className="hairline mt-[4mm] mb-[4mm] h-px w-full" />
 
             <section>
               <h2 className="text-[22px] font-light leading-[1.3] text-on-surface">
-                초고도화된 전환을 위한 <span className="gold-text font-medium">데이터 기반 마케팅 아키텍처</span>
+                매출로 이어지는 마케팅, <span className="gold-text font-medium">AI가 설계합니다</span>
               </h2>
             </section>
 
-            <section className="grid grid-cols-2 gap-[5mm] flex-grow content-start">
+            <section className="mt-[4mm] grid grid-cols-2 gap-[4mm]">
               {marketingTeam.trends?.slice(0, 6).map((trend: any, idx: number) => (
-                <div key={idx} className="print-panel rounded-2xl border border-primary/15 p-[5mm] flex items-start gap-4">
+                <div key={idx} className="print-panel rounded-2xl border border-primary/15 p-[4mm] flex items-start gap-4">
                   <div className="flex h-[11mm] w-[11mm] shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary shadow-[0_0_12px_rgba(242,202,80,0.12)]">
                     <span className="material-symbols-outlined text-[24px]">{trend.icon}</span>
                   </div>
@@ -353,9 +353,9 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               ))}
             </section>
 
-            <div className="mt-auto pt-[4mm]">
+            <div className="mt-[4mm]">
               <div className="hairline mb-[4mm] h-px w-full" />
-              <div className="mb-[6mm] flex flex-col items-center justify-center gap-2 text-center">
+              <div className="mb-[5mm] flex flex-col items-center justify-center gap-2 text-center">
                 <p className="gold-text text-[36px] font-bold tracking-widest">010-9932-9829</p>
                 <p className="font-label-caps text-[12px] uppercase tracking-[0.4em] text-primary/80">aethemar.com</p>
               </div>
