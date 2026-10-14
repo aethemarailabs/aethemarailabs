@@ -153,7 +153,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
                 <div className="h-[15mm] w-px bg-primary/35" />
                 <div>
                   <p className="font-label-caps text-[8px] uppercase tracking-[0.32em] text-primary/80">Aethemar AI Labs</p>
-                  <p className="mt-1 text-[10px] leading-tight text-on-surface-variant">AI Agent Marketing Outsourcing</p>
+                  <p className="mt-1 text-[13px] font-semibold leading-tight text-on-surface">AI Agent Marketing Outsourcing</p>
                 </div>
               </div>
               <div className="rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-primary">
@@ -309,7 +309,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
                 <div className="h-[15mm] w-px bg-primary/35" />
                 <div>
                   <p className="font-label-caps text-[8px] uppercase tracking-[0.32em] text-primary/80">Services</p>
-                  <p className="mt-1 text-[10px] leading-tight text-on-surface-variant">AI-Driven Marketing Architecture</p>
+                  <p className="mt-1 text-[13px] font-semibold leading-tight text-on-surface">AI-Driven Marketing Architecture</p>
                 </div>
               </div>
               <div className="rounded-full border border-primary/35 bg-primary/10 px-4 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-primary">
@@ -317,7 +317,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               </div>
             </header>
 
-            <section className="mt-[4mm]">
+            <section className="mt-[6mm]">
               <div className="flex gap-[5mm] items-start">
                 <div className="mt-1.5 w-[2mm] h-[12mm] bg-primary/70 rounded-full shrink-0 shadow-[0_0_10px_rgba(242,202,80,0.4)]" />
                 <div>
@@ -331,7 +331,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               </div>
             </section>
 
-            <div className="hairline mt-[4mm] mb-[4mm] h-px w-full" />
+            <div className="hairline mt-[6mm] mb-[6mm] h-px w-full" />
 
             <section>
               <h2 className="text-[22px] font-light leading-[1.3] text-on-surface">
@@ -339,7 +339,7 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               </h2>
             </section>
 
-            <section className="mt-[4mm] grid grid-cols-2 gap-[4mm]">
+            <section className="mt-[5mm] grid grid-cols-2 gap-[5mm]">
               {marketingTeam.trends?.slice(0, 6).map((trend: any, idx: number) => (
                 <div key={idx} className="print-panel rounded-2xl border border-primary/15 p-[4mm] flex items-start gap-4">
                   <div className="flex h-[11mm] w-[11mm] shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 text-primary shadow-[0_0_12px_rgba(242,202,80,0.12)]">
@@ -353,9 +353,9 @@ export default async function BrochurePage({ params }: { params: Promise<{ lang:
               ))}
             </section>
 
-            <div className="mt-[4mm]">
+            <div className="mt-auto pt-[4mm]">
               <div className="hairline mb-[4mm] h-px w-full" />
-              <div className="mb-[5mm] flex flex-col items-center justify-center gap-2 text-center">
+              <div className="mb-[4mm] flex flex-col items-center justify-center gap-2 text-center">
                 <p className="gold-text text-[36px] font-bold tracking-widest">010-9932-9829</p>
                 <p className="font-label-caps text-[12px] uppercase tracking-[0.4em] text-primary/80">aethemar.com</p>
               </div>
