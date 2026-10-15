@@ -1,5 +1,7 @@
 import { getDictionary } from '@/dictionaries';
 import FadeIn from '@/components/animations/FadeIn';
+import Link from 'next/link';
+import TeamComparison from '@/components/TeamComparison';
 
 export default async function WhyAethemarPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
   const { lang } = await params;
@@ -66,182 +68,85 @@ export default async function WhyAethemarPage({ params }: { params: Promise<{ la
 
         {/* Comparison Diagram */}
         <FadeIn direction="up" delay={0.6}>
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch justify-center w-full mt-4">
-            
-            {/* Traditional In-house Team */}
-            <div className="flex-1 glass-panel rounded-2xl p-6 md:p-8 flex flex-col items-center relative overflow-hidden border-t-red-500/20 group">
-              <div className="absolute inset-0 bg-gradient-to-b from-red-500/5 to-transparent opacity-50"></div>
-              <h3 className="font-title-md text-xl text-on-surface/80 mb-8 z-10">{dict.why_aethemar.traditional_team.title}</h3>
-              
-              {/* Structure */}
-              <div className="flex flex-col items-center gap-4 z-10 w-full max-w-sm flex-1">
-                <div className="w-full bg-surface-variant/50 border border-on-surface/10 rounded-lg p-4 text-center text-on-surface">
-                  {dict.why_aethemar.traditional_team.director}
-                </div>
-                <div className="w-px h-6 bg-red-500/30"></div>
-                <div className="w-full bg-red-500/10 border border-red-500/20 rounded-lg p-4 text-center text-red-200 font-medium">
-                  {dict.why_aethemar.traditional_team.leader}
-                </div>
-                <div className="w-px h-6 bg-red-500/30"></div>
-                <div className="w-full grid grid-cols-1 gap-2">
-                  {dict.why_aethemar.traditional_team.members.map((member: string, i: number) => (
-                    <div key={i} className="bg-surface-variant/30 border border-on-surface/5 rounded-lg p-3 text-center text-sm text-on-surface-variant">
-                      {member}
+          <TeamComparison
+            traditional={dict.why_aethemar.traditional_team}
+            aethemar={dict.why_aethemar.aethemar_team}
+          />
+        </FadeIn>
+
+        {/* Three Teams Overview */}
+        <FadeIn direction="up" delay={0.4}>
+          <div className="w-full mt-24 flex flex-col gap-12">
+            <div className="text-center space-y-4">
+              <span className="inline-block px-3 py-1.5 rounded-full border border-primary/30 text-primary text-xs font-label-caps tracking-widest bg-primary/5">
+                {dict.why_aethemar.teams_section.badge}
+              </span>
+              <h2 className="font-display-lg text-3xl md:text-4xl text-on-surface">
+                {dict.why_aethemar.teams_section.title}
+              </h2>
+              <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                {dict.why_aethemar.teams_section.subtitle}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {dict.services.teams.map((team: any) => (
+                <Link key={team.id} href={`/${lang}/services/${team.id}`} className="block h-full outline-none">
+                  <div className="glass-panel rounded-2xl p-6 md:p-8 h-full flex flex-col gap-5 border-t border-t-primary/30 glow-box group hover:-translate-y-1 transition-all duration-300">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-surface-container shadow-[0_0_15px_rgba(212,175,55,0.15)] flex-shrink-0">
+                        <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>{team.icon}</span>
+                      </div>
+                      <div>
+                        <h3 className="font-title-md text-lg text-on-surface">{team.title}</h3>
+                        <div className="text-[11px] font-label-caps text-primary/80 tracking-widest mt-1">{team.director}</div>
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Pain points tags */}
-              <div className="mt-10 flex flex-wrap justify-center gap-2 z-10 w-full">
-                {dict.why_aethemar.traditional_team.pain_points.map((point: string, i: number) => (
-                  <span key={i} className="text-xs font-body-sm px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-300">
-                    {point}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* VS Divider for desktop */}
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-on-surface-variant font-title-md z-10 glow-box">
-                VS
-              </div>
-            </div>
-
-            {/* Aethemar AI Agent Team */}
-            <div className="flex-1 glass-panel rounded-2xl p-6 md:p-8 flex flex-col items-center relative overflow-hidden border-t-primary/50 glow-box group">
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <h3 className="font-title-md text-xl text-primary mb-8 z-10 glow-text">{dict.why_aethemar.aethemar_team.title}</h3>
-              
-              {/* Structure */}
-              <div className="flex flex-col items-center gap-4 z-10 w-full max-w-sm flex-1">
-                <div className="w-full bg-surface-variant/50 border border-on-surface/10 rounded-lg p-4 text-center text-on-surface">
-                  {dict.why_aethemar.aethemar_team.director}
-                </div>
-                <div className="w-px h-6 bg-primary/50"></div>
-                <div className="w-full bg-primary/20 border border-primary/40 rounded-lg p-4 text-center text-primary font-bold shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                  {dict.why_aethemar.aethemar_team.leader}
-                </div>
-                <div className="w-px h-6 bg-primary/50"></div>
-                <div className="w-full grid grid-cols-1 gap-2">
-                  {dict.why_aethemar.aethemar_team.members.map((member: string, i: number) => (
-                    <div key={i} className="bg-primary/5 border border-primary/20 rounded-lg p-3 text-center text-sm text-primary/90 font-medium">
-                      <span className="material-symbols-outlined text-[14px] align-middle mr-1">smart_toy</span>
-                      {member}
+                    <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed flex-1">{team.desc}</p>
+                    <div className="flex items-center gap-1 text-primary text-sm font-medium">
+                      {dict.why_aethemar.teams_section.cta}
+                      <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Benefits tags */}
-              <div className="mt-10 flex flex-wrap justify-center gap-2 z-10 w-full">
-                {dict.why_aethemar.aethemar_team.benefits.map((benefit: string, i: number) => (
-                  <span key={i} className="text-xs font-body-sm px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary glow-text">
-                    {benefit}
-                  </span>
-                ))}
-              </div>
+                  </div>
+                </Link>
+              ))}
             </div>
-
           </div>
         </FadeIn>
 
-        {/* Deep Dive Section */}
-        {dict.why_aethemar.deep_dive && (
-          <FadeIn direction="up" delay={0.4}>
-            <div className="w-full mt-24 flex flex-col gap-12 mb-12">
-              <div className="text-center space-y-4">
+        {/* Industry Focus */}
+        <FadeIn direction="up" delay={0.4}>
+          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-primary/20 relative overflow-hidden glow-box mb-12">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50"></div>
+            <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
+              <div className="flex-1 space-y-4">
                 <span className="inline-block px-3 py-1.5 rounded-full border border-primary/30 text-primary text-xs font-label-caps tracking-widest bg-primary/5">
-                  {dict.why_aethemar.deep_dive.badge}
+                  {dict.why_aethemar.industry.badge}
                 </span>
-                <h2 className="font-display-lg text-3xl md:text-4xl text-on-surface">
-                  {dict.why_aethemar.deep_dive.title}
+                <h2 className="font-display-lg text-2xl md:text-3xl text-on-surface">
+                  {dict.why_aethemar.industry.title}
                 </h2>
-                <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                  {dict.why_aethemar.deep_dive.subtitle}
+                <p className="font-body-md text-on-surface-variant leading-relaxed">
+                  {dict.why_aethemar.industry.desc}
                 </p>
-              </div>
-
-              {/* In-house Structures (2-column) */}
-              <div className="grid md:grid-cols-2 gap-8">
-                {Object.entries(dict.why_aethemar.deep_dive.structures).map(([key, structure]: [string, any], idx: number) => (
-                  <div key={key} className="glass-panel p-6 md:p-8 rounded-2xl border border-on-surface/5 flex flex-col gap-6 relative overflow-hidden group hover:border-primary/20 transition-colors duration-500">
-                    <div className="absolute top-0 right-0 p-6 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500">
-                      <span className="material-symbols-outlined text-8xl">{key === 'hospital' ? 'local_hospital' : 'gavel'}</span>
-                    </div>
-                    
-                    <div className="relative z-10">
-                      <h3 className="font-title-md text-xl text-on-surface mb-2 flex items-center gap-2">
-                        <span className="material-symbols-outlined text-primary">{key === 'hospital' ? 'health_and_safety' : 'balance'}</span>
-                        {structure.title}
-                      </h3>
-                      <p className="font-body-sm text-on-surface-variant text-sm leading-relaxed">{structure.desc}</p>
-                    </div>
-                    
-                    <div className="flex flex-col gap-4 relative z-10">
-                      {structure.roles.map((role: any, rIdx: number) => (
-                        <div key={rIdx} className="bg-surface/50 border border-on-surface/5 rounded-xl p-5 hover:bg-surface transition-colors">
-                          <div className="font-title-md text-sm text-on-surface mb-3 flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60"></span>
-                            {role.name}
-                          </div>
-                          <ul className="space-y-2">
-                            {role.tasks.map((task: string, tIdx: number) => (
-                              <li key={tIdx} className="font-body-sm text-[13px] text-on-surface/70 flex items-start gap-2">
-                                <span className="text-primary/50 mt-0.5 text-xs">└</span>
-                                <span className="flex-1 leading-relaxed">{task}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* AI Mapping Strategy */}
-              <div className="glass-panel p-8 md:p-12 rounded-3xl border border-primary/20 relative overflow-hidden glow-box mt-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50"></div>
-                
-                <div className="relative z-10 text-center mb-12">
-                  <h3 className="font-display-lg text-2xl md:text-3xl text-primary glow-text mb-4">
-                    {dict.why_aethemar.deep_dive.mapping.title}
-                  </h3>
-                  <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                    {dict.why_aethemar.deep_dive.mapping.subtitle}
-                  </p>
-                </div>
-
-                <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                  {dict.why_aethemar.deep_dive.mapping.agents.map((agent: any, idx: number) => (
-                    <div key={idx} className="bg-surface/80 border border-primary/10 rounded-2xl p-6 flex flex-col items-center text-center gap-4 hover:border-primary/40 hover:-translate-y-2 transition-all duration-300 shadow-lg">
-                      <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center border border-primary/30 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
-                        <span className="material-symbols-outlined text-primary text-[28px]">
-                          {idx === 0 ? 'psychology' : idx === 1 ? 'edit_document' : idx === 2 ? 'trending_up' : 'movie'}
-                        </span>
-                      </div>
-                      <div>
-                        <div className="font-label-caps text-[11px] text-primary/70 tracking-wider mb-1.5">{agent.name}</div>
-                        <div className="font-title-md text-[17px] text-on-surface glow-text">{agent.ai}</div>
-                      </div>
-                      <p className="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-                        {agent.desc}
-                      </p>
-                    </div>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {dict.why_aethemar.industry.tags.map((tag: string, i: number) => (
+                    <span key={i} className="text-xs font-body-sm px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary">
+                      {tag}
+                    </span>
                   ))}
                 </div>
-
-                <div className="relative z-10 bg-primary/10 border border-primary/30 rounded-2xl p-8 text-center shadow-[0_0_30px_rgba(212,175,55,0.15)] max-w-4xl mx-auto">
-                  <p className="font-title-md text-on-surface text-base md:text-lg leading-relaxed">
-                    {dict.why_aethemar.deep_dive.mapping.conclusion}
-                  </p>
-                </div>
               </div>
+              <Link
+                href={`/${lang}/services/marketing`}
+                className="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-4 rounded-sm font-label-caps tracking-widest text-sm hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex-shrink-0"
+              >
+                {dict.why_aethemar.industry.cta}
+                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              </Link>
             </div>
-          </FadeIn>
-        )}
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

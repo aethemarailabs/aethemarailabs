@@ -3,6 +3,8 @@ import FadeIn from '@/components/animations/FadeIn';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PlatformBadge from '@/components/PlatformBadge';
+import TeamComparison from '@/components/TeamComparison';
+import MarketingDeepDive from '@/components/MarketingDeepDive';
 
 export async function generateStaticParams() {
   const ids = ['marketing', 'development', 'production'];
@@ -152,6 +154,32 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               </div>
             </div>
           </FadeIn>
+        )}
+
+        {/* In-house vs Aethemar + Deep Dive (Marketing only) */}
+        {id === 'marketing' && dict.marketing_inhouse && (
+          <>
+            <FadeIn direction="up" delay={0.5}>
+              <div className="mb-16 flex flex-col gap-10">
+                <div className="text-center space-y-4">
+                  <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 text-primary text-sm font-label-caps tracking-widest bg-primary/5">
+                    {dict.marketing_inhouse.badge}
+                  </span>
+                  <h2 className="font-headline-lg text-3xl md:text-4xl text-on-surface">{dict.marketing_inhouse.title}</h2>
+                  <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">{dict.marketing_inhouse.subtitle}</p>
+                </div>
+                <TeamComparison
+                  traditional={dict.marketing_inhouse.traditional_team}
+                  aethemar={dict.marketing_inhouse.aethemar_team}
+                />
+              </div>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.5}>
+              <div className="mb-24">
+                <MarketingDeepDive deepDive={dict.marketing_inhouse.deep_dive} />
+              </div>
+            </FadeIn>
+          </>
         )}
         
         {/* Contact CTA */}
