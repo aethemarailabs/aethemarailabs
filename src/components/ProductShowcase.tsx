@@ -36,9 +36,9 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
     { id: 'ai_contents', name: dict.categories.ai_contents, icon: 'movie' },
   ] as const;
 
-  const filteredItems = activeTab === 'all'
+  const filteredItems: ProductItem[] = activeTab === 'all'
     ? (dict.items || [])
-    : (dict.items || []).filter((item: any) => item.category === activeTab);
+    : (dict.items || []).filter((item: ProductItem) => item.category === activeTab);
 
   const getCount = (catId: 'all' | 'software' | 'webpage' | 'ai_contents') => {
     if (!dict.items) return 0;
@@ -93,7 +93,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
 
       {/* Showcase Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-7xl mx-auto">
-        {filteredItems.map((item) => {
+        {filteredItems.map((item: ProductItem) => {
           const isVideo = item.type === 'video';
           const isSoftware = item.category === 'software';
           const isWeb = item.category === 'webpage';
@@ -216,7 +216,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
 
                 {/* Tech Stack Chips */}
                 <div className="flex flex-wrap gap-1.5 pt-1">
-                  {item.tags.map((tag, i) => (
+                  {item.tags.map((tag: string, i: number) => (
                     <span
                       key={i}
                       className="text-[11px] font-label-caps px-2.5 py-1 rounded-md bg-surface-variant/40 border border-on-surface/5 text-on-surface-variant"
@@ -392,7 +392,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
                       핵심 설계 & 특장점 (Key Features)
                     </span>
                     <ul className="space-y-2">
-                      {activeModalItem.details.map((detail, idx) => (
+                      {activeModalItem.details.map((detail: string, idx: number) => (
                         <li key={idx} className="font-body-sm text-sm text-on-surface/80 flex items-start gap-2.5">
                           <span className="text-primary mt-1 text-xs">◆</span>
                           <span className="flex-1 leading-relaxed">{detail}</span>
@@ -423,7 +423,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
                     {dict.labels.tech_stack}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {activeModalItem.tags.map((tag, idx) => (
+                    {activeModalItem.tags.map((tag: string, idx: number) => (
                       <span
                         key={idx}
                         className="text-xs font-label-caps px-3 py-1.5 rounded-lg bg-surface-variant/40 border border-primary/20 text-primary"
