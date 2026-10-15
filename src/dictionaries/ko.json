@@ -162,6 +162,226 @@
     "title": "Aethemar's Creations",
     "subtitle": "우리의 창의적인 결과물들을 확인해 보세요."
   },
+  "product": {
+    "badge": "Product & Showcase",
+    "title": "Aethemar's Creations",
+    "subtitle": "자체 개발 S/W 솔루션부터 고전환 반응형 웹, 시네마틱 생성형 AI 미디어까지. 에테마르의 검증된 기술력과 크리에이티브를 확인해 보세요.",
+    "categories": {
+      "all": "전체 보기",
+      "software": "S/W & Web App",
+      "webpage": "Web Page",
+      "ai_contents": "AI Media & Contents"
+    },
+    "labels": {
+      "watch_video": "영상 감상하기",
+      "view_demo": "데모 / 상세 보기",
+      "visit_site": "웹사이트 방문",
+      "key_highlight": "주요 성과 / 특장점",
+      "close": "닫기",
+      "tech_stack": "기술 스택",
+      "category": "카테고리"
+    },
+    "social_channels": {
+      "badge": "Channels",
+      "title": "Official Channels",
+      "subtitle": "에테마르의 최신 AI 콘텐츠와 제작 인사이트를 매일 실시간으로 확인하세요.",
+      "youtube_sub": "@AethemarAILabs",
+      "insta_sub": "@aethemarailabs",
+      "threads_sub": "@aethemarailabs"
+    },
+    "items": [
+      {
+        "id": "sw-agent-os",
+        "category": "software",
+        "categoryLabel": "S/W & Web App",
+        "title": "Aethemar Multi-Agent OS",
+        "subtitle": "마케팅 자동화 전사 관제 시스템",
+        "desc": "카피라이터, 디자이너, 비디오 에디터, 미디어 바이어 AI 에이전트를 단일 인터페이스에서 총괄 지휘하고 캠페인 성과를 실시간 오케스트레이션하는 엔터프라이즈 웹 앱입니다.",
+        "tags": ["Next.js", "FastAPI", "Multi-Agent System", "PostgreSQL", "Workflow Engine"],
+        "highlight": "캠페인 세팅 및 콘텐츠 제작 리드타임 85% 단축",
+        "icon": "hub",
+        "type": "software",
+        "details": [
+          "에이전트 간 역할 분담 및 실시간 피드백 루프 자동화",
+          "마케팅 컨트롤 타워(CEO/CMO) 1인 원클릭 컨펌 및 배포",
+          "플랫폼별 API(네이버, 메타, 유튜브) 연동 자동 포스팅"
+        ]
+      },
+      {
+        "id": "sw-compliance-editor",
+        "category": "software",
+        "categoryLabel": "S/W & Web App",
+        "title": "Legal & Medical Compliance Linter",
+        "subtitle": "의료·법률 전문직 특화 사전 규제 검수기",
+        "desc": "의료법 및 변호사법 광고 심의 가이드라인을 데이터베이스화하여, 생성된 광고 원고 및 상세페이지 내 위험 단어를 실시간 감지하고 안전한 대체 카피를 추천하는 B2B 솔루션입니다.",
+        "tags": ["B2B SaaS", "Legal/Medical NLP", "Realtime Linter", "Risk Assessment"],
+        "highlight": "의료법·변호사법 위반 소지 단어 99% 사전 필터링",
+        "icon": "verified_user",
+        "type": "software",
+        "details": [
+          "보건복지부 및 변협 광고 심의 최신 판례 실시간 반영",
+          "과장·왜곡·유인성 표현 자동 탐지 및 수정 가이드 제안",
+          "인하우스 팀 원고 작성 시간 절감 및 리스크 예방"
+        ]
+      },
+      {
+        "id": "sw-roas-optimizer",
+        "category": "software",
+        "categoryLabel": "S/W & Web App",
+        "title": "Real-time ROAS & Bid Optimizer",
+        "subtitle": "데이터 기반 실시간 광고 입찰 및 예산 재분배 봇",
+        "desc": "네이버 검색광고(SA)와 메타 스폰서드 광고 데이터를 24시간 실시간 모니터링하여, 저효율 키워드는 즉시 차단하고 고전환 소재에 예산을 자동 재분배하는 성과 분석 플랫폼입니다.",
+        "tags": ["Data Analytics", "Automated Bidding", "ROAS Engine", "Meta Graph API"],
+        "highlight": "월 광고비 30% 절감 & 유효 리드 획득 단가 최적화",
+        "icon": "monitoring",
+        "type": "software",
+        "details": [
+          "시간대별 전환율 분석 기반 동적 입찰가 조정",
+          "광고 피로도 감지 시 크리에이티브 자동 교체 트리거",
+          "일간·주간 종합 퍼포먼스 리포트 자동 생성"
+        ]
+      },
+      {
+        "id": "web-clinic-portal",
+        "category": "webpage",
+        "categoryLabel": "Web Page",
+        "title": "Medical Clinic Premium Portal",
+        "subtitle": "강남 메디컬 클리닉 맞춤형 고전환 반응형 플랫폼",
+        "desc": "강남 피부과·성형외과를 위한 모바일 퍼스트 인터랙티브 웹. 비포&애프터 시각화, 의료진 권위 구축, 실시간 비대면 상담 예약 시스템을 유기적으로 결합하여 문의 전환율을 극대화합니다.",
+        "tags": ["Mobile First", "CRO Architecture", "Responsive Web", "SEO Engine"],
+        "highlight": "모바일 방문자 상담 문의 전환율 240% 향상",
+        "icon": "health_and_safety",
+        "type": "webpage",
+        "details": [
+          "의료법 심의 기준을 준수한 전후 사진 갤러리",
+          "모바일 로딩 1초 미만 초고속 페이지스피드 구현",
+          "카카오톡 알림톡 및 원내 차트 연동 간편 예약"
+        ]
+      },
+      {
+        "id": "web-lawfirm-platform",
+        "category": "webpage",
+        "categoryLabel": "Web Page",
+        "title": "Law Firm Authority Platform",
+        "subtitle": "서초동 대형 로펌 승소 사례 DB 중심 공식 플랫폼",
+        "desc": "고관여 의뢰인의 불안을 신뢰로 전환하는 승소 판례 데이터베이스 중심 웹사이트. 분야별 전문 변호사 칼럼 및 1:1 비밀 법률 상담 창구가 유기적으로 연동된 다크 럭셔리 스타일의 웹입니다.",
+        "tags": ["Case Law DB", "Brand Authority", "Speed Optimized", "Dark Luxury"],
+        "highlight": "고단가 사건 수임 문의 유입 및 신뢰도 극대화",
+        "icon": "balance",
+        "type": "webpage",
+        "details": [
+          "승소 사례 키워드별 검색 및 카테고리 필터링 DB",
+          "검색엔진 최상위 노출을 위한 테크니컬 SEO 구조화 데이터 적용",
+          "24시간 비밀 상담 예약 접수 및 변호사 매칭 시스템"
+        ]
+      },
+      {
+        "id": "web-aethemar-official",
+        "category": "webpage",
+        "categoryLabel": "Web Page",
+        "title": "Aethemar AI Labs Official Web",
+        "subtitle": "글래스모피즘 & 카본 골드 테마의 브랜드 웹사이트",
+        "desc": "Aethemar AI Labs의 철학과 3대 전문 팀의 역량을 집약한 공식 웹사이트. Next.js App Router 기반 다국어(EN/KO) 지원과 경량 인터랙티브 애니메이션을 결합한 하이엔드 테크 웹입니다.",
+        "tags": ["Next.js App Router", "i18n Multi-Lang", "Glassmorphism", "Tailwind CSS"],
+        "highlight": "Lighthouse 성능 98점 & 모바일 완벽 대응",
+        "icon": "language",
+        "type": "webpage",
+        "details": [
+          "Zero-lag 클라이언트 사이드 전환 및 동적 언어 토글",
+          "A4 출력에 완벽 대응하는 인쇄용 온라인 브로슈어 포함",
+          "모든 해상도에 최적화된 반응형 UI 및 모션 인터랙션"
+        ]
+      },
+      {
+        "id": "ai-cinematic-ad",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "시네마틱 AI 브랜드 커머셜",
+        "subtitle": "The Fifth Element (에테마르 브랜드 필름)",
+        "desc": "물리적 촬영의 한계를 초월한 최첨단 생성형 AI 4K 영상. 고대 에테르 철학과 현대 인공지능 조직의 지능적 융합을 시각화한 플래그십 비주얼 쇼케이스입니다.",
+        "tags": ["Generative AI", "4K Cinema", "Runway Gen-3", "Midjourney v6"],
+        "highlight": "제작 비용 90% 절감 & 극장용 시네마틱 퀄리티 구현",
+        "icon": "movie",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "xnuxzPBhaN0",
+        "thumbnail": "https://img.youtube.com/vi/xnuxzPBhaN0/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-brand-showcase",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "미래형 브랜드 비전 쇼케이스",
+        "subtitle": "AI 에이전트 조직의 일하는 방식",
+        "desc": "인공지능과 비즈니스의 조화를 다룬 다이내믹 모션과 시네마틱 연출로, 인간과 AI 에이전트가 함께 일하는 혁신적인 업무 구조를 설득력 있게 전달합니다.",
+        "tags": ["AI Film", "Dynamic Motion", "Prompt Engineering", "Sound Design"],
+        "highlight": "고객사 B2B 브랜드 인지도 및 신뢰도 향상",
+        "icon": "smart_display",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "nQIjpvkqSsY",
+        "thumbnail": "https://img.youtube.com/vi/nQIjpvkqSsY/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-viral-shorts-1",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "알고리즘 최적화 유튜브 쇼츠",
+        "subtitle": "초단기 오가닉 트래픽 창출 숏폼",
+        "desc": "첫 3초 후킹과 고밀도 정보 전달 알고리즘을 선제적으로 공략하여, 광고비 집행 없이 대규모 자연 유입을 이끌어낸 숏폼 영상 시리즈입니다.",
+        "tags": ["YouTube Shorts", "Shortform SEO", "High Retention", "Viral Content"],
+        "highlight": "단기간 구독자 2.2만 돌파 및 수십만 조회수 기록",
+        "icon": "play_circle",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "4SWPBTTnHD0",
+        "thumbnail": "https://img.youtube.com/vi/4SWPBTTnHD0/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-cinematic-visual",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "하이엔드 AI 비주얼 스토리텔링",
+        "subtitle": "초현실적 비주얼 아트 디렉팅",
+        "desc": "다양한 생성형 비디오 모델을 정밀 조합하여 만든 프리미엄 아트워크. 전통적인 CG 스튜디오 수개월치 작업을 단 며칠 만에 완성한 결과물입니다.",
+        "tags": ["Visual Art", "AI Production", "Cinematic Prompt", "Color Grading"],
+        "highlight": "전통 스튜디오 대비 제작 기간 80% 단축",
+        "icon": "auto_awesome",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "ty8gYccpp-w",
+        "thumbnail": "https://img.youtube.com/vi/ty8gYccpp-w/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-insta-reels",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "인스타그램 릴스 & 카드뉴스 시리즈",
+        "subtitle": "즉각적인 가치와 솔루션을 전달하는 숏폼",
+        "desc": "인스타그램 알고리즘과 저장·공유 지표를 자극하는 비주얼 숏폼 에셋. 대표 및 전문직 타깃 고객의 빠른 유입과 팔로우 전환을 유도합니다.",
+        "tags": ["Instagram Reels", "Direct Conversion", "Shortform Viral"],
+        "highlight": "저장 및 공유율 350% 상회 바이럴 달성",
+        "icon": "video_library",
+        "type": "video",
+        "videoType": "instagram",
+        "videoId": "DZplSkypVpP",
+        "url": "https://www.instagram.com/p/DZplSkypVpP/"
+      },
+      {
+        "id": "ai-threads-viral",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "쓰레드 데이터 바이럴 마이크로 콘텐츠",
+        "subtitle": "고밀도 인사이트 텍스트 & 카드",
+        "desc": "활발한 리포스트와 소통이 특징인 쓰레드 플랫폼에서 브랜드 인지도와 전문직 권위를 구축하기 위한 데이터 중심 마이크로 콘텐츠 아키텍처입니다.",
+        "tags": ["Threads", "Viral Growth", "Brand Authority", "Micro-Content"],
+        "highlight": "수만 조회수 및 진성 비즈니스 타깃 팔로워 확보",
+        "icon": "forum",
+        "type": "external",
+        "url": "https://www.threads.net/@aethemarailabs"
+      }
+    ]
+  },
   "achievements": {
     "title": "Aethemar's Results",
     "subtitle": "수치로 증명하는 에테마르의 압도적인 결과물입니다."

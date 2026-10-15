@@ -23,7 +23,8 @@ export default function TopNavBar() {
     { name: 'Why Aethemar?', href: `/${currentLang}` },
     { name: 'Philosophy', href: `/${currentLang}/philosophy` },
     { name: 'Services', href: `/${currentLang}/services` },
-    { name: 'Portfolio', href: `/${currentLang}/achievements` },
+    { name: 'Product', href: `/${currentLang}/product` },
+    { name: 'Achievements', href: `/${currentLang}/achievements` },
     { name: 'Contact', href: `/${currentLang}/contact` },
   ];
 

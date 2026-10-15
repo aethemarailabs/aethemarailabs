@@ -160,6 +160,226 @@
     "title": "Aethemar's Creations",
     "subtitle": "Connect with our constellation of insights."
   },
+  "product": {
+    "badge": "Product & Showcase",
+    "title": "Aethemar's Creations",
+    "subtitle": "From proprietary software solutions and high-converting responsive web portals to cinematic generative AI media. Explore Aethemar's proven engineering and creative lineup.",
+    "categories": {
+      "all": "All Work",
+      "software": "S/W & Web App",
+      "webpage": "Web Page",
+      "ai_contents": "AI Media & Contents"
+    },
+    "labels": {
+      "watch_video": "Watch Video",
+      "view_demo": "View Demo / Details",
+      "visit_site": "Visit Website",
+      "key_highlight": "Key Highlights",
+      "close": "Close",
+      "tech_stack": "Tech Stack",
+      "category": "Category"
+    },
+    "social_channels": {
+      "badge": "Channels",
+      "title": "Official Channels",
+      "subtitle": "Explore Aethemar's latest AI creations and production insights in real time.",
+      "youtube_sub": "@AethemarAILabs",
+      "insta_sub": "@aethemarailabs",
+      "threads_sub": "@aethemarailabs"
+    },
+    "items": [
+      {
+        "id": "sw-agent-os",
+        "category": "software",
+        "categoryLabel": "S/W & Web App",
+        "title": "Aethemar Multi-Agent OS",
+        "subtitle": "Enterprise Marketing Automation Control System",
+        "desc": "An enterprise web app that commands and orchestrates Copywriter, Designer, Video, and Media Buyer AI agents within a unified interface for real-time campaign performance.",
+        "tags": ["Next.js", "FastAPI", "Multi-Agent System", "PostgreSQL", "Workflow Engine"],
+        "highlight": "85% Reduction in Campaign Setup & Content Lead Time",
+        "icon": "hub",
+        "type": "software",
+        "details": [
+          "Automated role delegation and real-time feedback loops between agents",
+          "One-click confirmation and deployment by single Control Tower (CEO/CMO)",
+          "Direct API integration for automated multi-channel posting"
+        ]
+      },
+      {
+        "id": "sw-compliance-editor",
+        "category": "software",
+        "categoryLabel": "S/W & Web App",
+        "title": "Legal & Medical Compliance Linter",
+        "subtitle": "Pre-Regulatory Compliance Linter for Professionals",
+        "desc": "A B2B SaaS solution that databases advertising guidelines for healthcare and legal industries, detecting high-risk terms in generated ad copy in real time and recommending safe alternatives.",
+        "tags": ["B2B SaaS", "Legal/Medical NLP", "Realtime Linter", "Risk Assessment"],
+        "highlight": "99% Proactive Filtering of Regulatory Violation Risks",
+        "icon": "verified_user",
+        "type": "software",
+        "details": [
+          "Real-time database updates reflecting latest court rulings and regulatory standards",
+          "Automatic detection of exaggerated, misleading, or deceptive phrases",
+          "Drastic reduction in draft writing time while preventing legal liabilities"
+        ]
+      },
+      {
+        "id": "sw-roas-optimizer",
+        "category": "software",
+        "categoryLabel": "S/W & Web App",
+        "title": "Real-time ROAS & Bid Optimizer",
+        "subtitle": "Data-Driven Automated Bidding & Budget Allocation Bot",
+        "desc": "A performance analysis platform monitoring search and sponsored ad data 24/7, instantly shutting off underperforming keywords and dynamically reallocating budget to top-converting creatives.",
+        "tags": ["Data Analytics", "Automated Bidding", "ROAS Engine", "Meta Graph API"],
+        "highlight": "30% Reduction in Monthly Ad Spend & Optimized Cost Per Lead",
+        "icon": "monitoring",
+        "type": "software",
+        "details": [
+          "Dynamic bid adjustment based on time-slot conversion metrics",
+          "Automatic creative refresh triggers upon ad fatigue detection",
+          "Automated daily & weekly executive performance reporting"
+        ]
+      },
+      {
+        "id": "web-clinic-portal",
+        "category": "webpage",
+        "categoryLabel": "Web Page",
+        "title": "Medical Clinic Premium Portal",
+        "subtitle": "High-Converting Responsive Platform for Elite Clinics",
+        "desc": "A mobile-first interactive web platform for Gangnam dermatology and plastic surgery clinics. Integrates Before/After visualization, medical authority building, and real-time appointment booking.",
+        "tags": ["Mobile First", "CRO Architecture", "Responsive Web", "SEO Engine"],
+        "highlight": "+240% Inbound Mobile Consultation Conversion Rate",
+        "icon": "health_and_safety",
+        "type": "webpage",
+        "details": [
+          "Compliance-verified Before & After interactive case gallery",
+          "Ultra-fast under-1-second mobile page load speed",
+          "Seamless booking with instant messaging and clinic CRM integration"
+        ]
+      },
+      {
+        "id": "web-lawfirm-platform",
+        "category": "webpage",
+        "categoryLabel": "Web Page",
+        "title": "Law Firm Authority Platform",
+        "subtitle": "Precedent Database-Centered Platform for Leading Firms",
+        "desc": "A dark-luxury legal platform designed to turn high-involvement client anxiety into trust through an extensive case precedent database, attorney columns, and confidential consultation channels.",
+        "tags": ["Case Law DB", "Brand Authority", "Speed Optimized", "Dark Luxury"],
+        "highlight": "Maximized High-Stakes Client Inquiries & Brand Trust",
+        "icon": "balance",
+        "type": "webpage",
+        "details": [
+          "Keyword searchable and categorized winning case precedent DB",
+          "Technical SEO and schema markup for prime search engine rankings",
+          "24/7 confidential inquiry intake and attorney matching pipeline"
+        ]
+      },
+      {
+        "id": "web-aethemar-official",
+        "category": "webpage",
+        "categoryLabel": "Web Page",
+        "title": "Aethemar AI Labs Official Web",
+        "subtitle": "Carbon & Gold Themed Brand Experience",
+        "desc": "The official brand website crystallizing Aethemar AI Labs' philosophy and 3 expert teams. Built on Next.js App Router with bilingual (EN/KO) support and lightweight glassmorphic micro-interactions.",
+        "tags": ["Next.js App Router", "i18n Multi-Lang", "Glassmorphism", "Tailwind CSS"],
+        "highlight": "Lighthouse 98 Performance Score & Flawless Mobile UX",
+        "icon": "language",
+        "type": "webpage",
+        "details": [
+          "Zero-lag client side transitions and dynamic language switching",
+          "Fully integrated online brochure optimized for A4 print",
+          "High-performance responsive UI across all desktop and mobile viewports"
+        ]
+      },
+      {
+        "id": "ai-cinematic-ad",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "Cinematic AI Brand Commercial",
+        "subtitle": "The Fifth Element (Aethemar Brand Film)",
+        "desc": "State-of-the-art generative AI 4K film transcending the limits of physical production. A flagship visual showcase marrying the ancient Aether philosophy with contemporary AI organizational power.",
+        "tags": ["Generative AI", "4K Cinema", "Runway Gen-3", "Midjourney v6"],
+        "highlight": "90% Cost Reduction with Theatrical Cinematic Quality",
+        "icon": "movie",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "xnuxzPBhaN0",
+        "thumbnail": "https://img.youtube.com/vi/xnuxzPBhaN0/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-brand-showcase",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "Futuristic Brand Vision Showcase",
+        "subtitle": "How AI Agent Organizations Work",
+        "desc": "Cinematic motion design conveying the synergy of artificial intelligence and enterprise, demonstrating how humans and AI agents collaborate seamlessly.",
+        "tags": ["AI Film", "Dynamic Motion", "Prompt Engineering", "Sound Design"],
+        "highlight": "Enhanced B2B Brand Recognition & Partner Trust",
+        "icon": "smart_display",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "nQIjpvkqSsY",
+        "thumbnail": "https://img.youtube.com/vi/nQIjpvkqSsY/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-viral-shorts-1",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "Algorithm-Optimized YouTube Shorts",
+        "subtitle": "Ultra-Fast Organic Traffic Generation",
+        "desc": "A viral short-form video series targeting the first 3-second hook and high-density retention algorithms, driving massive organic inbound traffic without ad budget.",
+        "tags": ["YouTube Shorts", "Shortform SEO", "High Retention", "Viral Content"],
+        "highlight": "Surpassed 22K Subscribers in Ultra-Short Period with 100K+ Views",
+        "icon": "play_circle",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "4SWPBTTnHD0",
+        "thumbnail": "https://img.youtube.com/vi/4SWPBTTnHD0/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-cinematic-visual",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "High-End AI Visual Storytelling",
+        "subtitle": "Surrealistic Visual Art Direction",
+        "desc": "Premium artwork composited through precise prompting across diverse generative video models, compressing months of traditional CGI studio labor into days.",
+        "tags": ["Visual Art", "AI Production", "Cinematic Prompt", "Color Grading"],
+        "highlight": "80% Time-to-Delivery Compression vs Traditional Studios",
+        "icon": "auto_awesome",
+        "type": "video",
+        "videoType": "youtube",
+        "videoId": "ty8gYccpp-w",
+        "thumbnail": "https://img.youtube.com/vi/ty8gYccpp-w/maxresdefault.jpg"
+      },
+      {
+        "id": "ai-insta-reels",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "Instagram Reels & Visual Assets",
+        "subtitle": "Short-Form Assets Delivering Immediate Solutions",
+        "desc": "Short-form visual assets engineered to trigger Instagram save and share algorithms, driving rapid customer acquisition among founders and professional leaders.",
+        "tags": ["Instagram Reels", "Direct Conversion", "Shortform Viral"],
+        "highlight": "+350% Industry-Average Save & Share Virality Ratio",
+        "icon": "video_library",
+        "type": "video",
+        "videoType": "instagram",
+        "videoId": "DZplSkypVpP",
+        "url": "https://www.instagram.com/p/DZplSkypVpP/"
+      },
+      {
+        "id": "ai-threads-viral",
+        "category": "ai_contents",
+        "categoryLabel": "AI Media & Contents",
+        "title": "Threads Data-Driven Micro-Content",
+        "subtitle": "High-Density Insight Cards & Text",
+        "desc": "A data-driven micro-content architecture establishing thought leadership and brand authority in fast-paced conversational platforms like Threads.",
+        "tags": ["Threads", "Viral Growth", "Brand Authority", "Micro-Content"],
+        "highlight": "Tens of Thousands of Impressions & High-Intent Follower Base",
+        "icon": "forum",
+        "type": "external",
+        "url": "https://www.threads.net/@aethemarailabs"
+      }
+    ]
+  },
   "achievements": {
     "title": "Achievements",
     "subtitle": "Our undeniable results, proven by numbers."
