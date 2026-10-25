@@ -19,8 +19,8 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2 text-center">
                   <p className="font-label-caps text-on-surface-variant text-sm tracking-widest">Email</p>
-                  <a href="mailto:aethemarcmo@gmail.com" className="font-title-md text-lg sm:text-xl text-on-surface group-hover:text-primary transition-colors inline-block break-all">
-                    aethemarcmo@gmail.com
+                  <a href="mailto:aethemar@gmail.com" className="font-title-md text-lg sm:text-xl text-on-surface group-hover:text-primary transition-colors inline-block break-all">
+                    aethemar@gmail.com
                   </a>
                 </div>
               </div>
@@ -43,8 +43,8 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2 text-center">
                   <p className="font-label-caps text-on-surface-variant text-sm tracking-widest">Instagram DM</p>
-                  <a href="https://www.instagram.com/hkee26" target="_blank" rel="noopener noreferrer" className="font-title-md text-lg sm:text-xl text-on-surface group-hover:text-primary transition-colors inline-block">
-                    @hkee26
+                  <a href="https://www.instagram.com/aethemarailabs" target="_blank" rel="noopener noreferrer" className="font-title-md text-lg sm:text-xl text-on-surface group-hover:text-primary transition-colors inline-block">
+                    @aethemarailabs
                   </a>
                 </div>
               </div>
