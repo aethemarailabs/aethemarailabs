@@ -37,9 +37,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       <div className="max-w-5xl mx-auto relative z-10">
         <FadeIn direction="up" delay={0.1}>
-          <Link href={`/${lang}/#services`} className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors mb-12 font-label-caps tracking-widest text-sm">
+          <Link href={`/${lang}/services`} className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors mb-12 font-label-caps tracking-widest text-sm">
             <span className="material-symbols-outlined text-sm">arrow_back</span>
-            Back to Services
+            {lang === 'ko' ? '서비스 목록으로' : 'Back to Services'}
           </Link>
         </FadeIn>
 
@@ -48,7 +48,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-primary/30 flex items-center justify-center bg-surface-container shadow-[0_0_30px_rgba(212,175,55,0.15)] flex-shrink-0">
               <span className="material-symbols-outlined text-primary text-3xl md:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>{team.icon}</span>
             </div>
-            <h1 className="font-display-lg text-3xl md:text-4xl lg:text-5xl text-primary glow-text tracking-wider">{team.title}</h1>
+            <div>
+              {id === 'development' && (
+                <span className="inline-block px-3 py-1 rounded-full border border-primary/50 text-primary text-[10px] font-label-caps tracking-widest bg-primary/20 shadow-[0_0_10px_rgba(212,175,55,0.2)] mb-2">
+                  MAIN SERVICE
+                </span>
+              )}
+              <h1 className="font-display-lg text-3xl md:text-4xl lg:text-5xl text-primary glow-text tracking-wider">{team.title}</h1>
+            </div>
           </div>
           <p className="font-body-lg text-lg md:text-xl text-on-surface-variant max-w-3xl leading-relaxed">
             {team.desc}
@@ -60,7 +67,11 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <FadeIn direction="right" delay={0.3}>
             <div className="mb-6 border-b border-primary/20 pb-4">
               <h2 className="font-title-lg text-2xl text-on-surface mb-2">Team Architecture</h2>
-              <p className="font-body-sm text-on-surface-variant/80 text-sm">단 1명의 완벽한 컨트롤 타워와 각 분야 최고 수준의 AI 에이전트 결합</p>
+              <p className="font-body-sm text-on-surface-variant/80 text-sm">
+                {lang === 'ko'
+                  ? '전문가 컨트롤 타워 1인과 분야별 특화 AI 에이전트의 유기적 결합'
+                  : 'Seamless synergy of a dedicated expert Control Tower and specialized AI Agents'}
+              </p>
             </div>
             <div className="glass-panel p-6 md:p-8 rounded-2xl glow-box flex flex-col gap-6">
               <div className="bg-primary/10 border border-primary/30 rounded-xl p-6 text-center shadow-[0_0_20px_rgba(212,175,55,0.1)]">
@@ -101,7 +112,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div>
                       <h4 className="font-title-md text-lg text-on-surface">{item}</h4>
                       <p className="font-body-sm text-on-surface-variant/70 mt-2 text-sm leading-relaxed">
-                        최고의 전문성을 가진 AI 에이전트들이 해당 역량을 바탕으로 압도적인 결과물을 생성합니다.
+                        {team.itemDescs?.[i] || (lang === 'ko'
+                          ? '분야별 특화 AI 에이전트와 전문가 검수를 통해 빠르고 완성도 높은 결과물을 구현합니다.'
+                          : 'Specialized AI Agents combined with expert review deliver fast, production-grade results.')}
                       </p>
                     </div>
                   </li>
@@ -125,16 +138,20 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </FadeIn>
         )}
 
-        {/* 2026 Trends (Conditional) */}
+        {/* Solutions / Trends (Conditional) */}
         {team.trends && (
           <FadeIn direction="up" delay={0.5}>
             <div className="mb-24">
               <div className="text-center mb-12">
                 <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 text-primary text-sm font-label-caps tracking-widest bg-primary/5 mb-4">
-                  2026 INSIGHTS
+                  {team.trendsBadge || '2026 INSIGHTS'}
                 </span>
-                <h2 className="font-headline-lg text-3xl md:text-4xl text-on-surface mb-4">2026 Marketing Trends & Strategies</h2>
-                <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">다가올 마케팅 생태계의 패러다임 변화를 주도할 핵심 트렌드 라인업입니다.</p>
+                <h2 className="font-headline-lg text-3xl md:text-4xl text-on-surface mb-4">
+                  {team.trendsTitle || '2026 Marketing Trends & Strategies'}
+                </h2>
+                <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                  {team.trendsSubtitle || '변화하는 생태계에서 비즈니스 성장을 이끄는 핵심 전략 라인업입니다.'}
+                </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,6 +169,25 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   </div>
                 ))}
               </div>
+            </div>
+          </FadeIn>
+        )}
+
+        {/* Traditional Dev vs Aethemar (Development only) */}
+        {id === 'development' && dict.development_inhouse && (
+          <FadeIn direction="up" delay={0.5}>
+            <div className="mb-24 flex flex-col gap-10">
+              <div className="text-center space-y-4">
+                <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 text-primary text-sm font-label-caps tracking-widest bg-primary/5">
+                  {dict.development_inhouse.badge}
+                </span>
+                <h2 className="font-headline-lg text-3xl md:text-4xl text-on-surface">{dict.development_inhouse.title}</h2>
+                <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">{dict.development_inhouse.subtitle}</p>
+              </div>
+              <TeamComparison
+                traditional={dict.development_inhouse.traditional_team}
+                aethemar={dict.development_inhouse.aethemar_team}
+              />
             </div>
           </FadeIn>
         )}
@@ -191,12 +227,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <span className="material-symbols-outlined text-primary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>rocket_launch</span>
               </div>
               <h2 className="font-headline-md text-3xl md:text-4xl text-on-surface">Ready to Transform Your Business?</h2>
-              <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto text-lg">
-                이 강력한 AI 팀을 도입하여 <span className="text-primary glow-text">월 2,000만 원 이상의 고정 인건비 리스크</span>를 없애고,<br className="hidden md:block"/>오직 퍼포먼스에만 집중하는 완벽한 아웃소싱을 경험해 보세요.
+              <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+                {lang === 'ko' ? (
+                  <>수천만 원에 달하는 채용·외주 시행착오와 <span className="text-primary glow-text">막대한 고정비 부담</span>을 줄이고,<br className="hidden md:block"/>오직 비즈니스 성장과 결과에만 집중하는 전담 AI 팀을 만나보세요.</>
+                ) : (
+                  <>Eliminate costly hiring overhead and <span className="text-primary glow-text">fixed payroll risks</span>—<br className="hidden md:block"/>partner with a dedicated AI team focused purely on your business growth.</>
+                )}
               </p>
               <div className="pt-4">
                 <Link href={`/${lang}/contact`} className="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-sm font-label-caps tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                  Initiate Contact <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
+                  {lang === 'ko' ? '문의하기 (Contact)' : 'Initiate Contact'} <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
                 </Link>
               </div>
             </div>

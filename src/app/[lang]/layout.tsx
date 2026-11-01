@@ -13,7 +13,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Aethemar AI Labs | Imagine Anything. Create Everything.",
-  description: "Aethemar AI Labs - Marketing agency & SW development",
+  description: "Aethemar AI Labs - AI SW Development, Marketing & Ad Production",
   openGraph: {
     title: "Aethemar AI Labs",
     description: "Imagine Anything. Create Everything.",

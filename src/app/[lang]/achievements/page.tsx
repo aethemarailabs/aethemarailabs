@@ -19,8 +19,16 @@ export default async function AchievementsPage({ params }: { params: Promise<{ l
 
       <FadeIn direction="up" delay={0.2} className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center w-full max-w-5xl mx-auto">
-          <InsightImageCard imageSrc="/insight2.jpg" altText="Insight Statistics 2" caption="조회수 65만, 좋아요 4천개, 전달 1만개" />
-          <InsightImageCard imageSrc="/insight1.jpg" altText="Insight Statistics 1" caption="조회수 47만, 좋아요 7천개" />
+          <InsightImageCard
+            imageSrc="/insight2.jpg"
+            altText="Insight Statistics 2"
+            caption={lang === 'ko' ? '조회수 65만 회 · 좋아요 4,000+ · 공유 10,000+' : '650K Views · 4K+ Likes · 10K+ Shares'}
+          />
+          <InsightImageCard
+            imageSrc="/insight1.jpg"
+            altText="Insight Statistics 1"
+            caption={lang === 'ko' ? '조회수 47만 회 · 좋아요 7,000+' : '470K Views · 7K+ Likes'}
+          />
         </div>
       </FadeIn>
     </section>

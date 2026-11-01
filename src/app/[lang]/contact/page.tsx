@@ -1,6 +1,8 @@
 import FadeIn from '@/components/animations/FadeIn';
 
-export default function ContactPage() {
+export default async function ContactPage({ params }: { params: Promise<{ lang: 'en' | 'ko' }> }) {
+  const { lang } = await params;
+
   return (
     <section id="contact" className="py-24 px-margin-mobile md:px-margin-desktop min-h-[70vh] flex items-center">
       <FadeIn direction="up" delay={0.1} className="w-full">
@@ -8,7 +10,11 @@ export default function ContactPage() {
           <div className="relative z-10 flex flex-col items-center text-center space-y-12 py-8">
             <div className="space-y-4 max-w-2xl">
               <h2 className="font-headline-lg text-4xl md:text-5xl text-primary glow-text uppercase tracking-wider">Contact Us</h2>
-              <p className="font-body-lg text-on-surface-variant">Ready to elevate your operational reality? Reach out to our secure channel.</p>
+              <p className="font-body-lg text-on-surface-variant leading-relaxed">
+                {lang === 'ko'
+                  ? '맞춤형 SW·웹·앱 개발부터 마케팅, AI 도입까지 비즈니스에 필요한 최적의 솔루션을 제안해 드립니다. 편하신 채널로 문의해 주세요.'
+                  : 'From custom software development to growth marketing and AI integration—reach out through your preferred channel.'}
+              </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">

@@ -90,15 +90,22 @@ export default async function WhyAethemarPage({ params }: { params: Promise<{ la
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {dict.services.teams.map((team: any) => (
+              {dict.services.teams.map((team: any) => {
+                const isMain = team.id === 'development';
+                return (
                 <Link key={team.id} href={`/${lang}/services/${team.id}`} className="block h-full outline-none">
-                  <div className="glass-panel rounded-2xl p-6 md:p-8 h-full flex flex-col gap-5 border-t border-t-primary/30 glow-box group hover:-translate-y-1 transition-all duration-300">
+                  <div className={`glass-panel rounded-2xl p-6 md:p-8 h-full flex flex-col gap-5 glow-box group hover:-translate-y-1 transition-all duration-300 ${isMain ? 'bg-gradient-to-b from-primary/15 to-surface-container/50 border border-primary/50 shadow-[0_0_25px_rgba(212,175,55,0.15)]' : 'border-t border-t-primary/30'}`}>
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-surface-container shadow-[0_0_15px_rgba(212,175,55,0.15)] flex-shrink-0">
                         <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>{team.icon}</span>
                       </div>
                       <div>
-                        <h3 className="font-title-md text-lg text-on-surface">{team.title}</h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-title-md text-lg text-on-surface">{team.title}</h3>
+                          {isMain && (
+                            <span className="inline-block px-2 py-0.5 rounded-full border border-primary/50 text-primary text-[9px] font-label-caps tracking-widest bg-primary/20">MAIN</span>
+                          )}
+                        </div>
                         <div className="text-[11px] font-label-caps text-primary/80 tracking-widest mt-1">{team.director}</div>
                       </div>
                     </div>
@@ -109,7 +116,7 @@ export default async function WhyAethemarPage({ params }: { params: Promise<{ la
                     </div>
                   </div>
                 </Link>
-              ))}
+              )})}
             </div>
           </div>
         </FadeIn>
@@ -138,7 +145,7 @@ export default async function WhyAethemarPage({ params }: { params: Promise<{ la
                 </div>
               </div>
               <Link
-                href={`/${lang}/services/marketing`}
+                href={`/${lang}/services/development`}
                 className="inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-4 rounded-sm font-label-caps tracking-widest text-sm hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex-shrink-0"
               >
                 {dict.why_aethemar.industry.cta}

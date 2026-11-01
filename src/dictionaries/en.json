@@ -3,9 +3,9 @@
     "title1": "Imagine Anything.",
     "title2": "Create Everything.",
     "subtitle": "The Fifth Element",
-    "desc1": "In ancient philosophy, <strong>Aether</strong> was considered the absolute medium and the fifth element that fills the universe and transmits light. Just as modern science posits invisible energy to explain cosmic order, Aether is the essential medium that connects everything.",
-    "desc2": "<strong>Aethemar</strong> was born by combining this vast concept with <strong>cutting-edge AI technology</strong>. We perfectly replace the imperfect, high-cost 'traditional human teams'. By utilizing top-tier AI Agents as our tireless teammates, we become the <strong>'most powerful and intelligent medium'</strong> that helps your brand expand across the world.",
-    "desc3": "<strong>The name Aethemar is born from adding the strategic edge of Marketing to the infinite scalability of Aether.</strong> The fusion of a single brilliant Control Tower (CEO) and an AI organization with overwhelming performance. This is why we can design an exclusive path for your brand to shine brighter and faster than a 10-person in-house team."
+    "desc1": "In ancient philosophy, <strong>Aether</strong> was considered the essential medium and the fifth element that fills the universe and transmits light. Just as modern science posits invisible energy to explain cosmic order, Aether is the core medium that connects everything.",
+    "desc2": "<strong>Aethemar</strong> was born by combining this concept with <strong>cutting-edge AI software engineering</strong>. We innovate beyond high-cost, inefficient traditional team structures. By orchestrating specialized AI Agents that evolve 24/7, we become the <strong>'most powerful and intelligent digital medium'</strong> that turns your business vision into production-ready software and thriving brands.",
+    "desc3": "<strong>The name Aethemar unites the infinite connectivity of Aether with robust SW engineering and Market strategy.</strong> Combining seasoned expert Control Towers with a high-velocity AI Agent organization, we build digital products and scale businesses faster and more precisely than large traditional teams."
   },
   "ceo": {
     "leadership": "Leadership",
@@ -105,15 +105,45 @@
   },
   "services": {
     "title": "Aethemar AI Team Line-up",
-    "subtitle": "From marketing to development and ad production. Hire an entire perfect team combining the best AI Agents with a human Control Tower.",
+    "subtitle": "From custom software development to marketing and ad production. Deploy a dedicated team combining expert human Control Towers with specialized AI Agents.",
     "teams": [
+      {
+        "id": "development",
+        "title": "AI SW Development Team",
+        "desc": "Custom web, mobile app, and AI solution development built to scale your business. From architecture design to deployment and maintenance, we engineer reliable digital products.",
+        "director": "CTO (Chief Technology Officer)",
+        "members": ["Frontend Architect AI", "Backend System AI", "AI Automation AI", "QA & Security AI"],
+        "items": ["Full-Stack Web & Mobile Apps", "Custom AI Solutions & Automation", "High-Converting Enterprise Platforms"],
+        "itemDescs": [
+          "We build fast, responsive web and cross-platform mobile applications powered by modern stacks like Next.js and React Native.",
+          "We develop practical AI solutions—custom LLM chatbots, automated compliance linters, and data pipelines—that eliminate repetitive tasks.",
+          "From UX engineering and technical SEO to cloud infrastructure and security, we architect scalable platforms built for growth."
+        ],
+        "icon": "terminal",
+        "trendsBadge": "CORE SOLUTIONS",
+        "trendsTitle": "Key SW Engineering & AI Solutions",
+        "trendsSubtitle": "From initial concept to production launch, explore our core software engineering capabilities.",
+        "trends": [
+          { "title": "Custom Web & Mobile Apps", "desc": "High-performance responsive web and iOS/Android applications engineered for seamless UX and conversion.", "icon": "devices" },
+          { "title": "Enterprise Platforms & SaaS", "desc": "All-in-one business platforms integrating booking, payments, CRM, and real-time admin dashboards.", "icon": "hub" },
+          { "title": "Custom AI Agents & Chatbots", "desc": "LLM-powered chatbots and intelligent review systems trained on your proprietary business data and workflows.", "icon": "smart_toy" },
+          { "title": "Workflow Automation", "desc": "Automate data collection, reporting, and API integrations to drastically cut operational overhead and lead times.", "icon": "settings_suggest" },
+          { "title": "Technical SEO & Speed Optimization", "desc": "Sub-second page load times and structured SEO architecture that maximize organic discovery and retention.", "icon": "speed" },
+          { "title": "Cloud & Security Architecture", "desc": "Resilient cloud infrastructure, data encryption, and role-based access control to protect enterprise assets.", "icon": "shield_lock" }
+        ]
+      },
       {
         "id": "marketing",
         "title": "AI Marketing Team",
-        "desc": "Data-driven marketing architecture for ultra-high conversions. Building an ecosystem of self-sustaining brand authority.",
-        "director": "CEO & CMO",
+        "desc": "Data-driven growth marketing engineered for real conversions. From brand authority building to performance ads, we design self-sustaining marketing pipelines.",
+        "director": "CMO (Chief Marketing Officer)",
         "members": ["Copywriter AI", "Design AI", "Video AI", "Media Buyer AI"],
-        "items": ["High-Involvement Targeting", "SEO & Performance Ads", "Premium Brand Positioning"],
+        "items": ["High-Involvement Target Marketing", "SEO, GEO & Performance Ads", "Premium Brand Positioning"],
+        "itemDescs": [
+          "We analyze customer behavior and search intent to execute targeted campaigns that drive qualified inquiries and revenue.",
+          "From Naver/Google SEO and Generative AI Search (GEO) to Meta and search ads, we optimize media mix for maximum ROAS.",
+          "We build trusted brand authority while strictly adhering to regulatory standards in healthcare, legal, and B2B sectors."
+        ],
         "icon": "campaign",
         "platforms": [
           { "id": "reels", "name": "Reels" },
@@ -122,43 +152,42 @@
           { "id": "naver-place", "name": "Naver Place" },
           { "id": "daangn", "name": "Karrot Market" },
           { "id": "naver-blog", "name": "Naver Blog" },
-          { "id": "ai", "name": "AI" },
+          { "id": "ai", "name": "AI Search" },
           { "id": "threads", "name": "Threads" },
           { "id": "naver-ads", "name": "Naver Ads" }
         ],
+        "trendsBadge": "2026 INSIGHTS",
+        "trendsTitle": "2026 Marketing Trends & Strategies",
+        "trendsSubtitle": "Core channel strategies leading brand growth across evolving search and content ecosystems.",
         "trends": [
           { "title": "Instagram Reels", "desc": "Maximize target customer conversion with short-form videos and in-depth card news offering immediate value.", "icon": "smart_display" },
-          { "title": "YouTube Shorts", "desc": "Proactively build optimized short-form SEO to generate overwhelming organic search traffic.", "icon": "play_circle" },
+          { "title": "YouTube Shorts", "desc": "Proactively build optimized short-form SEO to generate consistent organic search traffic.", "icon": "play_circle" },
           { "title": "Threads", "desc": "Leverage active sharing and reposts to lead initial virality with data-driven, highly spreadable content.", "icon": "forum" },
-          { "title": "Naver Map / Place", "desc": "Benchmark top-ranking algorithms and integrate Naver's ecosystem features to dominate local search.", "icon": "pin_drop" },
-          { "title": "Naver Blog", "desc": "Strategically target Home Feed algorithms and metrics to rapidly build brand awareness and trust.", "icon": "article" },
-          { "title": "GEO (Gen-AI Search Engines)", "desc": "Preemptively expand brand mentions on external media to prepare for the upcoming AI search era like ChatGPT.", "icon": "psychology" },
-          { "title": "Multi Short-form Channels", "desc": "Repurpose and distribute high-quality short-form assets to solidify long-term keyword share.", "icon": "devices" }
+          { "title": "Naver Map / Place", "desc": "Benchmark top-ranking algorithms and integrate local ecosystem features to dominate local search.", "icon": "pin_drop" },
+          { "title": "Naver Blog", "desc": "Strategically target Home Feed algorithms and search intent with high-trust professional columns.", "icon": "article" },
+          { "title": "GEO (Gen-AI Search Optimization)", "desc": "Build authoritative brand mentions across external media so AI search engines recommend your brand.", "icon": "psychology" },
+          { "title": "Multi Short-form Channels", "desc": "Repurpose and distribute high-performing short-form assets across platforms to solidify keyword share.", "icon": "devices" }
         ]
-      },
-      {
-        "id": "development",
-        "title": "AI SW Development Team",
-        "desc": "Custom web and app development optimized for business expansion. Engineering the perfect digital products for your business.",
-        "director": "CTO (Chief Technology Officer)",
-        "members": ["Frontend Architect AI", "Backend System AI", "QA Tester AI"],
-        "items": ["Native App Architecture", "Enterprise Web Platforms", "AI Chatbot Integration"],
-        "icon": "terminal"
       },
       {
         "id": "production",
         "title": "AI Ad Production Team",
-        "desc": "Producing high-end brand commercial videos that transcend physical limits using state-of-the-art generative AI models.",
+        "desc": "Producing high-end brand films and commercial videos that transcend physical shooting limits using state-of-the-art generative AI.",
         "director": "Creative Director",
         "members": ["Prompt Engineer AI", "Video Generator AI", "Sound Editor AI"],
-        "items": ["Generative AI Commercials", "Cinematic Promo Videos", "Mass Short-form Production"],
+        "items": ["High-End Generative AI Commercials", "Cinematic Brand Promo Videos", "Platform-Optimized Short-Form Video"],
+        "itemDescs": [
+          "We produce 4K AI commercial films that bring your brand vision to life without costly location shoots or traditional CGI.",
+          "We craft compelling visual storytelling and custom sound design that leave a lasting impression on your audience.",
+          "We rapidly produce trendy, high-retention videos tailored for YouTube Shorts, Instagram Reels, and social ad campaigns."
+        ],
         "icon": "movie"
       }
     ]
   },
   "portfolio": {
     "title": "Aethemar's Creations",
-    "subtitle": "Connect with our constellation of insights."
+    "subtitle": "Explore the software solutions and creative works engineered by Aethemar."
   },
   "product": {
     "badge": "Product & Showcase",
@@ -388,62 +417,81 @@
     "badge": "Why Aethemar?",
     "title1": "Not More People.",
     "title2": "A Better Structure.",
-    "subtitle": "Aethemar AI Labs is an AI-native organization where proven expert Control Towers lead specialized AI Agent teams. From marketing to software development and ad production, one principle delivers faster, sharper results.",
+    "subtitle": "Aethemar AI Labs is an AI-native organization where proven expert Control Towers lead specialized AI Agent teams. From software development to marketing and ad production, one principle delivers faster, sharper results.",
     "details": [
       {
-        "title": "1. Scale Through Structure, Not Headcount",
+        "title": "1. Scale Through Architecture, Not Headcount",
         "label1": "The Old Way",
-        "desc1": "More work means more hires, and with them, rising recruiting, training, and management costs.\n\nWhether agency or in-house, quality depends heavily on 'who' is assigned to you.",
+        "desc1": "More projects mean more hires or agencies, driving up recruiting, management, and communication costs.\n\nWhether outsourcing or in-house, quality fluctuates wildly depending on 'who' is assigned.",
         "label2": "The Aethemar Way",
-        "desc2": "We modularize work into role-based AI Agents, scaling instantly as needed while delivering consistent quality.\n\nThroughput and speed grow without adding headcount."
+        "desc2": "We modularize development, marketing, and production into role-based AI Agents—scaling instantly while maintaining consistent quality.\n\nDelivery speed and throughput grow without adding headcount."
       },
       {
-        "title": "2. Experts Plan, Review, and Own the Results",
+        "title": "2. Experts Architect, Review, and Own the Results",
         "label1": "The Old Way",
-        "desc1": "Juggling multiple vendors and contacts scatters your strategy and leaves you doing the coordination.\n\nAdopting AI tools alone leaves no one to judge and refine the output.",
+        "desc1": "Managing separate dev shops, marketing agencies, and studios scatters your strategy and burdens you with coordination.\n\nAdopting AI tools alone leaves no one to architect systems and verify quality.",
         "label2": "The Aethemar Way",
-        "desc2": "Each team is led by an experienced Control Tower (CEO & CMO, CTO, Creative Director) who plans, reviews, and takes responsibility for every AI output.\n\nYou communicate through a single point of contact and simply receive results."
+        "desc2": "Each team is led by an experienced Control Tower (CTO, CMO, Creative Director) who designs, reviews, and takes full ownership of every output.\n\nYou communicate through a single point of contact and receive production-ready results."
       },
       {
-        "title": "3. One Organization, Three Expert Teams",
+        "title": "3. From SW Development to Marketing, Connected as One",
         "label1": "The Old Way",
-        "desc1": "Splitting marketing, web/app development, and ad production across separate vendors breaks your brand message and data.\n\nEvery vendor change means starting over.",
+        "desc1": "Splitting web/app development, marketing, and video production across separate vendors breaks your product architecture, brand message, and data.\n\nEvery vendor change means explaining your business from scratch.",
         "label2": "The Aethemar Way",
-        "desc2": "Our Marketing, SW Development, and Ad Production teams share the same strategy and data.\n\nWe design the entire brand experience, from first impression to conversion, as one."
+        "desc2": "Our SW Development, Marketing, and Ad Production teams share the same business goals and data.\n\nFrom building digital products to customer acquisition and conversion, we engineer the entire pipeline as one."
       }
     ],
     "traditional_team": {
       "title": "The Old Way: Fragmented Vendors",
       "director": "Business Owner",
       "leader": "Internal Manager (Vendor Coordination)",
-      "members": ["Marketing Agency", "Web/App Dev Contractor", "Video Production House", "Design Freelancer"],
-      "pain_points": ["Scattered Communication", "Broken Brand Message", "Accumulating Costs", "Person-Dependent Quality"]
+      "members": ["Web/App Dev Contractor", "Marketing Agency", "Video Production House", "Design Freelancer"],
+      "pain_points": ["Dev & Marketing Silos", "Delays & Uneven Quality", "Accumulating Fixed/Vendor Costs", "Maintenance & Handover Gaps"]
     },
     "aethemar_team": {
       "title": "Aethemar AI-Native Organization",
       "director": "Business Owner",
       "leader": "Aethemar Control Tower (Single Contact)",
-      "members": ["AI Marketing Team", "AI SW Development Team", "AI Ad Production Team"],
-      "benefits": ["Single Point of Contact", "Unified Strategy & Data", "Efficient Cost Structure", "Expert-Reviewed Quality"]
+      "members": ["AI SW Development Team", "AI Marketing Team", "AI Ad Production Team"],
+      "benefits": ["Single Point of Contact", "Integrated Dev & Growth", "Efficient Cost Structure", "Fast & Reliable Delivery"]
     },
     "teams_section": {
       "badge": "Our Teams",
-      "title": "Three AI Teams, One Operating Principle",
-      "subtitle": "Each team pairs one expert Control Tower with role-based AI Agents. Choose the team you need, or use all three as one organization.",
+      "title": "Three Specialized AI Teams to Complete Your Business",
+      "subtitle": "Each team pairs one seasoned expert Control Tower with role-based AI Agents. Start with SW Development or deploy all three as one dedicated organization.",
       "cta": "Learn More"
     },
     "industry": {
-      "badge": "Industry Focus",
-      "title": "Built for High-Trust Professional Industries",
-      "desc": "Drawing on hands-on experience leading in-house marketing at 14 hospitals, clinics, and law firms, we design strategies for industries where trust and compliance matter most. The same structure applies to businesses of any industry and size.",
-      "tags": ["Hospitals & Clinics", "Law Firms", "Professional Services", "Brands & Commerce"],
-      "cta": "See Hospital & Law Firm Marketing"
+      "badge": "Core Solutions",
+      "title": "Turning Ideas into Working Software and Measurable Growth",
+      "desc": "From custom web/app platforms and AI workflow automation to high-trust growth marketing for medical, legal, and commerce brands. We combine deep domain expertise with modern AI engineering to build digital products tailored to your business.",
+      "tags": ["Custom Web & Mobile Apps", "AI Automation & SaaS", "Enterprise Platforms", "Medical, Legal & Commerce"],
+      "cta": "Explore AI SW Development"
+    }
+  },
+  "development_inhouse": {
+    "badge": "Traditional Dev vs Aethemar",
+    "title": "Why Is Our Development Faster and More Reliable?",
+    "subtitle": "Compare traditional dev outsourcing and in-house hiring—often plagued by high upfront costs and delays—with the Aethemar AI SW Development Team.",
+    "traditional_team": {
+      "title": "Traditional Dev Shop / In-house Team",
+      "director": "Founder / Product Owner",
+      "leader": "Project Manager / Dev Lead",
+      "members": ["Frontend Developer", "Backend Developer", "UI/UX Designer", "QA Engineer"],
+      "pain_points": ["High Upfront Build Costs", "Frequent Schedule Delays", "Post-Launch Maintenance Gaps", "Hiring & Management Overhead"]
+    },
+    "aethemar_team": {
+      "title": "Aethemar AI SW Development Team",
+      "director": "Founder / Product Owner",
+      "leader": "CTO (Technical Control Tower)",
+      "members": ["Frontend Architect AI", "Backend System AI", "AI Automation AI", "QA & Security AI"],
+      "benefits": ["Drastically Faster Time-to-Market", "Direct CTO Architecture & Code Review", "End-to-End Build to Maintenance", "Scalable & Modern Tech Stack"]
     }
   },
   "marketing_inhouse": {
     "badge": "In-house vs Aethemar",
     "title": "Do You Really Need to Build an In-house Marketing Team?",
-    "subtitle": "Compare how hospitals and law firms typically run in-house marketing teams with how the Aethemar AI Marketing Team restructures them.",
+    "subtitle": "Compare how hospitals and law firms typically run in-house marketing teams with how the Aethemar AI Marketing Team streamlines them.",
     "traditional_team": {
       "title": "Traditional In-house Team",
       "director": "Hospital / Law Firm Director",
@@ -454,7 +502,7 @@
     "aethemar_team": {
       "title": "Aethemar AI Marketing Team",
       "director": "Hospital / Law Firm Director",
-      "leader": "CEO & CMO (Control Tower)",
+      "leader": "CMO (Marketing Control Tower)",
       "members": ["Copywriter AI", "Design AI", "Video AI", "Media Buyer AI"],
       "benefits": ["Efficient Cost Structure", "No Hiring or HR Overhead", "24/7 Data-Driven Operations", "Expert Planning & Review"]
     },
@@ -514,30 +562,30 @@
       },
       "mapping": {
         "title": "Aethemar AI Labs Mapping Strategy",
-        "subtitle": "We modularize these specialized human roles into top-tier AI Agents for complete automation.",
+        "subtitle": "We modularize these specialized roles into domain-tuned AI Agents for fast, reliable execution.",
         "agents": [
           {
             "name": "Marketing Director",
-            "ai": "CEO & CMO",
-            "desc": "Directs all AI agents: 'This client is a Gangnam clinic, focusing on lifting. Budget is $10k. Generate content.' Conducts final approval."
+            "ai": "CMO (Control Tower)",
+            "desc": "Designs campaign strategy tailored to your industry, core services, and budget—directing all AI Agents and conducting final review."
           },
           {
             "name": "Content Agent",
             "ai": "Copywriter AI",
-            "desc": "Configured with separate prompts for law firms and hospitals reflecting medical and legal advertising guidelines. Writes SEO-optimized posts daily, published after the Control Tower's final review."
+            "desc": "Configured with industry-specific advertising compliance guidelines to draft SEO-optimized content daily, published after Control Tower review."
           },
           {
             "name": "Performance Agent",
             "ai": "Media Buyer AI",
-            "desc": "An automated bot that analyzes ad performance data, automatically adjusts bids, and turns off underperforming creatives."
+            "desc": "Analyzes real-time ad performance data, adjusts bids, and filters out underperforming creatives to prevent wasted ad spend."
           },
           {
             "name": "Creative Agent",
             "ai": "Design & Video AI",
-            "desc": "A generative AI that instantly creates ad thumbnails and short-form videos (Shorts/Reels) based on text prompts."
+            "desc": "Rapidly produces high-converting card news, ad banners, and trendy Shorts/Reels videos based on campaign briefs."
           }
         ],
-        "conclusion": "Traditionally, building a team of this caliber costs $11,000 to $22,000 per month in payroll alone. Aethemar AI Labs combines AI Agent automation with expert review to deliver a full-stack marketing team at a far more efficient cost."
+        "conclusion": "Traditionally, running a dedicated team of this scale costs $11,000 to $22,000+ per month in fixed payroll. Aethemar AI Labs combines AI Agent automation with expert oversight to deliver full-stack marketing at a fraction of the cost."
       }
     }
   }

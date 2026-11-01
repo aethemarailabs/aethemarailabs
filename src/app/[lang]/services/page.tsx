@@ -29,10 +29,18 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                 AETHEMAR'S PHILOSOPHY
               </div>
               <h3 className="font-title-lg text-xl md:text-2xl text-on-surface mb-2">
-                비용은 절반으로, <span className="text-primary glow-text">퍼포먼스는 10배로.</span>
+                {lang === 'ko' ? (
+                  <>비용은 절반으로, <span className="text-primary glow-text">개발과 성장의 속도는 10배로.</span></>
+                ) : (
+                  <>Half the Cost, <span className="text-primary glow-text">10x Faster Delivery & Growth.</span></>
+                )}
               </h3>
-              <p className="font-body-sm md:font-body-md text-on-surface-variant max-w-3xl">
-                기존 인하우스 팀의 막대한 고정비와 관리 리스크를 완벽하게 해결합니다.<br className="hidden md:block"/>단 1명의 완벽한 컨트롤 타워와 각 분야 최고 수준의 AI 에이전트들이 귀하의 비즈니스를 전담합니다.
+              <p className="font-body-sm md:font-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+                {lang === 'ko' ? (
+                  <>기존 외주 개발과 인하우스 팀 운영의 높은 고정비, 소통 비용, 관리 리스크를 해결합니다.<br className="hidden md:block"/>숙련된 전문가 컨트롤 타워와 분야별 특화 AI 에이전트들이 프로덕트 개발부터 마케팅까지 책임지고 수행합니다.</>
+                ) : (
+                  <>Eliminate the high fixed overhead, communication delays, and management risks of traditional agencies and in-house teams.<br className="hidden md:block"/>Seasoned expert Control Towers and specialized AI Agents handle everything from SW development to marketing.</>
+                )}
               </p>
             </div>
             
@@ -55,10 +63,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
             const order = ['development', 'marketing', 'production'];
             return order.indexOf(a.id) - order.indexOf(b.id);
           }).map((team: any, idx: number) => {
-            const isMain = team.id === 'marketing';
+            const isMain = team.id === 'development';
             
             let orderClass = '';
-            if (team.id === 'marketing') orderClass = 'order-first lg:order-none';
+            if (team.id === 'development') orderClass = 'order-first lg:order-none';
             
             return (
             <FadeIn key={idx} direction="up" delay={0.2 + idx * 0.1} className={`h-full ${orderClass}`}>
