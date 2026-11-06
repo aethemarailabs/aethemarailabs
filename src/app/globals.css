@@ -65,57 +65,59 @@
   --font-body-sm: var(--font-outfit);
 }
 
-@utility font-label-caps {
-  font-family: var(--font-label-caps);
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.15em;
-  font-weight: 700;
-}
+@layer base {
+  .font-label-caps {
+    font-family: var(--font-label-caps);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+  }
 
-@utility font-body-lg {
-  font-family: var(--font-body-lg);
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-}
+  .font-body-lg {
+    font-family: var(--font-body-lg);
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 
-@utility font-headline-lg {
-  font-family: var(--font-headline-lg);
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: 0.05em;
-  font-weight: 400;
-}
+  .font-headline-lg {
+    font-family: var(--font-headline-lg);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
 
-@utility font-headline-lg-mobile {
-  font-family: var(--font-headline-lg-mobile);
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 400;
-}
+  .font-headline-lg-mobile {
+    font-family: var(--font-headline-lg-mobile);
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+  }
 
-@utility font-title-md {
-  font-family: var(--font-title-md);
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-}
+  .font-title-md {
+    font-family: var(--font-title-md);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+  }
 
-@utility font-display-lg {
-  font-family: var(--font-display-lg);
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.02em;
-  font-weight: 300;
-}
+  .font-display-lg {
+    font-family: var(--font-display-lg);
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+  }
 
-@utility font-body-sm {
-  font-family: var(--font-body-sm);
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+  .font-body-sm {
+    font-family: var(--font-body-sm);
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+  }
 }
 
 @layer utilities {

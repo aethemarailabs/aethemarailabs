@@ -56,7 +56,7 @@ export default async function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
       </head>
-      <body className={`bg-background text-on-background font-body-md antialiased selection:bg-primary/20 selection:text-primary overflow-x-hidden overflow-y-scroll min-h-screen flex flex-col relative pb-20 md:pb-0`}>
+      <body className={`bg-background text-on-background font-body-md antialiased selection:bg-primary/20 selection:text-primary overflow-x-hidden overflow-y-scroll min-h-screen flex flex-col relative pb-16 md:pb-0`}>
         {/* Global Background Texture */}
         <div className="fixed inset-0 z-[-1] pointer-events-none bg-background">
           <div 
@@ -65,7 +65,7 @@ export default async function RootLayout({
           />
         </div>
         <TopNavBar />
-        <main className="flex-grow pt-24 w-full overflow-x-hidden">
+        <main className="flex-grow pt-14 md:pt-24 w-full overflow-x-hidden">
           {children}
         </main>
         <MobileBottomNav />

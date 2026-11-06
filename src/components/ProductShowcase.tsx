@@ -61,7 +61,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
   return (
     <div className="w-full flex flex-col items-center">
       {/* Category Filter Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 max-w-4xl mx-auto w-full px-2">
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 md:mb-12 max-w-4xl mx-auto w-full px-1">
         {categories.map((cat) => {
           const isActive = activeTab === cat.id;
           const count = getCount(cat.id);
@@ -69,18 +69,18 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
-              className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-label-caps tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-full text-[11px] sm:text-sm font-label-caps tracking-wider transition-all duration-300 cursor-pointer ${
                 isActive
                   ? 'bg-primary text-background font-bold shadow-[0_0_20px_rgba(212,175,55,0.4)] scale-105'
                   : 'glass-panel text-on-surface-variant hover:text-primary hover:border-primary/40'
               }`}
             >
-              <span className="material-symbols-outlined text-[18px] sm:text-[20px]" style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>
+              <span className="material-symbols-outlined text-[16px] sm:text-[20px]" style={{ fontVariationSettings: isActive ? "'FILL' 1" : "'FILL' 0" }}>
                 {cat.icon}
               </span>
               <span>{cat.name}</span>
               <span
-                className={`text-[10px] sm:text-xs px-2 py-0.5 rounded-full ${
+                className={`text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full ${
                   isActive ? 'bg-background/20 text-background font-bold' : 'bg-surface-variant/50 text-on-surface-variant'
                 }`}
               >
@@ -92,7 +92,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
       </div>
 
       {/* Showcase Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 w-full max-w-7xl mx-auto">
         {filteredItems.map((item: ProductItem) => {
           const isVideo = item.type === 'video';
           const isSoftware = item.category === 'software';
@@ -182,33 +182,33 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
               </div>
 
               {/* Card Body */}
-              <div className="p-6 flex flex-col flex-1 gap-4">
+              <div className="p-4 sm:p-6 flex flex-col flex-1 gap-3 sm:gap-4">
                 <div>
-                  <h3 className="font-title-md text-lg text-on-surface group-hover:text-primary transition-colors flex items-center justify-between">
-                    <span>{item.title}</span>
-                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors text-base">
+                  <h3 className="font-title-md text-base sm:text-lg text-on-surface group-hover:text-primary transition-colors flex items-center justify-between gap-2">
+                    <span className="break-keep">{item.title}</span>
+                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors text-base flex-shrink-0">
                       {item.type === 'video' ? 'play_circle' : item.type === 'external' ? 'open_in_new' : 'arrow_outward'}
                     </span>
                   </h3>
                   {item.subtitle && (
-                    <p className="font-body-sm text-xs text-primary/90 mt-1 font-medium">{item.subtitle}</p>
+                    <p className="font-body-sm text-[11px] sm:text-xs text-primary/90 mt-1 font-medium break-keep">{item.subtitle}</p>
                   )}
                 </div>
 
-                <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed line-clamp-3 flex-1">
+                <p className="font-body-sm text-xs sm:text-sm text-on-surface-variant leading-relaxed line-clamp-3 flex-1 break-keep">
                   {item.desc}
                 </p>
 
                 {/* Key Highlight Box */}
-                <div className="bg-primary/5 rounded-xl p-3 border border-primary/15 flex items-start gap-2.5">
-                  <span className="material-symbols-outlined text-primary text-[18px] flex-shrink-0 mt-0.5">
+                <div className="bg-primary/5 rounded-xl p-2.5 sm:p-3 border border-primary/15 flex items-start gap-2 sm:gap-2.5">
+                  <span className="material-symbols-outlined text-primary text-[16px] sm:text-[18px] flex-shrink-0 mt-0.5">
                     verified
                   </span>
                   <div className="flex-1">
                     <span className="text-[10px] font-label-caps text-primary/80 tracking-widest block uppercase mb-0.5">
                       {dict.labels.key_highlight}
                     </span>
-                    <p className="font-body-sm text-xs text-on-surface font-medium leading-snug">
+                    <p className="font-body-sm text-[11px] sm:text-xs text-on-surface font-medium leading-snug break-keep">
                       {item.highlight}
                     </p>
                   </div>
@@ -219,7 +219,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
                   {item.tags.map((tag: string, i: number) => (
                     <span
                       key={i}
-                      className="text-[11px] font-label-caps px-2.5 py-1 rounded-md bg-surface-variant/40 border border-on-surface/5 text-on-surface-variant"
+                      className="text-[10px] sm:text-[11px] font-label-caps px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md bg-surface-variant/40 border border-on-surface/5 text-on-surface-variant"
                     >
                       {tag}
                     </span>
@@ -227,10 +227,10 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
                 </div>
 
                 {/* Card Action Button */}
-                <div className="pt-2">
+                <div className="pt-1 sm:pt-2">
                   <button
                     type="button"
-                    className="w-full py-2.5 rounded-lg border border-primary/30 text-primary text-xs font-label-caps tracking-widest uppercase hover:bg-primary hover:text-background transition-all duration-300 flex items-center justify-center gap-1.5"
+                    className="w-full py-2 sm:py-2.5 rounded-lg border border-primary/30 text-primary text-[11px] sm:text-xs font-label-caps tracking-widest uppercase hover:bg-primary hover:text-background transition-all duration-300 flex items-center justify-center gap-1.5"
                   >
                     <span>
                       {item.type === 'video'
@@ -239,7 +239,7 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
                         ? dict.labels.visit_site
                         : dict.labels.view_demo}
                     </span>
-                    <span className="material-symbols-outlined text-[16px]">
+                    <span className="material-symbols-outlined text-[15px] sm:text-[16px]">
                       {item.type === 'video' ? 'play_arrow' : 'arrow_forward'}
                     </span>
                   </button>
@@ -251,17 +251,17 @@ export default function ProductShowcase({ dict }: ProductShowcaseProps) {
       </div>
 
       {/* Official Social Channels Strip */}
-      <div className="w-full max-w-5xl mx-auto mt-24 glass-panel rounded-3xl p-8 md:p-12 border border-primary/20 glow-box relative overflow-hidden">
+      <div className="w-full max-w-5xl mx-auto mt-12 md:mt-24 glass-panel rounded-2xl md:rounded-3xl p-5 sm:p-8 md:p-12 border border-primary/20 glow-box relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-40 pointer-events-none"></div>
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-8 text-center md:text-left">
           <div className="space-y-2 max-w-xl">
-            <span className="inline-block px-3 py-1 rounded-full border border-primary/30 text-primary text-xs font-label-caps tracking-widest bg-primary/5">
+            <span className="inline-block px-3 py-1 rounded-full border border-primary/30 text-primary text-[11px] md:text-xs font-label-caps tracking-widest bg-primary/5">
               {dict.social_channels.badge}
             </span>
-            <h3 className="font-display-lg text-2xl md:text-3xl text-on-surface">
+            <h3 className="font-display-lg text-lg sm:text-2xl md:text-3xl text-on-surface break-keep">
               {dict.social_channels.title}
             </h3>
-            <p className="font-body-sm text-on-surface-variant text-sm">
+            <p className="font-body-sm text-on-surface-variant text-xs sm:text-sm break-keep">
               {dict.social_channels.subtitle}
             </p>
           </div>
